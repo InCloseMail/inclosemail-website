@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Use - InCloseMail</title>
+  <meta name="description" content="The terms for using InCloseMail, the beta email client for Microsoft 365 and Outlook.com.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="./">
+          <img src="favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>InCloseMail Terms of Use</h1>
+    </div>
+  </header>
+
+  <main class="wrap doc">
+    <p class="updated">Last updated: October 2026</p>
+
+    <p>InCloseMail is a desktop email client for Microsoft 365 and Outlook.com on Windows, published by EmuKey LLC, a Wisconsin limited liability company.</p>
+
+    <h2>The license agreement</h2>
+    <p>Your use of InCloseMail is governed by the license agreement shown in the installer, which you accept when you install it. You can read the full text here: <a href="license.html">InCloseMail Beta Software License Agreement</a>.</p>
+
+    <h2>The key points</h2>
+    <ul>
+      <li><strong>Beta software.</strong> InCloseMail is a pre-release beta for evaluation. It may have errors, may change, and the beta may end at any time.</li>
+      <li><strong>Provided &ldquo;as is&rdquo;.</strong> There is no warranty of any kind, to the extent the law allows.</li>
+      <li><strong>Back up your data.</strong> When you allow changes to your mailbox, the app can send, move and delete mail and change your calendar and contacts. Keep your own backups, or test with an account that holds nothing important.</li>
+      <li><strong>Limitation of liability.</strong> To the extent the law allows, EmuKey LLC isn&rsquo;t liable for indirect damages or loss of data, and its total liability is limited to the greater of what you paid or US$50.</li>
+      <li><strong>Wisconsin law.</strong> The agreement is governed by the laws of the State of Wisconsin, and disputes go to the state or federal courts located in Wisconsin.</li>
+    </ul>
+    <p>This summary is for convenience; the <a href="license.html">license agreement</a> is what applies. How the app handles your information is described in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Trademarks</h2>
+    <p>InCloseMail is not made by, affiliated with or endorsed by Microsoft. Microsoft, Microsoft 365, Outlook and Windows are trademarks of the Microsoft group of companies.</p>
+
+    <h2>Contact</h2>
+    <p>EmuKey LLC &middot; <a href="mailto:support@inclosemail.com">support@inclosemail.com</a></p>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+</html>

@@ -30,14 +30,17 @@
         </button>
       </div>
       <h1>If you&rsquo;ve used Outlook 2016 or 2019, you already know how to use InCloseMail.</h1>
-      <p class="lead">Email, calendar and contacts for Microsoft 365, on Windows.</p>
+      <p class="lead">InCloseMail is a Windows desktop email client for Microsoft 365 and Outlook.com: email, calendar and contacts.</p>
     </div>
   </header>
 
   <main class="wrap">
     <figure class="shot">
-      <img src="screenshot.png" width="1426" height="893"
+      <!-- The app in the page's mode: light normally, Dark Mode when the page is dark. -->
+      <img class="shot-light" src="screenshot.png" width="1426" height="893"
            alt="InCloseMail showing an Inbox: the ribbon across the top, the folder list on the left, the message list in the middle and the open message on the right.">
+      <img class="shot-dark" src="screenshot-dark.png" width="1426" height="893"
+           alt="InCloseMail in Dark Mode showing an Inbox: the ribbon across the top, the folder list on the left, the message list in the middle and the open message on the right.">
       <figcaption>InCloseMail with its sample mailbox.</figcaption>
     </figure>
 
@@ -65,30 +68,16 @@
   </main>
 
   <footer>
-    <div class="wrap">&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></div>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="license.html">License</a>
+      </nav>
+    </div>
   </footer>
 
-  <script>
-    // Dark mode button: switches the page between light and dark and remembers the choice in this browser.
-    (function () {
-      var root = document.documentElement;
-      var button = document.getElementById('theme-toggle');
-      var system = window.matchMedia('(prefers-color-scheme: dark)');
-      function isDark() { return root.dataset.theme ? root.dataset.theme === 'dark' : system.matches; }
-      function show() {
-        var dark = isDark();
-        button.querySelector('.label').textContent = dark ? 'Light mode' : 'Dark mode';
-        button.querySelector('.icon').textContent = dark ? '\u2600' : '\u263E';
-      }
-      button.addEventListener('click', function () {
-        var next = isDark() ? 'light' : 'dark';
-        root.dataset.theme = next;
-        try { localStorage.setItem('theme', next); } catch (e) {}
-        show();
-      });
-      system.addEventListener('change', show);
-      show();
-    })();
-  </script>
+  <script src="theme.js"></script>
 </body>
 </html>
