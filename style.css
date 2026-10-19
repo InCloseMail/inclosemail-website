@@ -9,8 +9,9 @@
   --hero-text: #ffffff;
 }
 
+/* Dark: from the system setting unless the visitor picked light with the button, or picked dark with it. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #1f1f1f;
     --surface: #292929;
     --text: #f0f0f0;
@@ -19,8 +20,23 @@
     --accent: #479ef5;
     --hero-bg: #0c3b5e;
     --hero-text: #ffffff;
+    color-scheme: dark;
   }
 }
+
+:root[data-theme="dark"] {
+  --bg: #1f1f1f;
+  --surface: #292929;
+  --text: #f0f0f0;
+  --muted: #adadad;
+  --border: #3d3d3d;
+  --accent: #479ef5;
+  --hero-bg: #0c3b5e;
+  --hero-text: #ffffff;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] { color-scheme: light; }
 
 * { box-sizing: border-box; }
 
@@ -48,6 +64,37 @@ a { color: var(--accent); }
   color: var(--hero-text);
   padding: 48px 0 56px;
 }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--hero-text);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover { background: rgba(255, 255, 255, 0.12); }
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--hero-text);
+  outline-offset: 2px;
+}
+
+.theme-toggle .icon { font-size: 1rem; line-height: 1; }
 
 .brand {
   display: flex;

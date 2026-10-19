@@ -8,13 +8,26 @@
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <div class="brand">
-        <img src="favicon.svg" alt="" width="40" height="40">
-        <span>InCloseMail</span>
+      <div class="topbar">
+        <div class="brand">
+          <img src="favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </div>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
       </div>
       <h1>If you&rsquo;ve used Outlook 2016 or 2019, you already know how to use InCloseMail.</h1>
       <p class="lead">Email, calendar and contacts for Microsoft 365, on Windows.</p>
@@ -52,7 +65,30 @@
   </main>
 
   <footer>
-    <div class="wrap">&copy; 2026 EmuKey LLC</div>
+    <div class="wrap">&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></div>
   </footer>
+
+  <script>
+    // Dark mode button: switches the page between light and dark and remembers the choice in this browser.
+    (function () {
+      var root = document.documentElement;
+      var button = document.getElementById('theme-toggle');
+      var system = window.matchMedia('(prefers-color-scheme: dark)');
+      function isDark() { return root.dataset.theme ? root.dataset.theme === 'dark' : system.matches; }
+      function show() {
+        var dark = isDark();
+        button.querySelector('.label').textContent = dark ? 'Light mode' : 'Dark mode';
+        button.querySelector('.icon').textContent = dark ? '\u2600' : '\u263E';
+      }
+      button.addEventListener('click', function () {
+        var next = isDark() ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        show();
+      });
+      system.addEventListener('change', show);
+      show();
+    })();
+  </script>
 </body>
 </html>
