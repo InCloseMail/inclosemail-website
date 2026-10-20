@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0f6cbd"/>
-  <rect x="12" y="18" width="40" height="28" rx="4" fill="#fff"/>
-  <path d="M14 21l18 13 18-13" fill="none" stroke="#0f6cbd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- InCloseMail's icon, "ICM": the app's icon-master.svg (OutlookClassic/assets/icon), used for the tab and the header logo. -->
+  <rect x="0" y="0" width="512" height="512" rx="72" fill="#0F6B66"/>
+  <rect x="72" y="136" width="368" height="248" rx="22" fill="#F4F6F5"/>
+  <g fill="none" stroke="#0F6B66" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The flap, down to the top of the C. -->
+    <polyline points="90,154 220,262"/>
+    <polyline points="422,154 292,262"/>
+    <line x1="146" y1="276" x2="146" y2="342"/>
+    <path d="M282,266 A46,46 0 1 0 282,342"/>
+    <polyline points="330,342 330,276 364,316 398,276 398,342"/>
+  </g>
 </svg>
