@@ -123,6 +123,51 @@ a { color: var(--accent); }
   opacity: 0.9;
 }
 
+/* Download the beta: a white button on the teal header, the release notes beside it. */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 22px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f6b66;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.button:hover { background: #e8f4f3; }
+
+.button:focus-visible,
+.cta-link:focus-visible {
+  outline: 2px solid var(--hero-text);
+  outline-offset: 3px;
+}
+
+.cta-link {
+  color: var(--hero-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cta-note {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.section-lead {
+  margin: -8px 0 16px;
+  color: var(--muted);
+}
+
 main { padding-top: 40px; padding-bottom: 24px; }
 
 /* The app in light mode, as it looks out of the box; a frame keeps it apart from a dark page. */

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>InCloseMail</title>
-  <meta name="description" content="Email, calendar and contacts for Microsoft 365 on Windows. If you've used Outlook 2016 or 2019, you already know how to use InCloseMail.">
+  <meta name="description" content="Email, calendar, contacts and tasks for Microsoft 365 and Outlook.com on Windows, working the way Outlook 2021 does. Free public beta.">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -29,34 +29,51 @@
           <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
         </button>
       </div>
-      <h1>If you&rsquo;ve used Outlook 2016 or 2019, you already know how to use InCloseMail.</h1>
-      <p class="lead">InCloseMail is a Windows desktop email client for Microsoft 365 and Outlook.com: email, calendar and contacts.</p>
+      <h1>If you&rsquo;ve used Outlook 2021, you already know how to use InCloseMail.</h1>
+      <p class="lead">A Windows desktop email client for Microsoft 365 and Outlook.com that works the way classic Outlook does: the ribbon, the menus, the right-click options and the keyboard shortcuts you already use, for mail, calendar, contacts and tasks.</p>
+      <div class="cta">
+        <a class="button" href="https://github.com/InCloseMail/inclosemail-releases/releases/latest/download/InCloseMail.msi">Download the free beta</a>
+        <a class="cta-link" href="https://github.com/InCloseMail/inclosemail-releases/releases">Release notes</a>
+      </div>
+      <p class="cta-note">Windows 10 (version 1809) or Windows 11, 64-bit. Signed installer. Updates install from inside the app. Beta builds work until December 31, 2026.</p>
     </div>
   </header>
 
   <main class="wrap">
     <figure class="shot">
       <!-- The app in the page's mode: light normally, Dark Mode when the page is dark. -->
-      <img class="shot-light" src="screenshot.png" width="1426" height="893"
+      <img class="shot-light" src="screenshot.png" width="1626" height="994"
            alt="InCloseMail showing an Inbox: the ribbon across the top, the folder list on the left, the message list in the middle and the open message on the right.">
-      <img class="shot-dark" src="screenshot-dark.png" width="1426" height="893"
+      <img class="shot-dark" src="screenshot-dark.png" width="1626" height="994"
            alt="InCloseMail in Dark Mode showing an Inbox: the ribbon across the top, the folder list on the left, the message list in the middle and the open message on the right.">
       <figcaption>InCloseMail with its sample mailbox.</figcaption>
     </figure>
 
     <section aria-labelledby="features">
-      <h2 id="features">Features</h2>
+      <h2 id="features">Outlook 2021, feature for feature</h2>
+      <p class="section-lead">InCloseMail was checked against Outlook 2021, screen by screen: if you reach for something out of habit, it&rsquo;s where you expect it.</p>
       <ul class="features">
-        <li><strong>The layout you know</strong><span>The ribbon, the folder list, the message list and the reading pane.</span></li>
-        <li><strong>Calendar and contacts</strong><span>Your Microsoft 365 calendar and people, side by side with mail.</span></li>
-        <li><strong>Rules, signatures and search</strong><span>Rules that file your mail, your signatures, and fast search.</span></li>
-        <li><strong>Offline and Send/Receive</strong><span>A local copy of your mail that stays readable and searchable offline.</span></li>
+        <li><strong>The layout you know</strong><span>The ribbon and its tabs, the folder list with Favorites, the message list, the reading pane, the To-Do Bar, Tell me, and Outlook&rsquo;s keyboard shortcuts.</span></li>
+        <li><strong>Mail the way you work</strong><span>Conversations, categories, follow-up flags and reminders, Ignore, Clean Up, search folders, Advanced Find, and the People Pane.</span></li>
+        <li><strong>Calendar</strong><span>Day, week and month views, meetings with the Scheduling Assistant and Room Finder, shared calendars, calendar groups and internet calendars.</span></li>
+        <li><strong>Contacts and tasks</strong><span>Your contacts with contact groups and colleagues&rsquo; shared contacts, and tasks with due dates, reminders and recurrence.</span></li>
+        <li><strong>Rules and Quick Steps</strong><span>Rules that run on the server, Quick Steps with Outlook&rsquo;s full list of actions, Always Move Messages in This Conversation, and rules you can export and import.</span></li>
+        <li><strong>Writing messages</strong><span>Signatures, Quick Parts, voting buttons, Delay Delivery, Format Painter and styles, spell check, and Save Sent Item To.</span></li>
+        <li><strong>Shared mailboxes</strong><span>Shared mailboxes and calendars in the folder list, Send As, and search across all of your mailboxes.</span></li>
+        <li><strong>Offline and Send/Receive</strong><span>A local copy of your mail that stays readable and searchable offline, Work Offline, and Send/Receive with Show Progress.</span></li>
+        <li><strong>Bring your .pst files</strong><span>Import an Outlook Data File into your mailbox, folders and all, without Outlook.</span></li>
         <li><strong>&ldquo;Why is this suspicious?&rdquo;</strong><span>A plain-language explanation for messages that look like phishing.</span></li>
-        <li><strong>Reply-all guardrails</strong><span>A second look before a message goes to everyone.</span></li>
-        <li><strong>Read-only mode</strong><span>Browse a mailbox without changing anything.</span></li>
+        <li><strong>A second look before sending</strong><span>A check for forgotten attachments, outside recipients and replies to many people.</span></li>
+        <li><strong>Read-only mode</strong><span>Browse a mailbox without changing anything, until you choose to allow changes.</span></li>
         <li><strong>Light and dark mode</strong><span>Pick the look that suits you.</span></li>
-        <li><strong>MSI install for IT</strong><span>A standard Windows Installer package for managed deployment.</span></li>
+        <li><strong>Ready for IT</strong><span>A signed Windows Installer package and Group Policy and Intune templates for managed deployment.</span></li>
       </ul>
+    </section>
+
+    <section aria-labelledby="beta">
+      <h2 id="beta">About the beta</h2>
+      <p>The beta is free. Each new build is offered inside the app (Help &rarr; Check for Updates), and beta builds work until December 31, 2026. After that, a beta build keeps the mail already on your PC readable but stops sending and receiving until you install a newer version.</p>
+      <p>Found a problem, or missing something you used in Outlook? Use <strong>Help &rarr; Suggest a Feature</strong> or <strong>Contact Support</strong> in the app.</p>
     </section>
 
     <section aria-labelledby="support">
