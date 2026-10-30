@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mail - InCloseMail Help</title>
+  <meta name="description" content="Reading and writing mail in InCloseMail: Focused Inbox, search, rules, junk mail and phishing warnings.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Mail</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html" aria-current="page">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <h2 id="reading">Reading mail</h2>
+    <ul>
+      <li>Click a message to read it in the reading pane. Double-click it, or press Enter, to open it in its own window.</li>
+      <li>Use <strong>View &rarr; Reading Pane</strong> to put the pane on the right, at the bottom, or turn it off.</li>
+      <li>Pictures from the web are blocked until you click <strong>Download pictures</strong>.</li>
+      <li>Files that can run code, such as .exe and .js files, are blocked, as they are in Outlook.</li>
+      <li><strong>File &rarr; Options &rarr; Mail</strong> sets when a message counts as read: right away, after waiting, or when you select another message.</li>
+    </ul>
+
+    <h2 id="focused-inbox">Focused Inbox</h2>
+    <p>Your Inbox has two tabs, <strong>Focused</strong> and <strong>Other</strong>, sorted by Microsoft&rsquo;s own classification. The number beside Inbox counts both tabs. The number beside Other shows how many of those unread messages are on that tab.</p>
+    <ul>
+      <li>Right-click a message for <strong>Move to Other</strong> or <strong>Move to Focused</strong>.</li>
+      <li><strong>Always Move to Other</strong> or <strong>Always Move to Focused</strong> puts that sender&rsquo;s new mail on that tab everywhere, including Outlook on the web.</li>
+      <li>To turn the tabs off, clear <strong>View &rarr; Show Focused Inbox</strong>. Shared mailboxes and other folders show All and Unread instead.</li>
+    </ul>
+
+    <h2 id="writing">Writing mail</h2>
+    <ul>
+      <li><strong>New Email</strong> is Ctrl+N, and Ctrl+Shift+M from anywhere. <strong>Reply</strong> is Ctrl+R, <strong>Reply All</strong> Ctrl+Shift+R and <strong>Forward</strong> Ctrl+F.</li>
+      <li>Send with <strong>Send</strong>, Ctrl+Enter or Alt+S. A message can carry up to 20 MB of attachments.</li>
+      <li>Drafts save themselves every 3 minutes. <strong>File &rarr; Options &rarr; Mail</strong> changes that.</li>
+      <li><strong>Signatures:</strong> <strong>Insert &rarr; Signature &rarr; Signatures...</strong> Set the defaults for new messages and for replies there.</li>
+      <li><strong>Send later:</strong> <strong>Options &rarr; Delay Delivery</strong>. Exchange holds the message in the Outbox, so it goes out even with InCloseMail closed.</li>
+      <li><strong>Quick Parts and templates:</strong> <strong>Insert &rarr; Quick Parts</strong> and <strong>Message &rarr; View Templates</strong>. Both are kept on this PC.</li>
+      <li>Before sending, InCloseMail warns about a reply to 20 or more people, outside recipients on a message that also goes to colleagues, and an attachment you mentioned but didn&rsquo;t attach. Turn this off in <strong>File &rarr; Options &rarr; Mail</strong>.</li>
+    </ul>
+
+    <h2 id="organizing">Organizing mail</h2>
+    <ul>
+      <li><strong>Delete</strong> moves messages to Deleted Items. <strong>Shift+Delete</strong> skips Deleted Items, after asking. <strong>Backspace</strong> archives.</li>
+      <li><strong>Undo</strong> (Ctrl+Z) takes back your last moves, deletes, flags and categories, up to 20 of them.</li>
+      <li><strong>Follow Up</strong> flags messages. Insert flags for today.</li>
+      <li><strong>Categorize</strong> adds color categories. In <strong>All Categories</strong> you can give one a shortcut key.</li>
+      <li><strong>Quick Steps</strong> (Home tab) run several actions with one click. Give one a shortcut in <strong>Manage Quick Steps</strong>.</li>
+      <li><strong>Clean Up</strong> and <strong>Ignore</strong> (Home tab) deal with long conversations.</li>
+      <li><strong>View &rarr; Show as Conversations</strong> threads the list. <strong>View &rarr; Clean Conversation View</strong> reads a whole conversation like a chat in the reading pane.</li>
+      <li><strong>Folder &rarr; Recover Deleted Items</strong> brings back what was deleted from Deleted Items, for a while afterwards.</li>
+    </ul>
+
+    <h2 id="search">Search</h2>
+    <ul>
+      <li>Ctrl+E puts the cursor in the search box. Results appear as you type. Esc goes back to the folder.</li>
+      <li>The <strong>Search</strong> tab sets the scope: Current Folder, Subfolders, Current Mailbox or All Mailboxes.</li>
+      <li>You can type criteria alongside words, such as <code>from:"Megan"</code>, <code>hasattachments:yes</code> or <code>read:no</code>.</li>
+      <li><strong>Advanced Find</strong> is Ctrl+Shift+F. <strong>New Search Folder</strong> is Ctrl+Shift+P.</li>
+      <li><strong>File &rarr; Options &rarr; Search</strong> sets how many results show and whether Deleted Items is included.</li>
+    </ul>
+
+    <h2 id="rules">Rules</h2>
+    <p><strong>Home &rarr; Rules &rarr; Manage Rules &amp; Alerts...</strong> lists your rules. <strong>Create Rule...</strong> starts one from the selected message. Rules are kept and run by Exchange, so they work with InCloseMail closed and show in Outlook on the web. <strong>Run Rules Now</strong> applies them to mail already in a folder, but never forwards it. <strong>Export Rules</strong> and <strong>Import Rules</strong> move your rules to another mailbox.</p>
+
+    <h2 id="junk">Junk mail and phishing</h2>
+    <ul>
+      <li><strong>Home &rarr; Junk</strong> has Block Sender, Never Block Sender, Not Junk and Junk E-mail Options.</li>
+      <li>InCloseMail&rsquo;s Safe Senders list is kept on this PC and works while the app is running. For filtering that works everywhere, also add senders in Outlook on the web.</li>
+      <li>When a message has signs of phishing, a bar appears above it. Click <strong>Why is this suspicious?</strong> for the reasons and what to do. <strong>Block Sender</strong> and <strong>I know this sender</strong> are there too. The bar never moves or blocks anything by itself.</li>
+    </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

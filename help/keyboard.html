@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard shortcuts - InCloseMail Help</title>
+  <meta name="description" content="InCloseMail's keyboard shortcuts, the same keys as Outlook.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Keyboard shortcuts</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html" aria-current="page">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <p>InCloseMail uses Outlook&rsquo;s keys. These are the ones people use most.</p>
+
+    <h2 id="everywhere">Everywhere</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>F1</td><td>Help for the area you&rsquo;re in</td></tr>
+      <tr><td>Alt+Q</td><td>Tell me what you want to do</td></tr>
+      <tr><td>Ctrl+1, 2, 3, 4</td><td>Mail, Calendar, People, Tasks</td></tr>
+      <tr><td>Ctrl+N</td><td>A new item of the kind you&rsquo;re looking at</td></tr>
+      <tr><td>Ctrl+Shift+M</td><td>New message</td></tr>
+      <tr><td>Ctrl+Shift+A, Ctrl+Shift+Q</td><td>New appointment, new meeting</td></tr>
+      <tr><td>Ctrl+Shift+C, Ctrl+Shift+K</td><td>New contact, new task</td></tr>
+      <tr><td>Ctrl+E or F3</td><td>Search</td></tr>
+      <tr><td>Ctrl+Shift+F</td><td>Advanced Find</td></tr>
+      <tr><td>Ctrl+Y</td><td>Go to a folder</td></tr>
+      <tr><td>F9, Shift+F9</td><td>Send/Receive all folders, the current folder</td></tr>
+      <tr><td>Ctrl+P</td><td>Print</td></tr>
+      <tr><td>Ctrl+Shift+B</td><td>Address Book</td></tr>
+      <tr><td>F6, Shift+F6</td><td>Move between the panes (Mail)</td></tr>
+      <tr><td>Ctrl+0</td><td>Reset the window&rsquo;s zoom</td></tr>
+    </table>
+
+    <h2 id="mail">Mail</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>Ctrl+R, Ctrl+Shift+R, Ctrl+F</td><td>Reply, Reply All, Forward</td></tr>
+      <tr><td>Ctrl+Alt+R, Ctrl+Alt+F</td><td>Reply with Meeting, Forward as Attachment</td></tr>
+      <tr><td>Ctrl+Q, Ctrl+U</td><td>Mark as read, mark as unread</td></tr>
+      <tr><td>Delete or Ctrl+D</td><td>Delete</td></tr>
+      <tr><td>Shift+Delete</td><td>Delete permanently, after asking</td></tr>
+      <tr><td>Backspace</td><td>Archive</td></tr>
+      <tr><td>Ctrl+Delete</td><td>Ignore the conversation</td></tr>
+      <tr><td>Insert, Ctrl+Shift+G</td><td>Flag for today, flag with a date</td></tr>
+      <tr><td>Ctrl+Shift+V, Ctrl+Shift+Y</td><td>Move to a folder, copy to a folder</td></tr>
+      <tr><td>Ctrl+Z</td><td>Undo</td></tr>
+      <tr><td>Ctrl+. and Ctrl+,</td><td>Next and previous message</td></tr>
+      <tr><td>Space, Shift+Space</td><td>Page through the message, then go to the next unread one</td></tr>
+      <tr><td>Ctrl+Shift+I, Ctrl+Shift+O</td><td>Go to the Inbox, the Outbox</td></tr>
+      <tr><td>Ctrl+Shift+E, Ctrl+Shift+P</td><td>New folder, new Search Folder</td></tr>
+      <tr><td>Ctrl+Alt+J</td><td>Not Junk (in Junk Email)</td></tr>
+      <tr><td>F4</td><td>Find in the open message</td></tr>
+      <tr><td>F12, Alt+Enter</td><td>Save As, message properties</td></tr>
+    </table>
+
+    <h2 id="writing">Writing a message</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>Ctrl+Enter or Alt+S</td><td>Send</td></tr>
+      <tr><td>Ctrl+S</td><td>Save the draft</td></tr>
+      <tr><td>Ctrl+K</td><td>Check Names; in the message text, Insert Hyperlink</td></tr>
+      <tr><td>F7</td><td>Spelling &amp; Grammar</td></tr>
+      <tr><td>Ctrl+H</td><td>Find and Replace</td></tr>
+      <tr><td>Ctrl+B, Ctrl+I, Ctrl+U</td><td>Bold, italic, underline</td></tr>
+      <tr><td>Ctrl+L, Ctrl+E, Ctrl+R, Ctrl+J</td><td>Align left, center, right, justify</td></tr>
+      <tr><td>Ctrl+Shift+L</td><td>Bullets</td></tr>
+    </table>
+
+    <h2 id="calendar">Calendar</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>Ctrl+Alt+1 to Ctrl+Alt+5</td><td>Day, Work Week, Week, Month, Schedule View</td></tr>
+      <tr><td>Ctrl+G</td><td>Go To Date</td></tr>
+      <tr><td>Alt+Down, Alt+Up</td><td>Next week, last week</td></tr>
+      <tr><td>Alt+Page Down, Alt+Page Up</td><td>Next month, last month</td></tr>
+    </table>
+
+    <h2 id="ribbon">Ribbon key tips</h2>
+    <p>Press Alt or F10 and each tab and command shows its letters, as in Outlook. For example, Alt, H, R, P replies and Alt, H, D deletes.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>People - InCloseMail Help</title>
+  <meta name="description" content="Contacts, contact groups and the Address Book in InCloseMail.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>People</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html" aria-current="page">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <h2 id="contacts">Contacts</h2>
+    <ul>
+      <li>Press Ctrl+3 or click People at the bottom of the folder pane.</li>
+      <li><strong>Change View</strong> (Home) switches between People, Business Card, Phone and List.</li>
+      <li>The search box above the list matches names, companies, addresses and phone numbers. The A&ndash;Z index beside the list jumps to a letter.</li>
+      <li><strong>New Contact</strong> is Ctrl+Shift+C. Double-click a contact to edit it. Delete sends it to Deleted Items, after asking.</li>
+      <li>Contact folders appear under My Contacts. <strong>New Folder</strong> (Home) adds one.</li>
+      <li><strong>File &rarr; Options &rarr; People</strong> sets the sort order and how names are filed.</li>
+    </ul>
+
+    <h2 id="groups">Contact groups</h2>
+    <p><strong>New Contact Group</strong> (Ctrl+Shift+L) gives a name to several people. Type that name in To, Cc or Bcc to send to everyone in it. These groups are kept on this PC. Outlook&rsquo;s own contact groups don&rsquo;t appear, as Microsoft 365 doesn&rsquo;t share them with other apps.</p>
+
+    <h2 id="address-book">Address Book</h2>
+    <p>Ctrl+Shift+B opens the Address Book. It shows your contacts or, for a work or school account, the Global Address List. The first time you use the Global Address List, <strong>Allow...</strong> asks for permission to read names and addresses.</p>
+
+    <h2 id="more">More</h2>
+    <ul>
+      <li><strong>Search People</strong> (Home) finds someone by name or address from Mail too.</li>
+      <li><strong>Mail Merge</strong> (People &rarr; Home) sends one message per contact, with merge fields.</li>
+      <li><strong>Open Shared Contacts</strong> shows contacts someone has shared with you.</li>
+      <li><strong>Follow Up</strong> flags a contact, as in Outlook.</li>
+    </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

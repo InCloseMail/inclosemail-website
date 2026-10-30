@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Troubleshooting - InCloseMail Help</title>
+  <meta name="description" content="Fixing sign-in, sending and mail problems in InCloseMail, and how to reach support.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Troubleshooting</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html" aria-current="page">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <h2 id="sign-in">Signing in</h2>
+    <ul>
+      <li><strong>&ldquo;Need admin approval&rdquo;:</strong> your organization requires an administrator to approve the app&rsquo;s permissions. Ask them to approve it, using the link Microsoft shows.</li>
+      <li><strong>The status bar lists missing permissions:</strong> your organization approved only some of them. The app reads what it can, but changes can&rsquo;t be turned on until the rest are approved.</li>
+      <li><strong>The Windows sign-in window doesn&rsquo;t appear:</strong> InCloseMail falls back to your browser.</li>
+      <li><strong>To remove the app&rsquo;s access:</strong> use <a href="https://account.microsoft.com">account.microsoft.com</a> for a personal account, or <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> for a work or school account.</li>
+    </ul>
+
+    <h2 id="sending">Sending</h2>
+    <ul>
+      <li><strong>Commands ask to allow changes, or are greyed out:</strong> the account is read-only. See <a href="accounts.html#read-only">Read-only mode</a>.</li>
+      <li><strong>Mail comes back with &ldquo;550 5.7.708&rdquo;:</strong> Microsoft refuses mail that some new Microsoft 365 organizations send to outside addresses this way. Turn on <strong>File &rarr; Options &rarr; Mail &rarr; Send through Exchange Online&rsquo;s SMTP server</strong>. If your organization has SMTP sign-in off, the app says how an administrator turns it on.</li>
+      <li><strong>A message stays in Drafts:</strong> sending failed, and the message form says why. If you sent from another address, check that you have Send As permission.</li>
+    </ul>
+
+    <h2 id="mail">Mail</h2>
+    <ul>
+      <li><strong>The Inbox shows an unread number but you can&rsquo;t find the message:</strong> it&rsquo;s probably on the <a href="mail.html#focused-inbox">Other tab</a>.</li>
+      <li><strong>Message text doesn&rsquo;t show:</strong> install or repair the Microsoft Edge WebView2 Runtime.</li>
+      <li><strong>A message I expected isn&rsquo;t there:</strong> older mail is read from the server as you scroll down. Search looks at the server too, unless you&rsquo;re offline.</li>
+      <li><strong>The status bar says Working Offline:</strong> click it to try to reconnect. If you chose Work Offline yourself, click <strong>Send / Receive &rarr; Work Offline</strong> again.</li>
+    </ul>
+
+    <h2 id="updates">Updates and the beta</h2>
+    <ul>
+      <li>InCloseMail checks for a new version once a day and shows a bar when there is one. <strong>Help &rarr; Check for Updates</strong> checks now.</li>
+      <li><strong>Install now</strong> needs Windows&rsquo; admin approval. The app closes, updates and reopens.</li>
+      <li>Beta builds work until December 31, 2026. After that, a beta build keeps the mail on your PC readable but stops sending and receiving until you install a newer version.</li>
+      <li><strong>Help &rarr; What&rsquo;s New</strong> shows what changed in each release.</li>
+    </ul>
+
+    <h2 id="support">Getting support</h2>
+    <ul>
+      <li><strong>Help &rarr; Contact Support</strong> sends us a message, with a screenshot if you like. <strong>Help &rarr; Suggest a Feature</strong> tells us what you miss from Outlook.</li>
+      <li>You can also email <a href="mailto:support@inclosemail.com">support@inclosemail.com</a>.</li>
+      <li>If support asks for a log: choose <strong>File &rarr; Options &rarr; Advanced &rarr; Turn on debug logging</strong>, click OK, do what goes wrong again, then choose <strong>Send Log...</strong> there. The log never holds the content of your mail, subjects, search words or sign-in tokens.</li>
+    </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

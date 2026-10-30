@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar - InCloseMail Help</title>
+  <meta name="description" content="Using the InCloseMail calendar: views, appointments, meetings, and shared and internet calendars.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Calendar</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html" aria-current="page">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <h2 id="views">Views</h2>
+    <ul>
+      <li>The Calendar <strong>Home</strong> tab has Day, Work Week, Week, Month and Schedule View (Ctrl+Alt+1 to Ctrl+Alt+5), plus Today and Next 7 Days.</li>
+      <li><strong>Change View</strong> lists your items, and <strong>Time Scale</strong> sets how much time each row covers.</li>
+      <li>Click a date in the small month calendar in the folder pane to go there. Ctrl+G opens Go To Date.</li>
+      <li><strong>File &rarr; Options &rarr; Calendar</strong> sets your work hours, work week, first day of the week, a second time zone, week numbers and the default reminder. <strong>Add Holidays</strong> is there too.</li>
+    </ul>
+
+    <h2 id="items">Appointments and meetings</h2>
+    <ul>
+      <li>New appointment: Ctrl+Shift+A. New meeting: Ctrl+Shift+Q. Ctrl+N makes a new appointment while you&rsquo;re in Calendar.</li>
+      <li>Click an item to see its details. Double-click it to open the form. Until you <a href="accounts.html#read-only">allow changes</a>, the form is read-only.</li>
+      <li>Drag an item to move it. Hold Ctrl while dragging in the Day and Week views to copy it.</li>
+      <li>Answer invitations with Accept, Tentative or Decline. <strong>Forward</strong> sends a meeting to more people.</li>
+      <li>The meeting form has the <strong>Scheduling Assistant</strong>, and <strong>Rooms...</strong> beside Location opens Room Finder.</li>
+      <li>Appointments and meetings can have recurrence and attached files.</li>
+      <li>Reminders appear in the Reminders window, where you can snooze or dismiss them. They need a connection.</li>
+    </ul>
+
+    <h2 id="other-calendars">Other calendars</h2>
+    <ul>
+      <li><strong>My Calendars:</strong> tick one to show it over your main calendar in its own color. <strong>New Calendar</strong> (Home) adds a blank one.</li>
+      <li><strong>Open Shared Calendar</strong> (Home) shows a colleague&rsquo;s calendar or a shared mailbox&rsquo;s by email address. These open read-only here.</li>
+      <li><strong>Share Calendar</strong> (Home) shows who can see your calendar and lets you add, change or remove people.</li>
+      <li><strong>Calendar From Internet</strong> (Home) adds a published .ics link, such as public holidays or a team&rsquo;s schedule. It&rsquo;s read-only, and it stays on this PC, so Outlook on other PCs won&rsquo;t show it.</li>
+      <li><strong>Calendar Groups</strong> (Home) shows several calendars together.</li>
+    </ul>
+
+    <h2 id="printing">Printing</h2>
+    <p><strong>File &rarr; Print</strong> or Ctrl+P. <strong>Settings</strong> offers Outlook&rsquo;s styles: Daily, Weekly Agenda, Weekly Calendar, Monthly, Tri-fold and Calendar Details.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accounts and offline - InCloseMail Help</title>
+  <meta name="description" content="Read-only mode, more accounts, shared mailboxes, the local copy of your mail, and .pst files in InCloseMail.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Accounts and offline</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html" aria-current="page">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <h2 id="read-only">Read-only mode</h2>
+    <p>A real mailbox opens read-only: InCloseMail doesn&rsquo;t send, move, delete or mark anything, and opening a message doesn&rsquo;t mark it as read. The status bar shows <strong>Mode: Read Only</strong>.</p>
+    <ul>
+      <li><strong>To allow changes as you go,</strong> click a command that changes your mailbox, such as New Email, and answer Yes.</li>
+      <li><strong>To allow changes ahead of time,</strong> choose <strong>File &rarr; Options &rarr; Mail &rarr; Allow changes to my mailbox</strong>.</li>
+      <li><strong>To allow only some kinds of change,</strong> choose <strong>Custom</strong> there and tick the ones you want.</li>
+      <li><strong>To make sure an account never changes,</strong> choose <strong>Keep this account read-only</strong>.</li>
+    </ul>
+    <p>The choice is remembered for each account. Clicking <strong>Mode</strong> in the status bar opens these settings.</p>
+
+    <h2 id="accounts">More than one account</h2>
+    <p><strong>File &rarr; Add Account</strong> opens another work, school or Outlook.com account beside yours, with its mail in the folder pane and its address in the From list. Right-click it for <strong>Remove Account</strong>. <strong>File &rarr; Options &rarr; Mail</strong> sets read-only or changes for each account by itself.</p>
+
+    <h2 id="shared">Shared mailboxes</h2>
+    <ul>
+      <li>Shared mailboxes you have Full Access to usually appear by themselves. If a bar offers it, click <strong>Allow</strong>, or right-click your mailbox and choose <strong>Find Shared Mailboxes</strong>.</li>
+      <li>To add one by hand, right-click your mailbox and choose <strong>Add Shared Mailbox...</strong>. A new permission can take up to an hour to work.</li>
+      <li>A shared mailbox shows an <strong>S</strong> tag beside its name. <strong>File &rarr; Options &rarr; Mail &rarr; Shared mailboxes</strong> changes how it&rsquo;s marked.</li>
+      <li>To send from one, pick it in the message form&rsquo;s <strong>From</strong> list. You need Send As or Send on Behalf permission.</li>
+      <li>Messages can&rsquo;t be moved or copied between mailboxes.</li>
+    </ul>
+    <p>Shared mailboxes are for work and school accounts.</p>
+
+    <h2 id="offline">Offline and the local copy</h2>
+    <p>InCloseMail keeps a copy of your recent mail on this PC, encrypted for your Windows user. By default that&rsquo;s 30 days of the folders you&rsquo;ve opened and the messages you&rsquo;ve read, plus your calendar from a month back to three months ahead. Attachments and contacts aren&rsquo;t stored. Signing out deletes the copy.</p>
+    <ul>
+      <li><strong>File &rarr; Options &rarr; Advanced &rarr; Mail kept on this PC</strong> changes how much is kept.</li>
+      <li><strong>Send / Receive &rarr; Work Offline</strong> stops all sending and receiving until you click it again.</li>
+      <li>If your connection drops, the app goes offline by itself and reconnects when it can. Changes to your mailbox are off until then.</li>
+    </ul>
+
+    <h2 id="send-receive">Send/Receive</h2>
+    <p>New mail arrives by itself: the Inbox is checked often, and every folder every 30 minutes. F9 checks all folders now and Shift+F9 the current one. <strong>Send / Receive &rarr; Send/Receive Groups &rarr; Define Send/Receive Groups</strong> changes the timing.</p>
+
+    <h2 id="pst">.pst files and backups</h2>
+    <ul>
+      <li><strong>File &rarr; Open &amp; Export &rarr; Import/Export</strong> copies the mail in a .pst into your mailbox. It needs changes allowed. Large files take a while, as Microsoft limits the rate.</li>
+      <li><strong>File &rarr; Open &amp; Export &rarr; Export to .pst</strong> saves a copy of a mailbox or folder. It works on a read-only mailbox too.</li>
+      <li>Only mail is imported and exported, not calendars, contacts or tasks.</li>
+    </ul>
+
+    <h2 id="look">Appearance</h2>
+    <p><strong>View &rarr; Dark Mode</strong> switches between light and dark. <strong>File &rarr; Account &rarr; InCloseMail Theme</strong> has High Contrast and holiday themes. Ctrl+mouse wheel zooms the whole window and Ctrl+0 resets it. The slider on the status bar zooms only the message.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

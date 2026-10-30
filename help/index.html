@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InCloseMail Help</title>
+  <meta name="description" content="How to get started with InCloseMail, the Windows email client that works the way Outlook 2021 does.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>InCloseMail Help</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./" aria-current="page">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <p>If you&rsquo;ve used Outlook 2021, most of InCloseMail is already familiar: the ribbon, the menus, the right-click options and the keyboard shortcuts are where you expect them. These pages cover getting started and the places where InCloseMail works differently.</p>
+
+    <h2>Get started</h2>
+    <ol>
+      <li><strong>Install it.</strong> <a href="../">Download InCloseMail.msi</a> and run it. You need Windows 10 (version 1809) or Windows 11, 64-bit. If message text doesn&rsquo;t show after installing, see <a href="troubleshooting.html">Troubleshooting</a>.</li>
+      <li><strong>Sign in.</strong> Use a Microsoft 365 work or school account, or an Outlook.com account. The first time, Microsoft asks you to allow the app&rsquo;s permissions. Your organization may need an administrator to approve them.</li>
+      <li><strong>Look around.</strong> Your mail opens read-only, so nothing in your mailbox can change by accident, and opening a message doesn&rsquo;t mark it as read.</li>
+      <li><strong>Allow changes when you&rsquo;re ready.</strong> Click New Email, Reply or anything else that changes your mailbox and InCloseMail asks whether to allow changes. See <a href="accounts.html#read-only">Read-only mode</a>.</li>
+    </ol>
+    <p>Just want to look? Choose <strong>Try demo mode</strong> on the sign-in screen. It opens a sample mailbox, calendar and contacts that you can change freely, with no account.</p>
+
+    <h2>Find your way around</h2>
+    <ul>
+      <li><strong>Switch areas</strong> with the Mail, Calendar, People and Tasks buttons at the bottom of the folder pane, or Ctrl+1 to Ctrl+4.</li>
+      <li><strong>Find any command</strong> by typing a few words in the <strong>Tell me what you want to do</strong> box to the right of the ribbon tabs (Alt+Q).</li>
+      <li><strong>Open help for the area you&rsquo;re in</strong> by pressing F1 in the main window.</li>
+    </ul>
+
+    <h2>Topics</h2>
+    <ul class="features">
+      <li><a href="mail.html"><strong>Mail</strong></a><span>Reading, Focused Inbox, writing, search, rules, junk and phishing warnings.</span></li>
+      <li><a href="calendar.html"><strong>Calendar</strong></a><span>Views, appointments and meetings, shared and internet calendars.</span></li>
+      <li><a href="people.html"><strong>People</strong></a><span>Contacts, contact groups and the Address Book.</span></li>
+      <li><a href="tasks.html"><strong>Tasks</strong></a><span>Your Microsoft To Do lists and flagged mail.</span></li>
+      <li><a href="accounts.html"><strong>Accounts and offline</strong></a><span>Read-only mode, more accounts, shared mailboxes, the local copy, .pst files.</span></li>
+      <li><a href="keyboard.html"><strong>Keyboard shortcuts</strong></a><span>Outlook&rsquo;s shortcuts and ribbon key tips.</span></li>
+      <li><a href="troubleshooting.html"><strong>Troubleshooting</strong></a><span>Sign-in problems, updates, and how to reach support.</span></li>
+    </ul>
+
+    <h2>Different from Outlook</h2>
+    <ul>
+      <li><strong>Read-only until you say so.</strong> A real mailbox starts read-only. See <a href="accounts.html#read-only">Read-only mode</a>.</li>
+      <li><strong>Settings stay on this PC.</strong> Options, Quick Steps, signatures, Quick Parts, templates and Safe Senders aren&rsquo;t stored in your mailbox, so Outlook and your other PCs keep their own. Rules, categories and Automatic Replies are in your mailbox and are shared.</li>
+      <li><strong>Attachments are never stored on this PC ahead of time,</strong> and the local copy keeps 30 days of mail unless you change it. See <a href="accounts.html#offline">Offline and the local copy</a>.</li>
+      <li><strong>Contact groups are InCloseMail&rsquo;s own.</strong> Outlook&rsquo;s contact groups don&rsquo;t appear, as Microsoft 365 doesn&rsquo;t share them with other apps.</li>
+      <li><strong>A few things aren&rsquo;t available</strong> because Microsoft doesn&rsquo;t offer them to other apps, including message recall and room lists.</li>
+    </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

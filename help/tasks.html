@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasks - InCloseMail Help</title>
+  <meta name="description" content="Using your Microsoft To Do lists and flagged mail in InCloseMail.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Tasks</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html" aria-current="page">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+    </nav>
+
+    <main class="doc">
+    <p>Tasks shows your Microsoft To Do lists, the same tasks you see in Outlook on the web and new Outlook. Press Ctrl+4 or click Tasks at the bottom of the folder pane.</p>
+
+    <h2 id="first-use">The first time</h2>
+    <p>Tasks needs a permission that sign-in doesn&rsquo;t ask for, so the first click opens a Microsoft sign-in window for it. If you cancel, Tasks explains why and offers <strong>Allow access</strong>. Your organization may need an administrator to approve it.</p>
+
+    <h2 id="using">Using tasks</h2>
+    <ul>
+      <li>Type in <strong>Click here to add a new Task</strong> and press Enter. <strong>New Task</strong> (Ctrl+N, or Ctrl+Shift+K from anywhere) opens the full form.</li>
+      <li>The form has the start and due dates, status, priority, reminder, categories, notes and <strong>Recurrence...</strong>. Completing a recurring task brings the next one.</li>
+      <li>The check box on a row, <strong>Mark Complete</strong> or Insert completes a task or reopens it.</li>
+      <li><strong>My Tasks</strong> in the folder pane lists your task lists.</li>
+      <li><strong>Change View</strong> has Simple List, Detailed, To-Do List, Prioritized, Active, Completed, Today, Next 7 Days and Overdue.</li>
+      <li><strong>To-Do List</strong> shows your open tasks and flagged messages together, by due date.</li>
+    </ul>
+
+    <h2 id="to-do-bar">To-Do Bar</h2>
+    <p><strong>View &rarr; To-Do Bar</strong> keeps the calendar and your flagged mail beside your messages in Mail.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>
