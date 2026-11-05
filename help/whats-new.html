@@ -49,9 +49,16 @@
 
     <main class="doc">
     <!-- Made by OutlookClassic/tools/Build-WhatsNew.ps1 from the release notes: edit the notes, not this file. -->
-    <p>Every InCloseMail build, newest first. The latest is build 6 of 5 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
+    <p>Every InCloseMail build, newest first. The latest is build 7 of 5 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
     <p>Running a build from 27 October earlier than build 17? It can&rsquo;t install updates itself: <a href="https://github.com/InCloseMail/inclosemail-releases/releases/latest/download/InCloseMail.msi">download the latest installer</a> and run it once.</p>
     <h2 id="d2026-11-05">5 November 2026</h2>
+    <section class="release" id="v26.11.507">
+      <h3>Build 7 <span class="release-version">version 26.11.507</span></h3>
+      <h4>Fixed</h4>
+      <ul>
+        <li><strong>An account added beside your main one keeps its downloaded mail when it needs you to sign in again.</strong> Before, if its sign-in stopped working (say your organization removed InCloseMail, or your password changed), the account was dropped and its mail deleted from your PC at the next start. Now it waits: it signs in again by itself if access comes back, or you can sign in again with File &rarr; Add Account, and its mail is still there. Only if it isn&#39;t signed in again within 30 days is its mail removed.</li>
+      </ul>
+    </section>
     <section class="release" id="v26.11.506">
       <h3>Build 6 <span class="release-version">version 26.11.506</span></h3>
       <h4>Changed</h4>
