@@ -49,9 +49,16 @@
 
     <main class="doc">
     <!-- Made by OutlookClassic/tools/Build-WhatsNew.ps1 from the release notes: edit the notes, not this file. -->
-    <p>Every InCloseMail build, newest first. The latest is build 8 of 5 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
+    <p>Every InCloseMail build, newest first. The latest is build 9 of 5 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
     <p>Running a build from 27 October earlier than build 17? It can&rsquo;t install updates itself: <a href="https://github.com/InCloseMail/inclosemail-releases/releases/latest/download/InCloseMail.msi">download the latest installer</a> and run it once.</p>
     <h2 id="d2026-11-05">5 November 2026</h2>
+    <section class="release" id="v26.11.509">
+      <h3>Build 9 <span class="release-version">version 26.11.509</span></h3>
+      <h4>Fixed</h4>
+      <ul>
+        <li><strong>An added account that loses access while InCloseMail is open no longer opens Microsoft&#39;s sign-in in your browser by itself.</strong> Before, if your organization removed InCloseMail (or the password changed), about an hour later a &quot;Pick an account&quot; page appeared out of nowhere, and if you closed it the account quietly stopped getting mail. Now the account is set aside at once: it leaves the folder pane, its mail stays on your PC, the status bar says it needs you to sign in again, and <strong>File &rarr; Account</strong> lists it with <strong>Sign In Again</strong> and <strong>Remove</strong>.</li>
+      </ul>
+    </section>
     <section class="release" id="v26.11.508">
       <h3>Build 8 <span class="release-version">version 26.11.508</span></h3>
       <h4>New</h4>
