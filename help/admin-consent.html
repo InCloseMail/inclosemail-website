@@ -70,13 +70,13 @@
       <tr><td>Mail.Send.Shared</td><td>Microsoft Graph</td><td>Sending as a shared mailbox they have Send As or Send on Behalf rights to</td><td>Sign-in</td></tr>
       <tr><td>Calendars.ReadWrite.Shared</td><td>Microsoft Graph</td><td>Calendars shared with them</td><td>Sign-in</td></tr>
       <tr><td>offline_access</td><td>Microsoft Graph</td><td>Staying signed in between sessions</td><td>Sign-in</td></tr>
-      <tr><td>User.ReadBasic.All</td><td>Microsoft Graph</td><td>The Address Book: names and addresses in your directory</td><td>First use of the Address Book</td></tr>
-      <tr><td>Tasks.ReadWrite</td><td>Microsoft Graph</td><td>Tasks (Microsoft To Do)</td><td>First use of Tasks</td></tr>
-      <tr><td>Contacts.Read.Shared</td><td>Microsoft Graph</td><td>Contact folders other people shared with them</td><td>First use of Open Shared Contacts</td></tr>
-      <tr><td>EWS.AccessAsUser.All</td><td>Office 365 Exchange Online</td><td>Finding the shared mailboxes they have access to (Autodiscover only; no other Exchange requests)</td><td>When they click Allow to find shared mailboxes</td></tr>
-      <tr><td>SMTP.Send</td><td>Office 365 Exchange Online</td><td>Sending through SMTP, an option for organizations whose outside mail Microsoft refuses from Graph</td><td>Only if they turn on Send through SMTP</td></tr>
+      <tr><td>User.ReadBasic.All</td><td>Microsoft Graph</td><td>The Address Book: names and addresses in your directory</td><td>Sign-in</td></tr>
+      <tr><td>Tasks.ReadWrite</td><td>Microsoft Graph</td><td>Tasks (Microsoft To Do)</td><td>Sign-in</td></tr>
+      <tr><td>Contacts.Read.Shared</td><td>Microsoft Graph</td><td>Contact folders other people shared with them</td><td>Sign-in</td></tr>
+      <tr><td>EWS.AccessAsUser.All</td><td>Office 365 Exchange Online</td><td>Finding the shared mailboxes they have access to (Autodiscover only; no other Exchange requests)</td><td>Sign-in (work and school accounts)</td></tr>
+      <tr><td>SMTP.Send</td><td>Office 365 Exchange Online</td><td>Sending through SMTP, an option for organizations whose outside mail Microsoft refuses from Graph</td><td>Sign-in (work and school accounts)</td></tr>
     </table>
-    <p>Without an administrator&rsquo;s approval, the ones asked for later are requested when each feature is first used, so a permission your organization doesn&rsquo;t allow only turns off its own feature.</p>
+    <p>InCloseMail asks for all of them the first time someone signs in, so nobody is asked again later. Personal Outlook.com accounts get only the ones that apply to them. If your organization approves only some, InCloseMail works with what it has, and a feature whose permission is missing asks for it when it&rsquo;s used.</p>
 
     <h2 id="remove">Removing InCloseMail</h2>
     <p>In the Entra admin center, <strong>Enterprise applications &rarr; InCloseMail &rarr; Properties &rarr; Delete</strong> removes it and every approval. Signed-in copies stop working at once.</p>
