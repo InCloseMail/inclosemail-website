@@ -260,6 +260,11 @@ a.brand { color: inherit; text-decoration: none; }
 .doc { max-width: 760px; }
 
 .doc h2 { margin-top: 32px; }
+/* What's New: one section per build under each day's heading. */
+.doc .release { margin-top: 18px; padding-top: 2px; }
+.doc .release h3 { margin-bottom: 4px; }
+.doc .release h4 { margin: 12px 0 4px; font-size: 1rem; }
+.doc .release-version { color: var(--muted); font-weight: normal; font-size: 0.85em; margin-left: 6px; }
 
 .doc p, .doc li { margin: 0 0 12px; }
 
