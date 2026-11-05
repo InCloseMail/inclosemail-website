@@ -350,3 +350,9 @@ a.brand { color: inherit; text-decoration: none; }
   .help-nav a[aria-current="page"] { border-bottom-color: var(--accent); }
   .doc td:first-child { white-space: normal; }
 }
+
+/* For administrators: the approve button on a light page, and the result Microsoft sends back. */
+.doc .consent-button { background: var(--accent); color: #ffffff; margin: 6px 0; }
+.doc .consent-button:hover { background: var(--accent); filter: brightness(1.1); }
+.doc .consent-result { border-left: 4px solid var(--accent); background: var(--surface); padding: 12px 16px; margin: 8px 0 4px; }
+.doc .consent-result.error { border-left-color: #c42b1c; }

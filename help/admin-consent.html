@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For administrators - InCloseMail Help</title>
+  <meta name="description" content="Approve InCloseMail for your whole organization in one step, and what each of its permissions is for.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>For administrators</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="admin-consent.html" aria-current="page">For administrators</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+    </nav>
+
+    <main class="doc">
+    <div id="consent-result" class="consent-result" hidden></div>
+
+    <h2 id="approve">Approve InCloseMail for your organization</h2>
+    <p>If your organization lets only administrators approve apps, people see &ldquo;Need admin approval&rdquo; when they sign in, and again when they first use some features. One approval covers every permission for everyone in your organization, so nobody is asked again.</p>
+    <p><a class="button consent-button" href="https://login.microsoftonline.com/organizations/adminconsent?client_id=f53ddd65-25b9-4df1-af00-a2cdfef81a63&amp;redirect_uri=https%3A%2F%2Finclosemail.com%2Fhelp%2Fadmin-consent.html">Approve for my organization</a></p>
+    <p>Sign in as a Global Administrator, Cloud Application Administrator or Application Administrator. Microsoft lists the permissions below and asks you to accept. Afterwards you come back to this page, which says whether it worked.</p>
+    <p>You can also do it in the <a href="https://entra.microsoft.com">Microsoft Entra admin center</a>: <strong>Enterprise applications &rarr; InCloseMail &rarr; Permissions &rarr; Grant admin consent</strong> (InCloseMail is listed there once anyone in your organization has signed in).</p>
+
+    <h2 id="permissions">What each permission is for</h2>
+    <p>All of them are <strong>delegated</strong>: InCloseMail acts only as the person signed in, and only on mail, calendars and contacts that person can already open. It has no access of its own, nothing runs on a server, and no mail leaves their PC except to Microsoft.</p>
+    <table>
+      <tr><th>Permission</th><th>API</th><th>What it&rsquo;s for</th><th>Asked for</th></tr>
+      <tr><td>User.Read</td><td>Microsoft Graph</td><td>The person&rsquo;s name, address, photo and aliases</td><td>Sign-in</td></tr>
+      <tr><td>Mail.ReadWrite</td><td>Microsoft Graph</td><td>Reading and organizing their mail</td><td>Sign-in</td></tr>
+      <tr><td>Mail.Send</td><td>Microsoft Graph</td><td>Sending mail as them</td><td>Sign-in</td></tr>
+      <tr><td>Calendars.ReadWrite</td><td>Microsoft Graph</td><td>Their calendar</td><td>Sign-in</td></tr>
+      <tr><td>Contacts.ReadWrite</td><td>Microsoft Graph</td><td>Their contacts</td><td>Sign-in</td></tr>
+      <tr><td>MailboxSettings.ReadWrite</td><td>Microsoft Graph</td><td>Automatic Replies, categories, time zone</td><td>Sign-in</td></tr>
+      <tr><td>Mail.ReadWrite.Shared</td><td>Microsoft Graph</td><td>Shared mailboxes they already have access to</td><td>Sign-in</td></tr>
+      <tr><td>Mail.Send.Shared</td><td>Microsoft Graph</td><td>Sending as a shared mailbox they have Send As or Send on Behalf rights to</td><td>Sign-in</td></tr>
+      <tr><td>Calendars.ReadWrite.Shared</td><td>Microsoft Graph</td><td>Calendars shared with them</td><td>Sign-in</td></tr>
+      <tr><td>offline_access</td><td>Microsoft Graph</td><td>Staying signed in between sessions</td><td>Sign-in</td></tr>
+      <tr><td>User.ReadBasic.All</td><td>Microsoft Graph</td><td>The Address Book: names and addresses in your directory</td><td>First use of the Address Book</td></tr>
+      <tr><td>Tasks.ReadWrite</td><td>Microsoft Graph</td><td>Tasks (Microsoft To Do)</td><td>First use of Tasks</td></tr>
+      <tr><td>Contacts.Read.Shared</td><td>Microsoft Graph</td><td>Contact folders other people shared with them</td><td>First use of Open Shared Contacts</td></tr>
+      <tr><td>EWS.AccessAsUser.All</td><td>Office 365 Exchange Online</td><td>Finding the shared mailboxes they have access to (Autodiscover only; no other Exchange requests)</td><td>When they click Allow to find shared mailboxes</td></tr>
+      <tr><td>SMTP.Send</td><td>Office 365 Exchange Online</td><td>Sending through SMTP, an option for organizations whose outside mail Microsoft refuses from Graph</td><td>Only if they turn on Send through SMTP</td></tr>
+    </table>
+    <p>Without an administrator&rsquo;s approval, the ones asked for later are requested when each feature is first used, so a permission your organization doesn&rsquo;t allow only turns off its own feature.</p>
+
+    <h2 id="remove">Removing InCloseMail</h2>
+    <p>In the Entra admin center, <strong>Enterprise applications &rarr; InCloseMail &rarr; Properties &rarr; Delete</strong> removes it and every approval. Signed-in copies stop working at once.</p>
+    </main>
+  </div>
+
+  <script>
+    // Microsoft sends the administrator back here with the result in the address (admin_consent=True, or an error).
+    // Read here in the browser only; nothing is sent anywhere.
+    (function () {
+      var q = new URLSearchParams(location.search), box = document.getElementById('consent-result');
+      if (q.get('admin_consent') === 'True') {
+        box.textContent = 'Done: InCloseMail is approved for your organization. People can sign in without being asked again.';
+        box.className = 'consent-result ok'; box.hidden = false;
+      } else if (q.get('error')) {
+        box.textContent = 'Not approved: ' + (q.get('error_description') || q.get('error')).split(/[\r\n]/)[0];
+        box.className = 'consent-result error'; box.hidden = false;
+      }
+    })();
+  </script>
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>
