@@ -102,6 +102,19 @@
     <h2 id="rules">Rules</h2>
     <p><strong>Home &rarr; Rules &rarr; Manage Rules &amp; Alerts...</strong> lists your rules. <strong>Create Rule...</strong> starts one from the selected message. On mail in an added account, it makes a rule in that account. Rules are kept and run by Exchange, so they work with InCloseMail closed and show in Outlook on the web. <strong>Run Rules Now</strong> applies them to mail already in a folder, but never forwards it. <strong>Export Rules</strong> and <strong>Import Rules</strong> move your rules to another mailbox.</p>
 
+    <h3 id="script-rules">Script rules</h3>
+    <p><strong>Home &rarr; Rules &rarr; Script Rules...</strong> runs a script of yours when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did, with a script file instead of VBA. A rule can watch your Inbox, an added account&rsquo;s or a shared mailbox&rsquo;s, and match on the sender, the subject and whether there are attachments. The script can be a PowerShell script (.ps1), a batch file (.cmd or .bat) or a program (.exe).</p>
+    <ul>
+      <li>The script gets one argument: the path of a JSON file with the message&rsquo;s details (<code>subject</code>, <code>fromAddress</code>, <code>fromName</code>, <code>to</code>, <code>cc</code>, <code>received</code>, <code>hasAttachments</code>, <code>bodyPreview</code>, <code>internetMessageId</code>, <code>mailbox</code> and <code>emlPath</code>, where the whole message is saved as an .eml file). Both files are deleted when the script ends.</li>
+      <li>Nothing from the message is put on the script&rsquo;s command line, so a crafted subject can&rsquo;t run anything.</li>
+      <li>PowerShell scripts run only if they were made on this PC or are signed (the RemoteSigned policy); a downloaded unsigned script doesn&rsquo;t run.</li>
+      <li>Rules run while InCloseMail is open, on the new mail it finds, and are kept on this PC. <strong>Run Now</strong> tries a rule on the selected message.</li>
+    </ul>
+    <p>A short example, saving each matching message as an .eml file in a folder:</p>
+    <pre><code>param($Path)
+$m = Get-Content -Raw -LiteralPath $Path | ConvertFrom-Json
+Copy-Item -LiteralPath $m.emlPath -Destination "C:\Invoices\$($m.internetMessageId.Trim('&lt;&gt;')).eml"</code></pre>
+
     <h2 id="junk">Junk mail and phishing</h2>
     <ul>
       <li><strong>Home &rarr; Junk</strong> has Block Sender, Never Block Sender, Not Junk and Junk E-mail Options.</li>

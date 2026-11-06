@@ -49,9 +49,17 @@
 
     <main class="doc">
     <!-- Made by OutlookClassic/tools/Build-WhatsNew.ps1 from the release notes: edit the notes, not this file. -->
-    <p>Every InCloseMail build, newest first. The latest is build 13 of 5 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
+    <p>Every InCloseMail build, newest first. The latest is build 14 of 5 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
     <p>Running a build from 27 October earlier than build 17? It can&rsquo;t install updates itself: <a href="https://github.com/InCloseMail/inclosemail-releases/releases/latest/download/InCloseMail.msi">download the latest installer</a> and run it once.</p>
     <h2 id="d2026-11-05">5 November 2026</h2>
+    <section class="release" id="v26.11.514">
+      <h3>Build 14 <span class="release-version">version 26.11.514</span></h3>
+      <h4>New</h4>
+      <ul>
+        <li><strong>Script rules.</strong> <strong>Home &rarr; Rules &rarr; Script Rules</strong> runs a script of yours when matching mail arrives, as classic Outlook&#39;s &quot;run a script&quot; rule did, with a PowerShell script, batch file or program instead of VBA. Match on the mailbox, the sender, the subject and attachments; <strong>Run Now</strong> tries a rule on the selected message. The script gets the message&#39;s details as a JSON file and the message as an .eml file; nothing from the message is put on its command line. Rules run while InCloseMail is open and are kept on each PC.</li>
+        <li><strong>For IT:</strong> a &quot;Don&#39;t run script rules&quot; policy (<code>DisableScriptRules</code>) turns them off.</li>
+      </ul>
+    </section>
     <section class="release" id="v26.11.513">
       <h3>Build 13 <span class="release-version">version 26.11.513</span></h3>
       <h4>New</h4>
