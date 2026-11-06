@@ -49,9 +49,20 @@
 
     <main class="doc">
     <!-- Made by OutlookClassic/tools/Build-WhatsNew.ps1 from the release notes: edit the notes, not this file. -->
-    <p>Every InCloseMail build, newest first. The latest is build 2 of 6 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
+    <p>Every InCloseMail build, newest first. The latest is build 3 of 6 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
     <p>Running a build from 27 October earlier than build 17? It can&rsquo;t install updates itself: <a href="https://github.com/InCloseMail/inclosemail-releases/releases/latest/download/InCloseMail.msi">download the latest installer</a> and run it once.</p>
     <h2 id="d2026-11-06">6 November 2026</h2>
+    <section class="release" id="v26.11.603">
+      <h3>Build 3 <span class="release-version">version 26.11.603</span></h3>
+      <h4>New</h4>
+      <ul>
+        <li><strong>Replying to an older message now warns you, as Outlook does.</strong> When someone has written in the conversation since the message you&#39;re answering, Reply and Reply All show &quot;You are not responding to the latest message in this conversation. Click here to open it.&quot; The link opens the latest message. Your own later messages don&#39;t count.</li>
+      </ul>
+      <h4>Fixed</h4>
+      <ul>
+        <li><strong>No more slow handle build-up during long sessions.</strong> Each time a message window opened after a while, Windows&#39; spell checker could leave about 50 handles behind, which added up over days of leaving InCloseMail open.</li>
+      </ul>
+    </section>
     <section class="release" id="v26.11.602">
       <h3>Build 2 <span class="release-version">version 26.11.602</span></h3>
       <h4>Fixed</h4>
