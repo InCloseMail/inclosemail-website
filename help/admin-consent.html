@@ -78,6 +78,10 @@
     </table>
     <p>InCloseMail asks for all of them the first time someone signs in, so nobody is asked again later. Personal Outlook.com accounts get only the ones that apply to them. If your organization approves only some, InCloseMail works with what it has, and a feature whose permission is missing asks for it when it&rsquo;s used.</p>
 
+    <h2 id="settings-folder">The hidden settings folder</h2>
+    <p>So people&rsquo;s settings follow them between PCs, InCloseMail keeps them in each person&rsquo;s own mailbox: a hidden folder named <strong>InCloseMail Settings</strong> at the top of the mailbox, holding one message whose text is the settings as JSON (options and views, Safe Senders, Quick Steps, signatures, templates and the like). It&rsquo;s made with the Mail.ReadWrite permission above; nothing is stored anywhere else, and no messages are copied into it. Outlook and Outlook on the web don&rsquo;t show it; Graph lists it with <code>includeHiddenFolders=true</code>.</p>
+    <p>Deleting the folder is safe: the next PC to sync writes it again from its own settings. A PC where changes to the mailbox are turned off only reads it. People can turn syncing off on a PC in <strong>File &rarr; Options &rarr; Advanced &rarr; Keep my settings the same on every PC</strong>.</p>
+
     <h2 id="remove">Removing InCloseMail</h2>
     <p>In the Entra admin center, <strong>Enterprise applications &rarr; InCloseMail &rarr; Properties &rarr; Delete</strong> removes it and every approval. Signed-in copies stop working at once.</p>
     </main>
