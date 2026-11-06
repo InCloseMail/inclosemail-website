@@ -49,8 +49,19 @@
 
     <main class="doc">
     <!-- Made by OutlookClassic/tools/Build-WhatsNew.ps1 from the release notes: edit the notes, not this file. -->
-    <p>Every InCloseMail build, newest first. The latest is build 14 of 5 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
+    <p>Every InCloseMail build, newest first. The latest is build 1 of 6 November 2026. InCloseMail offers each new build when it starts, or choose <strong>Help &rarr; Check for Updates</strong>.</p>
     <p>Running a build from 27 October earlier than build 17? It can&rsquo;t install updates itself: <a href="https://github.com/InCloseMail/inclosemail-releases/releases/latest/download/InCloseMail.msi">download the latest installer</a> and run it once.</p>
+    <h2 id="d2026-11-06">6 November 2026</h2>
+    <section class="release" id="v26.11.601">
+      <h3>Build 1 <span class="release-version">version 26.11.601</span></h3>
+      <h4>Fixed</h4>
+      <ul>
+        <li><strong>Saving files with unusual names.</strong> An attachment named like a Windows device (<code>aux.pdf</code>, <code>con.txt</code>, <code>COM1</code>), a message with such a subject, or an attachment name over 255 characters couldn&#39;t be saved. Now they save, with a <code>_</code> added in front or the name shortened.</li>
+        <li><strong>Save Folder As and Export to .mbox, run twice to the same place,</strong> make a new folder (&quot;Inbox (2)&quot;) instead of adding to the first one.</li>
+        <li><strong>Internet calendars:</strong> a feed with one malformed event no longer fails as a whole (or keeps InCloseMail&#39;s saved copy of it from loading at start); that event is skipped and the rest shown.</li>
+        <li>Smaller fixes found by testing InCloseMail with damaged and unusual input.</li>
+      </ul>
+    </section>
     <h2 id="d2026-11-05">5 November 2026</h2>
     <section class="release" id="v26.11.514">
       <h3>Build 14 <span class="release-version">version 26.11.514</span></h3>
