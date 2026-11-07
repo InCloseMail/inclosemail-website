@@ -77,7 +77,14 @@
       <tr><td>EWS.AccessAsUser.All</td><td>Office 365 Exchange Online</td><td>Finding the shared mailboxes they have access to (Autodiscover only; no other Exchange requests)</td><td>Sign-in (work and school accounts)</td></tr>
       <tr><td>SMTP.Send</td><td>Office 365 Exchange Online</td><td>Sending through SMTP, an option for organizations whose outside mail Microsoft refuses from Graph</td><td>Sign-in (work and school accounts)</td></tr>
     </table>
-    <p>InCloseMail asks for all of them the first time someone signs in, so nobody is asked again later. Personal Outlook.com accounts get only the ones that apply to them. If your organization approves only some, InCloseMail works with what it has, and a feature whose permission is missing asks for it when it&rsquo;s used.</p>
+    <p>InCloseMail asks for all of them except Group.Read.All the first time someone signs in, so nobody is asked again later. Personal Outlook.com accounts get only the ones that apply to them. If your organization approves only some, InCloseMail works with what it has, and a feature whose permission is missing asks for it when it&rsquo;s used.</p>
+
+    <h2 id="groups">Approving Microsoft 365 Groups</h2>
+    <p>Group.Read.All isn&rsquo;t part of sign-in, and the <strong>Approve for my organization</strong> button above doesn&rsquo;t include it, so approving InCloseMail never approves Groups by itself. It&rsquo;s asked for only when someone clicks <strong>Browse Groups</strong> on InCloseMail&rsquo;s Home tab.</p>
+    <ul>
+      <li><strong>To turn Groups on for everyone:</strong> sign in to InCloseMail as an administrator, click <strong>Browse Groups</strong>, tick <strong>Consent on behalf of your organization</strong> in Microsoft&rsquo;s window, and accept. Nobody in your organization is asked again.</li>
+      <li><strong>To leave Groups off:</strong> don&rsquo;t approve it. People who click Browse Groups see that it needs an administrator&rsquo;s approval (or can send you a request, if your organization uses admin consent requests), and the rest of InCloseMail works as usual.</li>
+    </ul>
 
     <h2 id="settings-folder">The hidden settings folder</h2>
     <p>So people&rsquo;s settings follow them between PCs, InCloseMail keeps them in each person&rsquo;s own mailbox: a hidden folder named <strong>InCloseMail Settings</strong> at the top of the mailbox, holding one message whose text is the settings as JSON (options and views, Safe Senders, Quick Steps, signatures, templates and the like). It&rsquo;s made with the Mail.ReadWrite permission above; nothing is stored anywhere else, and no messages are copied into it. Outlook and Outlook on the web don&rsquo;t show it; Graph lists it with <code>includeHiddenFolders=true</code>.</p>
