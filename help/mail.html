@@ -98,6 +98,14 @@
       <li>To open email links in InCloseMail, choose it in File &rarr; Options &rarr; General &rarr; <strong>Default Programs</strong>.</li>      <li><strong>Folder &rarr; Recover Deleted Items</strong> brings back what was deleted from Deleted Items, for a while afterwards.</li>
     </ul>
 
+    <h2 id="smime">Signed and encrypted mail (S/MIME)</h2>
+    <ul>
+      <li>Signed and encrypted messages open in the reading pane, as in Outlook. A bar above them says who signed the message and whether the signature is valid; <strong>Details</strong> shows the certificate.</li>
+      <li>To sign or encrypt a message you write, use <strong>Sign</strong> and <strong>Encrypt</strong> on its <strong>Options</strong> tab. <strong>File &rarr; Options &rarr; Trust Center</strong> can turn them on for every message, and lists your email certificates.</li>
+      <li>InCloseMail uses the certificates in Windows, as Outlook does. Your own certificate (with its private key) comes from your organization, or you import it with <strong>Manage Certificates</strong>.</li>
+      <li>To encrypt a message, InCloseMail needs each recipient's certificate. It keeps the certificate of everyone who sends you signed mail; if one is missing, it asks whether to send the message unencrypted.</li>
+    </ul>
+
     <h2 id="search">Search</h2>
     <ul>
       <li>Ctrl+E puts the cursor in the search box. Results appear as you type. Esc goes back to the folder.</li>
