@@ -226,6 +226,9 @@ section { margin-bottom: 40px; }
   font-size: 0.95rem;
 }
 
+/* "See all features" under the homepage's feature cards. */
+.more-link { margin: 16px 0 0; font-weight: 600; }
+
 .note {
   color: var(--muted);
   font-size: 0.9rem;

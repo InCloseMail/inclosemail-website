@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Features - InCloseMail</title>
+  <meta name="description" content="Everything InCloseMail does: mail, calendar, contacts and tasks for Microsoft 365 and Outlook.com on Windows, the way Outlook 2021 does them.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="./">
+          <img src="favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Features</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Feature areas">
+      <a href="#layout">The Outlook layout</a>
+      <a href="#mail">Mail</a>
+      <a href="#writing">Writing and sending</a>
+      <a href="#search">Search</a>
+      <a href="#rules">Rules and Quick Steps</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#people">People</a>
+      <a href="#tasks">Tasks</a>
+      <a href="#accounts">Accounts and sharing</a>
+      <a href="#offline">Offline and Send/Receive</a>
+      <a href="#pst">.pst files and Outlook</a>
+      <a href="#security">Security and privacy</a>
+      <a href="#look">Look and accessibility</a>
+      <a href="#it">For IT</a>
+    </nav>
+
+    <main class="doc features-page">
+      <p>InCloseMail is a Windows email client for Microsoft 365 and Outlook.com that works the way Outlook 2021 does. It was checked against Outlook 2021 screen by screen, so if you reach for something out of habit, it&rsquo;s where you expect it. Here is everything it does. For how to use each feature, see the <a href="help/">help pages</a>.</p>
+
+      <h2 id="layout">The Outlook layout</h2>
+      <ul>
+        <li><strong>The ribbon</strong> with Outlook&rsquo;s tabs (File, Home, Send / Receive, Folder, View and Help) and the Quick Access Toolbar, with Undo.</li>
+        <li><strong>Tell me what you want to do</strong> (Alt+Q): type part of a command&rsquo;s name and run it.</li>
+        <li><strong>The folder pane</strong> with Favorites, unread counts, folders in your own order, and Normal, Minimized or Off.</li>
+        <li><strong>The message list and reading pane</strong>, with the reading pane on the right, at the bottom or off, and Reading view.</li>
+        <li><strong>The To-Do Bar</strong> with the month calendar, upcoming appointments and flagged mail.</li>
+        <li><strong>Outlook&rsquo;s keyboard shortcuts</strong>, Ctrl+1 to Ctrl+4 between Mail, Calendar, People and Tasks, and F1 for help on what&rsquo;s on screen.</li>
+        <li><strong>Outlook&rsquo;s right-click menus</strong> on messages, folders, names, calendar items, contacts and tasks.</li>
+        <li><strong>Windows that remember</strong> where they were and how big, on whichever monitor.</li>
+      </ul>
+
+      <h2 id="mail">Mail</h2>
+      <ul>
+        <li><strong>Conversations</strong>, including your replies from Sent Items, Conversation Settings, and <strong>Clean Conversation View</strong> to read a whole thread like a chat.</li>
+        <li><strong>Focused Inbox</strong> with Focused, Other and All, and Always Move to Other / Focused.</li>
+        <li><strong>Arrange and group</strong> by date, sender, subject, size, flag, categories, importance and more; collapsible groups and Reverse Sort.</li>
+        <li><strong>Change View, View Settings and Manage Views</strong>: Compact, Single and Preview, columns, message preview lines, and conditional formatting.</li>
+        <li><strong>Categories</strong> with colors, Quick Click and shortcut keys; <strong>follow-up flags</strong> and reminders on messages.</li>
+        <li><strong>Filter Email</strong>: Unread, Has Attachments, Categorized, Flagged, Important, Sent To Me.</li>
+        <li><strong>Ignore</strong>, <strong>Clean Up</strong> (conversation, folder, folder and subfolders) and <strong>Archive</strong>.</li>
+        <li><strong>Undo</strong> for moves, deletes, read/unread, flags and categories, up to 20 steps.</li>
+        <li><strong>Recover Deleted Items</strong>, Delete All, Copy Folder, Save Folder As and Mark All as Read.</li>
+        <li><strong>Attachments</strong>: preview pictures, text and PDFs in the reading pane; Save All; Remove Attachment.</li>
+        <li><strong>The People Pane</strong> with everyone on a message and their mail, attachments and meetings.</li>
+        <li><strong>Voting buttons</strong>, read receipts, message properties with internet headers, and Edit Message.</li>
+        <li><strong>Create an appointment or task</strong> from a message by dragging it onto Calendar or Tasks.</li>
+        <li><strong>Read Aloud</strong> with Windows&rsquo; voices, and zoom for the reading pane.</li>
+        <li><strong>Print</strong> in Outlook&rsquo;s Memo Style with a preview, Quick Print, and Save As text, HTML or .eml.</li>
+        <li><strong>Mailbox Cleanup</strong>: mailbox size by folder, find old or large items, and AutoArchive.</li>
+      </ul>
+
+      <h2 id="writing">Writing and sending</h2>
+      <ul>
+        <li><strong>Signatures</strong>, separate for new messages and replies, with pictures.</li>
+        <li><strong>Auto-Complete</strong> in To, Cc and Bcc, Check Names, the Address Book and the Global Address List.</li>
+        <li><strong>Formatting</strong>: styles, Format Painter, tables, pictures, line and paragraph spacing, borders and shading, symbols, horizontal lines and date and time.</li>
+        <li><strong>Paste Options</strong> and Paste Special, <strong>AutoCorrect</strong> as you type, and <strong>Spelling &amp; Grammar</strong> (F7) with proofing languages.</li>
+        <li><strong>Quick Parts</strong> and <strong>My Templates</strong> for the text you write often.</li>
+        <li><strong>Insert</strong> Outlook items, business cards and your calendar&rsquo;s free time into a message.</li>
+        <li><strong>@mentions</strong> that add people to the To line.</li>
+        <li><strong>Delay Delivery</strong>, Message Options (importance, sensitivity, receipts, replies sent to, expiry) and Save Sent Item To.</li>
+        <li><strong>Reply, Reply All, Forward</strong>, Forward as Attachment, Reply with Meeting and Resend This Message.</li>
+        <li><strong>Replies in the reading pane</strong> or in their own window, with Pop Out.</li>
+        <li><strong>Drafts that save themselves</strong> every few minutes.</li>
+        <li><strong>Send through Exchange Online&rsquo;s SMTP server</strong> for organizations whose mail Microsoft turns away when it&rsquo;s sent through Graph.</li>
+      </ul>
+
+      <h2 id="search">Search</h2>
+      <ul>
+        <li><strong>Instant search</strong> as you type, in the current folder, subfolders, the current mailbox or all mailboxes.</li>
+        <li><strong>Refine</strong>: From, Subject, Sent To, Has Attachments, Unread, Flagged, Important, Categorized and dates.</li>
+        <li><strong>Advanced Find</strong> (Ctrl+Shift+F) and <strong>Recent Searches</strong>.</li>
+        <li><strong>Search Folders</strong> that Exchange keeps up to date, so Outlook sees them too.</li>
+        <li><strong>Find Related</strong> messages in a conversation or from a sender, and Find (F4) in a message.</li>
+        <li><strong>Search the calendar</strong> a year back and a year ahead, and filter contacts as you type.</li>
+      </ul>
+
+      <h2 id="rules">Rules and Quick Steps</h2>
+      <ul>
+        <li><strong>Rules and Alerts</strong> that run on the server: file, flag, mark or delete mail by sender, recipients, words, Cc or attachments.</li>
+        <li><strong>Export and import rules</strong> to take them to another mailbox.</li>
+        <li><strong>Always Move Messages in This Conversation</strong> and Always Move Messages From.</li>
+        <li><strong>Quick Steps</strong> with Outlook&rsquo;s full list of actions, and Ctrl+Shift+1 to 9 shortcut keys.</li>
+        <li><strong>Junk Email</strong>: Junk Email Options with Safe Senders, and Not Junk.</li>
+        <li><strong>Automatic Replies</strong> (out of office).</li>
+      </ul>
+
+      <h2 id="calendar">Calendar</h2>
+      <ul>
+        <li><strong>Day, Work Week, Week, Month and Schedule views</strong>, Next 7 Days, Time Scale, a second time zone and week numbers.</li>
+        <li><strong>Appointments and meetings</strong> with recurrence, reminders, categories, attachments, Private and Show As.</li>
+        <li><strong>Scheduling Assistant</strong> with suggested times and AutoPick, <strong>Room Finder</strong>, and <strong>Teams meetings</strong>.</li>
+        <li><strong>Answer invitations</strong> with Accept, Tentative and Decline, Propose New Time, and Forward a meeting.</li>
+        <li><strong>Drag to move or resize</strong>, Ctrl+drag to copy, and type in a time slot to add an appointment.</li>
+        <li><strong>My Calendars and Calendar Groups</strong>, shown side by side or overlaid in their own colors.</li>
+        <li><strong>Shared calendars</strong>, <strong>Share Calendar</strong> with permission levels, and <strong>internet calendars</strong> (.ics links).</li>
+        <li><strong>The Reminders window</strong> with Dismiss, Snooze (including &ldquo;before start&rdquo; times) and Join Online.</li>
+        <li><strong>Add Holidays</strong>, the Daily Task List, and the Preview and List views.</li>
+        <li><strong>Print the calendar</strong> in Daily, Weekly Agenda, Weekly Calendar, Monthly, Tri-fold and Calendar Details styles.</li>
+      </ul>
+
+      <h2 id="people">People</h2>
+      <ul>
+        <li><strong>Contacts</strong> with the full contact form, pictures and contact folders.</li>
+        <li><strong>People, Business Card, Phone and List</strong> views, with an A&ndash;Z index.</li>
+        <li><strong>Contact groups</strong> to send to several people under one name.</li>
+        <li><strong>Colleagues&rsquo; shared contacts</strong> and the organization&rsquo;s Global Address List.</li>
+        <li><strong>Mail Merge</strong>: one message per contact, with merge fields.</li>
+      </ul>
+
+      <h2 id="tasks">Tasks</h2>
+      <ul>
+        <li><strong>Your Microsoft To Do tasks</strong>, the same ones Outlook on the web shows, in all your lists.</li>
+        <li><strong>The task form</strong> with start and due dates, status, priority, reminders, categories and recurrence.</li>
+        <li><strong>Outlook&rsquo;s task views</strong>: To-Do List (with flagged mail), Detailed, Prioritized, Active, Completed, Today, Next 7 Days and Overdue.</li>
+        <li><strong>Send Status Report</strong> on a task.</li>
+      </ul>
+
+      <h2 id="accounts">Accounts and sharing</h2>
+      <ul>
+        <li><strong>Microsoft 365 work and school accounts and Outlook.com</strong> accounts, signed in through Windows.</li>
+        <li><strong>Several accounts at once</strong>, each with its own mail and calendar.</li>
+        <li><strong>Shared mailboxes</strong>, found automatically as Outlook finds them, clearly marked, with <strong>Send As</strong> and Send on Behalf.</li>
+        <li><strong>Microsoft 365 Groups</strong>: group conversations and group calendars.</li>
+        <li><strong>Your aliases</strong> in the From list.</li>
+        <li><strong>Mailbox size</strong> as Outlook shows it, with your plan&rsquo;s limit.</li>
+      </ul>
+
+      <h2 id="offline">Offline and Send/Receive</h2>
+      <ul>
+        <li><strong>A local copy of your mail</strong>, encrypted on your PC, readable and searchable without a connection.</li>
+        <li><strong>Work Offline</strong>, with changes waiting until you&rsquo;re back online.</li>
+        <li><strong>New mail within seconds</strong>, with Outlook&rsquo;s Send/Receive groups, Show Progress and Cancel All.</li>
+        <li><strong>Desktop Alerts</strong> with Delete and Flag, a new-mail sound, and the envelope by the clock.</li>
+        <li><strong>Large mailboxes</strong> kept within Exchange&rsquo;s limits, so they aren&rsquo;t throttled.</li>
+      </ul>
+
+      <h2 id="pst">.pst files and coming from Outlook</h2>
+      <ul>
+        <li><strong>Open Outlook Data File</strong>: read a .pst of any size in the folder pane, without copying it.</li>
+        <li><strong>Import a .pst</strong> into your mailbox, folders and all, with the original dates and attachments.</li>
+        <li><strong>Export to a .pst</strong> that Outlook can open, from a whole mailbox or one folder.</li>
+        <li><strong>Import from Outlook</strong>: your signatures, Auto-Complete List and Quick Access Toolbar from classic Outlook on the same PC.</li>
+        <li><strong>Open .eml, .msg and .ics files</strong>, and InCloseMail as your default mail app for email links.</li>
+        <li>None of this needs Outlook installed.</li>
+      </ul>
+
+      <h2 id="security">Security and privacy</h2>
+      <ul>
+        <li><strong>&ldquo;Why is this suspicious?&rdquo;</strong> A plain-language explanation for messages that look like phishing.</li>
+        <li><strong>A second look before sending</strong>: forgotten attachments, outside recipients and replies to many people.</li>
+        <li><strong>Read-only mode</strong>: a real mailbox opens without changing anything until you choose to allow changes.</li>
+        <li><strong>S/MIME</strong>: read signed and encrypted mail, and sign and encrypt your own.</li>
+        <li><strong>Pictures from the web blocked</strong> until you download them, scripts off, and attachments that can run code blocked, as in Outlook.</li>
+        <li><strong>Continuous Access Evaluation</strong>: when an administrator ends your sessions, InCloseMail notices within minutes.</li>
+        <li><strong>Stay signed in safely</strong>: sign-in through Windows, with tokens and the local copy of your mail encrypted on your PC. See the <a href="privacy.html">privacy policy</a>.</li>
+      </ul>
+
+      <h2 id="look">Look and accessibility</h2>
+      <ul>
+        <li><strong>Light and Dark Mode</strong>, following Windows until you choose, with Switch Background for a message.</li>
+        <li><strong>High Contrast</strong>, and Windows&rsquo; own high-contrast themes.</li>
+        <li><strong>Holiday themes</strong>, or one that changes with the season.</li>
+        <li><strong>Zoom</strong> the whole window with Ctrl+mouse wheel.</li>
+        <li><strong>Ease of Access options</strong>, screen reader support, and KeyTips (Alt) for the ribbon.</li>
+      </ul>
+
+      <h2 id="it">For IT</h2>
+      <ul>
+        <li><strong>A signed Windows Installer package</strong> (.msi) for silent, per-machine installs.</li>
+        <li><strong>Group Policy and Intune templates</strong>, and installer settings to limit sign-in to your organization or use your own app registration.</li>
+        <li><strong>Admin consent</strong>: what InCloseMail asks for, and how to approve it for your organization. See <a href="help/admin-consent.html">For administrators</a>.</li>
+        <li><strong>Updates from inside the app</strong>, each installer checked for EmuKey&rsquo;s signature before it runs.</li>
+      </ul>
+
+      <p class="lead-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="help/">Help</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+</html>
