@@ -126,6 +126,18 @@
     <h2 id="rules">Rules</h2>
     <p><strong>Home &rarr; Rules &rarr; Manage Rules &amp; Alerts...</strong> lists your rules. <strong>Create Rule...</strong> starts one from the selected message. On mail in an added account, it makes a rule in that account. Rules are kept and run by Exchange, so they work with InCloseMail closed and show in Outlook on the web. <strong>Run Rules Now</strong> applies them to mail already in a folder, but never forwards it. <strong>Export Rules</strong> and <strong>Import Rules</strong> move your rules to another mailbox.</p>
 
+    <h3 id="suggest-rules">Suggest Rules</h3>
+    <p><strong>Home &rarr; Rules &rarr; Suggest Rules</strong> looks through your Inbox and suggests folders to sort it into:</p>
+    <ul>
+      <li>a folder for each colleague who writes often, inside your company&rsquo;s folder;</li>
+      <li>a folder for each company you hear from often, whoever there writes (matched by their email domain);</li>
+      <li>a folder for each other busy sender.</li>
+    </ul>
+    <p><strong>Select Folder Plan</strong> ticks the colleagues and companies and leaves single senders for you to choose. <strong>Create Rules</strong> makes a rule for each ticked folder, creates any folder that doesn&rsquo;t exist yet under the Inbox, and moves the mail already in the Inbox there.</p>
+
+    <h3 id="start-over">Start over with your rules</h3>
+    <p>When years of rules have piled up, <strong>Start Over...</strong> in Rules and Alerts clears the way. It saves every rule to a backup file in <strong>Documents\InCloseMail\Rules backups</strong>, deletes them, and then offers Suggest Rules to build a new set. Your folders and mail stay as they are. If the backup can&rsquo;t be saved, nothing is deleted. To bring an old rule back, use <strong>Import Rules</strong> with the backup file.</p>
+
     <h3 id="script-rules">Script rules</h3>
     <p><strong>Home &rarr; Rules &rarr; Script Rules...</strong> runs a script of yours when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did, with a script file instead of VBA. A rule can watch your Inbox, an added account&rsquo;s or a shared mailbox&rsquo;s, and match on the sender, the subject and whether there are attachments. The script can be a PowerShell script (.ps1), a batch file (.cmd or .bat) or a program (.exe).</p>
     <ul>
@@ -144,6 +156,9 @@ Copy-Item -LiteralPath $m.emlPath -Destination "C:\Invoices\$($m.internetMessage
       <li><strong>Home &rarr; Junk</strong> has Block Sender, Never Block Sender, Not Junk and Junk E-mail Options.</li>
       <li>InCloseMail&rsquo;s Safe Senders list is kept on this PC and works while the app is running. For filtering that works everywhere, also add senders in Outlook on the web.</li>
       <li>When a message has signs of phishing, a bar appears above it. Click <strong>Why is this suspicious?</strong> for the reasons and what to do. <strong>Block Sender</strong> and <strong>I know this sender</strong> are there too. The bar never moves or blocks anything by itself.</li>
+      <li>Outside mail that claims to be internal or verified, such as &ldquo;verified as an internal communication&rdquo;, is a strong sign of phishing, since your organization doesn&rsquo;t mark mail that way.</li>
+      <li>In <strong>Junk E-mail Options &rarr; Phishing</strong>, list <strong>People to protect</strong>, such as your CEO. Mail from outside your organization that uses one of those names in the sender&rsquo;s name or address is marked as possible phishing, even when the name is misspelled by a letter.</li>
+      <li>To turn the warning bar off, clear <strong>Warn me about messages that look like phishing</strong> on the same tab.</li>
     </ul>
     </main>
   </div>
