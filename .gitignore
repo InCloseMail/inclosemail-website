@@ -1,4 +1,4 @@
-# Only the two published screenshots, taken from the app's sample (demo) mailbox, belong here. Any other capture,
+# Only the published screenshots, taken from the app's sample (demo) mailbox, belong here. Any other capture,
 # log or test output could show real email or account details, so it's ignored.
 *.png
 *.jpg
@@ -6,6 +6,8 @@
 *.gif
 !screenshot.png
 !screenshot-dark.png
+!screenshot-analytics.png
+!screenshot-analytics-dark.png
 *.log
 *.txt
 *.eml
