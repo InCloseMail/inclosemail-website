@@ -57,7 +57,15 @@
   <script>
     // This page exists so a visit to it counts a Download click (the analytics count page views only). The installer
     // starts a moment later, which gives the page view time to be sent; the link above is there if it doesn't.
-    setTimeout(function () { location.href = document.getElementById('msi').href; }, 1200);
+    // It downloads through a hidden frame, so this page stays as it is instead of starting to leave (which some
+    // browsers showed as a white page under the footer in dark mode).
+    setTimeout(function () {
+      var frame = document.createElement('iframe');
+      frame.hidden = true;
+      frame.title = 'Download';
+      frame.src = document.getElementById('msi').href;
+      document.body.appendChild(frame);
+    }, 1200);
   </script>
   <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>

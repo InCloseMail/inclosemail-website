@@ -40,7 +40,8 @@
 
 * { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+/* The page's own color all the way down, below a short page's footer too, in light and dark. */
+html { -webkit-text-size-adjust: 100%; background: var(--bg); min-height: 100%; }
 
 body {
   margin: 0;
