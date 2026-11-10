@@ -50,7 +50,333 @@
     <main class="doc">
     <!-- Made by OutlookClassic/tools/Build-WhatsNew.ps1 from the release notes: edit the notes, not this file. -->
     <p>InCloseMail&rsquo;s public beta starts here. As new builds come out, what changed in each is listed on this page, newest first. InCloseMail offers each new build when it starts; you can also choose <strong>Help &rarr; Check for Updates</strong>.</p>
+    <h2 id="d2026-11-10">November 10, 2026</h2>
+    <section class="release" id="v26.11.1004">
+      <h3>InCloseMail 26.11.1004</h3>
+      <h4>Rules</h4>
+      <ul>
+        <li><strong>Run one rule any time.</strong> In Rules and Alerts, select a rule and click <strong>Run Selected Rule</strong> to run just that rule on the messages already in the folder chosen beside Run Rules Now, even if the rule is turned off. Before, a single rule could only be run as it was saved.</li>
+      </ul>
+      <h4>Updates</h4>
+      <ul>
+        <li><strong>What&rsquo;s new from File → Account.</strong> When an update is available, <strong>What&rsquo;s New</strong> beside Install now shows what&rsquo;s in it. When you&rsquo;re up to date, <strong>What&rsquo;s new in InCloseMail</strong> opens the release history.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.1003">
+      <h3>InCloseMail 26.11.1003</h3>
+      <h4>Dialogs</h4>
+      <ul>
+        <li><strong>Use the keyboard in every dialog.</strong> In a question like "Move 2 Folders to Spam?", Left and Right move between the buttons and Space presses one. In a dialog with options and OK/Cancel, Up and Down move between the options, and Left and Right move to OK and Cancel.</li>
+        <li><strong>Only the button you&rsquo;re on is outlined.</strong> Moving from Yes to No moves the blue outline with you; Enter presses the outlined button.</li>
+        <li><strong>Buttons match.</strong> OK and Cancel (and the other buttons in a row) are now the same size and line up in every dialog.</li>
+        <li><strong>Long choices wrap.</strong> An option too long for the dialog (such as keeping a deleted folder&rsquo;s rules) wraps onto more lines instead of being cut off.</li>
+      </ul>
+      <h4>Select Names</h4>
+      <ul>
+        <li><strong>Readable in Dark Mode.</strong> The highlighted name in Select Names (and in Mailbox Cleanup and Manage All Views) is no longer white on light blue.</li>
+        <li><strong>Pick a name and click OK.</strong> With nothing on the To line, OK now uses the names you highlighted, so a rule&rsquo;s "sent to people or public group" box fills in.</li>
+      </ul>
+      <h4>Rules Wizard</h4>
+      <ul>
+        <li><strong>Companies you write to.</strong> The wizard now suggests co-workers and companies only if you&rsquo;ve written to someone there, so spam and cold sales don&rsquo;t get company folders. To group every company as before, clear "Only co-workers and companies I&rsquo;ve written to" on its first page.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.1002">
+      <h3>InCloseMail 26.11.1002</h3>
+      <h4>Folders</h4>
+      <ul>
+        <li><strong>Delete a folder with the Delete key.</strong> Select a folder (or pick several with Ctrl or Shift) and press Delete. It asks first, as Delete Folder does, including about rules that file into it.</li>
+        <li><strong>Move to Spam.</strong> Right-click a folder (or several picked ones) and choose Move to Spam. They go into your own Spam folder, or into Junk Email if the mailbox has none.</li>
+      </ul>
+      <h4>Anonymous usage statistics</h4>
+      <ul>
+        <li>So we can count how many people use InCloseMail, it now sends a short report once a day at launch: a random install ID, the InCloseMail version, the Windows version, and whether it&rsquo;s the first report. Nothing about your account, mail, contacts or files is sent. Details are on the <a href="https://inclosemail.com/privacy.html">privacy page</a>.</li>
+        <li>To turn it off, clear <strong>Send anonymous usage statistics</strong> in File → Options → General. Organizations can turn it off for everyone with the new "Turn off anonymous usage statistics" Group Policy setting.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.1001">
+      <h3>InCloseMail 26.11.1001</h3>
+      <h4>AI agents</h4>
+      <ul>
+        <li><strong>Whole conversations.</strong> Reading a conversation now gives every message in it, from the Inbox, Sent Items and other folders, instead of only the one asked about.</li>
+        <li><strong>Attachments by name.</strong> A message&rsquo;s attachments are listed by their file names, not just "Attachments: yes".</li>
+        <li><strong>Cleaner search results.</strong> InCloseMail&rsquo;s own synced-settings message, and items in hidden folders that couldn&rsquo;t be opened, no longer show up in an agent&rsquo;s searches.</li>
+        <li><strong>Easier-to-read mail.</strong> Earlier messages quoted in an Outlook reply are left out of a conversation, as they&rsquo;re in it already. The invisible padding that marketing mail puts in its first lines is dropped, and so is a leftover "On ... wrote:" line.</li>
+      </ul>
+      <h4>Deleting folders</h4>
+      <ul>
+        <li><strong>Delete Folder says what it&rsquo;s doing.</strong> While it checks which rules file into the folder, the status bar says so, with the progress bar. If that takes more than 10 seconds, it asks without the rules instead of keeping you waiting.</li>
+        <li><strong>"The move or copy operation failed" is fixed</strong> for a folder whose name Deleted Items already has. It goes in as "Highwinds (2)", as other same-name folders already did.</li>
+      </ul>
+    </section>
+
+    <h2 id="d2026-11-09">November 9, 2026</h2>
+    <section class="release" id="v26.11.914">
+      <h3>InCloseMail 26.11.914</h3>
+      <h4>Folders and the rules that use them</h4>
+      <ul>
+        <li><strong>Deleting a folder asks about its rules.</strong> If rules file mail into it, Delete Folder names them and lets you delete them, turn them off, or keep them (and says what keeping them means: they&rsquo;d file into Deleted Items, or stop working).</li>
+        <li><strong>Delete several folders at once.</strong> Pick them with Ctrl or Shift and Delete Folder deletes them all ("Delete 3 Folders"), with one question.</li>
+        <li><strong>Two folders with the same name can both be deleted.</strong> If Deleted Items already has a "Highwinds", the next one goes in as "Highwinds (2)" instead of failing.</li>
+        <li><strong>Broken rules are flagged</strong> in Rules and Alerts: a rule whose folder is gone, or sits in Deleted Items, or that Microsoft 365 reports as broken.</li>
+        <li><strong>Folders that share a name are shown by their path</strong> in rule descriptions ("Inbox › Clients › TestRail"), and the Rules Wizard no longer guesses between them.</li>
+      </ul>
+      <h4>Moving folders</h4>
+      <ul>
+        <li><strong>Cut and paste folders:</strong> Ctrl+X on a folder (or several picked), then Ctrl+V on the folder to put them in. Also on the right-click menu. Esc cancels.</li>
+        <li><strong>The folder pane scrolls while you drag</strong> near its top or bottom edge.</li>
+        <li>Moving or deleting a big folder shows how long it&rsquo;s taken so far.</li>
+      </ul>
+      <h4>AI agents</h4>
+      <ul>
+        <li>An AI agent app started before you turned AI agents on (or opened InCloseMail) now connects as soon as it&rsquo;s allowed, without restarting it.</li>
+        <li>File → Options → Advanced → AI agents has Select All / Select None for the mailboxes.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.913">
+      <h3>InCloseMail 26.11.913</h3>
+      <h4>InCloseMail and AI</h4>
+      <ul>
+        <li><strong>Copy for AI.</strong> Right-click a message → Copy for AI copies the whole conversation as clean text: who wrote what and when, oldest first, without the quoted repeats. Paste it into ChatGPT, Claude or any other AI.</li>
+        <li><strong>Export for AI.</strong> Save the selected messages, or a folder&rsquo;s newest 500 (right-click the folder), as one Markdown file to give to an AI.</li>
+        <li><strong>AI agents.</strong> Let AI apps on your PC that use MCP (Claude Desktop, Claude Code and others) read your mail through InCloseMail: File → Options → Advanced → AI agents.</li>
+        <li>Off unless you turn it on, and only while InCloseMail is open.</li>
+        <li>Only for you on this PC, and only for the mailboxes you tick.</li>
+        <li>Agents can list, search and read mail and whole conversations. They can&rsquo;t send, delete or move anything.</li>
+        <li>If you allow it, they can save a draft for you to check and send. Mailboxes that are read-only in InCloseMail stay read-only.</li>
+        <li>"Copy Setup for AI Apps" gives you the settings to paste into Claude Desktop.</li>
+        <li>A log shows what agents asked for, never what your mail says.</li>
+        <li>Organizations can turn agents off with the DisableAiAgents policy.</li>
+      </ul>
+      <h4>You can see it working</h4>
+      <ul>
+        <li>Anything that takes more than a moment now shows a progress bar in the status bar. It fills for jobs that count (Delete All, Empty Deleted Items, Clean Up, moving or deleting many messages, moving several folders, Mark All as Read).</li>
+        <li>Deleting a folder says what it&rsquo;s doing, such as "Deleting the folder Old Projects and its 500 items...". The server does that in one go, so a big folder takes a while.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.912">
+      <h3>InCloseMail 26.11.912</h3>
+      <h4>Move several folders at once</h4>
+      <ul>
+        <li><strong>Ctrl+click</strong> folders in the folder pane to pick several, or <strong>Shift+click</strong> to pick a run of folders side by side. Drag any of them (or use Folder → Move Folder) and they all move, with one question.</li>
+        <li>Folders that can&rsquo;t go there (Inbox and the other special folders, the folder you&rsquo;re dropping onto, or a name already there) stay where they are, and you&rsquo;re told which. Rules that file into the folders keep working.</li>
+      </ul>
+      <h4>Analytics: the right people in the right lists</h4>
+      <ul>
+        <li>A company&rsquo;s newsletter is no longer listed as a co-worker; co-workers are people.</li>
+        <li>Deals, digests, "insider" mailings and the like count as automated mail, not people.</li>
+        <li>Companies are named the way their senders write them ("Canyon Freight", not "Canyonfreight"), in Analytics and in the Rules Wizard&rsquo;s folders.</li>
+      </ul>
+      <h4>Demo mode</h4>
+      <ul>
+        <li>Everything works on the demo&rsquo;s second account (Acme) too: Automatic Replies, categories, Rules and Alerts, Create Rule, the Rules Wizard and mailbox size.</li>
+        <li>The demo companies have logos as their account pictures.</li>
+        <li>A month of Acme mail now includes Wylie E. Coyote&rsquo;s peace treaty with Rhoda Runner: dictated, drafted, never sent. It&rsquo;s still in Drafts.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.911">
+      <h3>InCloseMail 26.11.911</h3>
+      <h4>Analytics keeps the scan you made</h4>
+      <ul>
+        <li>File → Analytics now opens on your newest report, whatever its period. After the Rules Wizard scans 12 months, Analytics shows those 12 months straight away instead of an older 30-day report. Picking another period shows that period&rsquo;s last report.</li>
+      </ul>
+      <h4>Rules Wizard</h4>
+      <ul>
+        <li><strong>Time left.</strong> Reading the Inbox and filing your mail now say how long is left at the pace so far, such as "about 8 minutes left".</li>
+        <li><strong>Move your folders freely.</strong> The last page now says so: rules file mail into the folder itself, not into a place. Drag the new folders anywhere, rename them or put them inside others, and the rules keep filing into them.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.910">
+      <h3>InCloseMail 26.11.910</h3>
+      <h4>Rules Wizard improvements</h4>
+      <ul>
+        <li><strong>Choose how busy a sender must be, before the lists are made.</strong> "Suggest anyone who wrote at least 10 times": pick 3, 5, 10, 15, 20, 30, 50 or 100. It applies to co-workers, companies and other senders, and your choice is remembered. A big mailbox no longer gives a long list to untick.</li>
+        <li><strong>You can see it working.</strong> Create shows each step with a progress bar: setting up folders, adding rule 12 of 46, looking through the Inbox, filing their mail. <strong>Stop</strong> ends it after the step it&rsquo;s on, and whatever was made stays.</li>
+        <li><strong>Filing the mail already in your Inbox is much faster.</strong> It now reads only who each message is from, so a 60,000-message Inbox takes minutes instead of the better part of an hour.</li>
+        <li><strong>Your existing folders move in.</strong> Folders you already have for people and companies (Inbox › Gammy, Inbox › Steve) can move into Co-workers and Companies; it&rsquo;s on by default, and their mail and rules go along. A folder you keep inside another folder of yours (Alerts › PagerDuty) stays where it is.</li>
+        <li>New rules go after the ones you have, one at a time; any the mailbox won&rsquo;t accept are listed with the reason.</li>
+      </ul>
+      <h4>Analytics</h4>
+      <ul>
+        <li>After the Rules Wizard scans your mail (12 months, say), File → Analytics shows that scan instead of the report it had open.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.909">
+      <h3>InCloseMail 26.11.909</h3>
+      <h4>Rules Wizard</h4>
+      <ul>
+        <li><strong>Rules Wizard</strong>, next to New Rule in Rules and Alerts (and Home → Rules), makes many rules at once. It sets up a folder for each co-worker (Co-workers › Gammy) and each company you deal with (Companies › AWS), with rules that file their mail. It works for every account, added accounts included.</li>
+        <li><strong>Built from Analytics.</strong> It uses the last Analytics scan, or scans now. Scanning 90 days or longer gives the best suggestions. It looks at all your folders, not only the Inbox, so people whose mail you already file away count too.</li>
+        <li><strong>Knows what you have.</strong> It leaves out senders your existing rules already handle, and says how many. Where you already have a folder for someone (one by that name, or where a rule files that company&rsquo;s mail), it uses that folder rather than making another. Spam and Quarantine-type folders are never used.</li>
+        <li>Co-workers have to be people: website contact forms, apps and Exchange&rsquo;s system mailboxes aren&rsquo;t offered a co-worker folder.</li>
+        <li>New Rule now has a tip: it&rsquo;s easier to right-click a message and choose Create Rule.</li>
+      </ul>
+      <h4>Analytics remembers</h4>
+      <ul>
+        <li>Analytics keeps its last report. Opening it shows that report at once, with when it was made; click Refresh for the latest.</li>
+      </ul>
+      <h4>Also</h4>
+      <ul>
+        <li>File → Account now shows the same account as File → Info, with the same account list.</li>
+        <li>What&rsquo;s New on the update bar has an <strong>Install now</strong> button, so you don&rsquo;t have to close it first.</li>
+        <li>Rules and Alerts: no more "..." on the buttons. In Dark Mode the rule list no longer turns white while rules are being imported or deleted.</li>
+        <li>Demo: the Acme desk&rsquo;s favorite customer is Wylie E. Coyote again.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.907">
+      <h3>InCloseMail 26.11.907</h3>
+      <h4>Drafts you can always finish</h4>
+      <ul>
+        <li><strong>A draft opens ready to send, wherever you find it.</strong> A message saved as a draft (when InCloseMail closed to update, for example) now opens in the message form with Send. That holds in a conversation in the Inbox, in search results or in a message window, not only in Drafts.</li>
+        <li><strong>"Edit draft" bar.</strong> Reading a draft in the reading pane or its own window shows "This message hasn&rsquo;t been sent" with an <strong>Edit draft</strong> button.</li>
+        <li><strong>You&rsquo;re told when you already have a draft.</strong> Replying or forwarding in a conversation that already has your draft shows "You already have a draft in this conversation, saved …" with <strong>Open the draft</strong>. Opening it closes the new reply if you haven&rsquo;t typed in it.</li>
+        <li>Drafts are recognized from what Microsoft 365 says about the message, not just the folder it&rsquo;s in.</li>
+      </ul>
+      <h4>Demo</h4>
+      <ul>
+        <li>At the Acme desk, Cody Yote keeps writing to Rhoda Runner, with Acme on Cc: dinner at the big rock, a gift to open "standing exactly where the X is", a meeting halfway, a picnic with "absolutely no traps". Rhoda politely declines.</li>
+        <li>Demo mail no longer signs off twice.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.906">
+      <h3>InCloseMail 26.11.906</h3>
+      <p>InCloseMail 2026.11.09, build 6.</p>
+      <p><strong>New</strong></p>
+      <ul>
+        <li><strong>Pick the account in Analytics.</strong> File → Analytics shows the account it&rsquo;s looking at in a box at the top, with a list to pick any of your accounts. Picking one doesn&rsquo;t change which account is primary. It now starts with the last 30 days, which is quicker to read.</li>
+        <li><strong>More in Analytics:</strong> your reply rate (how much mail from people you answer), how much you send after hours and how much mail comes at weekends, your busiest day, and who sends you the most attachments.</li>
+        <li><strong>A fuller demo.</strong> The demo&rsquo;s second account, user.demo@acme.com, now has a month of mail, from Acme&rsquo;s most accident-prone customer, Cody Yote, and many others, so Analytics has plenty to show.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.905">
+      <h3>InCloseMail 26.11.905</h3>
+      <p>InCloseMail 2026.11.09, build 5.</p>
+      <p><strong>New</strong></p>
+      <ul>
+        <li><strong>File → Analytics.</strong> See your mail at a glance for the last 30 days, 90 days, 12 months or all of it:</li>
+        <li><strong>Figures:</strong> mail received and sent (and how much a day), your usual reply time, what&rsquo;s still unread, and what was caught as junk.</li>
+        <li><strong>Charts:</strong> mail over time, your busiest hours and days, and a grid of when mail arrives each hour of the week. Pies show who your mail is from (co-workers, other people, automated senders) and how much is read.</li>
+        <li><strong>Top 10s:</strong> your top senders, the co-workers who write most, the companies you hear from (with all their addresses together, so everything from AWS counts as AWS) and automated senders. Also the people and domains you write to, who you leave unread, the longest conversations, who you answer fastest and slowest, and your top 10 folders by size.</li>
+      </ul>
+      <p>It&rsquo;s all worked out on your PC from who each message is from and to and when; message text is never read, and nothing is sent anywhere.</p>
+      <ul>
+        <li><strong>Folder sizes on hover.</strong> Point at a folder in the folder pane to see its items, unread and size.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.904">
+      <h3>InCloseMail 26.11.904</h3>
+      <p>InCloseMail 2026.11.09, build 4.</p>
+      <p><strong>Fixed</strong></p>
+      <ul>
+        <li><strong>Importing, starting over and deleting many rules show their progress.</strong> A progress bar says which rule is being saved ("Importing rule 37 of 196"), the other rule buttons wait until it&rsquo;s done, and Stop ends it after the current rule. Closing Rules and Alerts asks before stopping. A message at the end always says what happened and lists anything left out.</li>
+        <li><strong>Delete removes every selected rule.</strong> Select several with Ctrl or Shift, or all with Ctrl+A.</li>
+        <li><strong>Start Over no longer stops at "object not found in the store"</strong> when a rule was already gone.</li>
+        <li><strong>Import creates every folder its rules need.</strong> It no longer stopped at the first folder it had just made, and it finds the Junk Email, Deleted Items and Sent Items folders whatever another program called them ("Junk E-Mail").</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.903">
+      <h3>InCloseMail 26.11.903</h3>
+      <p>InCloseMail 2026.11.09, build 3.</p>
+      <p><strong>Changed</strong></p>
+      <ul>
+        <li><strong>Pick your primary account in File → Info.</strong> The account box is now a list of your accounts. Picking one makes it your primary account: its mailbox moves to the top of the folder pane and its Inbox opens. The account&rsquo;s description now sits under the box, where it can be read in full.</li>
+      </ul>
+      <p><strong>Fixed</strong></p>
+      <ul>
+        <li><strong>Import Rules brings in every rule it can.</strong> A rule your mailbox won&rsquo;t accept (one that names a group or a person without an email address, or has nothing left to do) no longer stops the import. The others come in, and a message lists the ones left out and why. People named without an address get theirs from your contacts where possible.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.902">
+      <h3>InCloseMail 26.11.902</h3>
+      <p>InCloseMail 2026.11.09, build 2.</p>
+      <p><strong>Changed</strong></p>
+      <ul>
+        <li><strong>The mailbox at the top is your primary account.</strong> InCloseMail opens on its Inbox, and File → Info, Rules and Alerts and Import Rules start from it, as they would in Outlook with that as your default account. File → Info says which account is primary; drag another mailbox to the top of the folder pane to change it.</li>
+      </ul>
+      <p><strong>Fixed</strong></p>
+      <ul>
+        <li><strong>Updates try again when GitHub is slow.</strong> A "504" or a dropped connection while checking for or downloading an update is retried a few seconds later instead of failing straight away.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.901">
+      <h3>InCloseMail 26.11.901</h3>
+      <p>InCloseMail 2026.11.09, build 1.</p>
+      <p><strong>New</strong></p>
+      <ul>
+        <li><strong>Organize Mail into Folders.</strong> A step-by-step wizard (Home → Rules, or the first choice in New Rule) that makes a folder for each co-worker inside Co-workers and for each company you hear from inside Companies, with rules that file their mail there. You tick who gets one and can rename any folder; a company&rsquo;s addresses share one folder, so everything from AWS goes to Companies › AWS. It can also file the mail already in your Inbox.</li>
+        <li><strong>Names as you type in rules.</strong> The rule editor&rsquo;s "from" and "sent to" boxes suggest people from your contacts and the people you write to, and have an Address Book button.</li>
+      </ul>
+      <p><strong>Fixed</strong></p>
+      <ul>
+        <li><strong>Importing a rules backup.</strong> Import Rules offers to create a folder a rule needs if it isn&rsquo;t there anymore, so a backup comes back as it was, and says why when nothing was imported.</li>
+        <li>Start Over names the account and lists the rules it will delete.</li>
+        <li>File → Info shows the account whose folder you&rsquo;re looking at.</li>
+        <li>Screen readers read a category&rsquo;s name, not code.</li>
+      </ul>
+    </section>
+
+    <h2 id="d2026-11-08">November 8, 2026</h2>
+    <section class="release" id="v26.11.803">
+      <h3>InCloseMail 26.11.803</h3>
+      <p>InCloseMail 2026.11.08, build 3.</p>
+      <p><strong>Fixed</strong></p>
+      <ul>
+        <li><strong>Memory use when writing mail.</strong> Every reply or new message used to keep a little memory after it closed, so InCloseMail grew the longer you used it. It now stays steady. Spell checking works as before: red underlines, suggestions on right-click, Ignore All, Add to Dictionary, and F7.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.802">
+      <h3>InCloseMail 26.11.802</h3>
+      <p>InCloseMail 2026.11.08, build 2.</p>
+      <p><strong>New</strong></p>
+      <ul>
+        <li><strong>What&rsquo;s New on the update bar.</strong> When a new version is available, What&rsquo;s New shows what it brings before you install it.</li>
+      </ul>
+    </section>
+
+    <section class="release" id="v26.11.801">
+      <h3>InCloseMail 26.11.801</h3>
+      <p>InCloseMail 2026.11.08, build 1.</p>
+      <p><strong>New</strong></p>
+      <ul>
+        <li><strong>Rules &gt; Start Over.</strong> Rules and Alerts can save every rule to a backup file (Documents\InCloseMail\Rules backups), delete them all, and start fresh with Suggest Rules. Import Rules brings any old rule back.</li>
+        <li><strong>Suggest Rules plans your folders.</strong> Besides busy senders, it suggests a folder for each colleague inside your company&rsquo;s folder, and one for each company you hear from often. <strong>Select Folder Plan</strong> ticks those for you.</li>
+        <li><strong>People to protect.</strong> Junk Email Options has a Phishing tab. List a name (your CEO&rsquo;s, say), and mail from outside your organization that uses that name, even misspelled by a letter, is flagged as possible phishing.</li>
+        <li><strong>Fake "verified" banners.</strong> Mail from outside that claims to be internal or verified is treated as a strong sign of phishing.</li>
+        <li>The phishing warning can be turned off on the same tab.</li>
+      </ul>
+      <p><strong>Fixed</strong></p>
+      <ul>
+        <li>Exported rules and Start Over backups now import into any account. They used to fit only the account they came from.</li>
+        <li>Screen readers can reach every page of tabbed windows in Dark Mode.</li>
+      </ul>
+    </section>
+
     <h2 id="d2026-11-07">November 7, 2026</h2>
+    <section class="release" id="v26.11.705">
+      <h3>InCloseMail 26.11.705</h3>
+      <p>InCloseMail 2026.11.07, build 5.</p>
+      <p><strong>Changed</strong></p>
+      <ul>
+        <li><strong>Your mailbox works from the start.</strong> Send, reply, move and delete right after you sign in, as in any mail app; InCloseMail no longer opens a real account read-only first. To look around without changing anything, clear <strong>File &gt; Options &gt; Mail &gt; Allow changes to my mailbox</strong>, or choose <strong>Keep this account read-only</strong>. An account you already made read-only stays that way.</li>
+      </ul>
+    </section>
+
 
     <section class="release" id="v26.11.704">
       <h3>InCloseMail Beta, first public release <span class="release-version">version 26.11.704</span></h3>
