@@ -81,6 +81,20 @@
       </div>
     </section>
 
+    <section id="site">
+      <h2>Downloads from the website</h2>
+      <div class="tiles">
+        <div class="tile"><span class="label">People, last 7 days</span><span class="big" id="s-week">—</span><span class="muted">Unique each day, added up</span></div>
+        <div class="tile"><span class="label">People, last 30 days</span><span class="big" id="s-month">—</span><span class="muted">Unique each day, added up</span></div>
+        <div class="tile"><span class="label">Download clicks, last 30 days</span><span class="big" id="s-clicks">—</span><span class="muted">Every click on Download</span></div>
+      </div>
+      <div class="panel">
+        <h2>People downloading each day</h2>
+        <p class="muted">Different people who clicked Download on inclosemail.com that day. Not the app's updater, and not crawlers.</p>
+        <div class="chart" id="c-site"></div>
+      </div>
+    </section>
+
     <section id="downloads">
       <h2>Downloads from GitHub</h2>
       <div class="tiles">
@@ -106,6 +120,7 @@
       <ul>
         <li>Installs come from the app's anonymous daily report (from 26.11.1002 on): one per Windows user on a PC, your own test copies included. Older versions don't report.</li>
         <li>"New installs" are installs whose first report was their first ever launch. Until the app release after 26.11.1002, an older install that updated is counted as new too.</li>
+        <li>Website downloads count each person once a day: a one-way scramble of their IP address and browser with a secret that changes daily, so people can't be told apart across days and no IP address is kept. They start on 2026-11-10.</li>
         <li>Downloads are GitHub's counts for each release's InCloseMail.msi: the website's Download button, the app's updater and your own installs. They can't tell people apart.</li>
       </ul>
     </details>
@@ -180,6 +195,16 @@
       list(document.getElementById('b-versions'), data.versions.map((r) => ({ label: r.version, value: r.installs })));
       const edition = (w) => (Number(w.split('.')[2]) >= 22000 ? 'Windows 11' : 'Windows 10');
       list(document.getElementById('b-windows'), data.windows.map((r) => ({ label: `${edition(r.windows)} (${r.windows.split('.')[2]})`, value: r.installs })));
+
+      const site = data.site_downloads || [];
+      const since = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
+      const sum = (rows, key, from) => rows.filter((r) => r.day >= from).reduce((s, r) => s + r[key], 0);
+      set('s-week', fmt.format(sum(site, 'people', since(6))));
+      set('s-month', fmt.format(sum(site, 'people', since(29))));
+      set('s-clicks', fmt.format(sum(site, 'clicks', since(29))));
+      bars(document.getElementById('c-site'), site.map((r) => ({
+        label: day(r.day), value: r.people, tip: `${day(r.day)}: ${fmt.format(r.people)} people, ${fmt.format(r.clicks)} clicks`,
+      })));
 
       const rel = [...data.releases].sort((a, b) => a.published.localeCompare(b.published));
       const total = rel.reduce((s, r) => s + r.downloads, 0);

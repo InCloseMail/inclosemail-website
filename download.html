@@ -35,7 +35,7 @@
   </header>
 
   <main class="wrap doc">
-    <p>InCloseMail.msi should start downloading in a moment. If it doesn&rsquo;t, <a id="msi" href="https://github.com/InCloseMail/inclosemail-releases/releases/latest/download/InCloseMail.msi">download it here</a>.</p>
+    <p>InCloseMail.msi should start downloading in a moment. If it doesn&rsquo;t, <a id="msi" href="https://icm-get.silent-math-ce11.workers.dev/">download it here</a>.</p>
     <p>Run it once it has downloaded. You need Windows 10 (version 1809) or Windows 11, 64-bit. To look around before signing in, choose <em>Try demo mode</em> when it starts.</p>
     <p><a href="help/">Getting started and help</a> &middot; <a href="./">Back to the home page</a></p>
   </main>
@@ -57,7 +57,8 @@
   <script>
     // This page exists so a visit to it counts a Download click (the analytics count page views only). The installer
     // starts a moment later, which gives the page view time to be sent; the link above is there if it doesn't.
-    // It downloads through a hidden frame, so this page stays as it is instead of starting to leave (which some
+    // The link goes through EmuKey's download counter (icm-get), which counts the download and sends the browser on to
+    // the newest installer on GitHub. It downloads through a hidden frame, so this page stays as it is instead of starting to leave (which some
     // browsers showed as a white page under the footer in dark mode).
     setTimeout(function () {
       var frame = document.createElement('iframe');
