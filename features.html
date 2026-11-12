@@ -39,10 +39,7 @@
       <a href="#mail">Mail</a>
       <a href="#writing">Writing and sending</a>
       <a href="#search">Search</a>
-      <a href="#big-mailboxes">Years of mail: cleanup</a>
       <a href="#rules">Rules and Quick Steps</a>
-            <a href="#ai">AI agents</a>
-            <a href="#analytics">Analytics</a>
       <a href="#calendar">Calendar</a>
       <a href="#people">People</a>
       <a href="#tasks">Tasks</a>
@@ -52,6 +49,10 @@
       <a href="#security">Security and privacy</a>
       <a href="#look">Look and accessibility</a>
       <a href="#it">For IT</a>
+      <a href="#only">Only in InCloseMail</a>
+      <a href="#big-mailboxes">Years of mail: cleanup</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#ai">AI agents</a>
     </nav>
 
     <main class="doc features-page">
@@ -67,10 +68,11 @@
         <li><strong>The To-Do Bar</strong> with the month calendar, upcoming appointments and flagged mail.</li>
         <li><strong>Outlook&rsquo;s keyboard shortcuts</strong>, Ctrl+1 to Ctrl+4 between Mail, Calendar, People and Tasks, and F1 for help on what&rsquo;s on screen.</li>
         <li><strong>Outlook&rsquo;s right-click menus</strong> on messages, folders, names, calendar items, contacts and tasks.</li>
-        <li><strong>Dialogs from the keyboard:</strong> arrow keys move between the buttons and choices, and Space or Enter picks one.</li>
+        <li><strong>Dialogs from the keyboard:</strong> arrow keys move between the buttons and choices, and Space or Enter picks one. In File &rarr; Options the arrow keys move through the sections and Tab goes into one; in the message list, Left folds the date group you leave and Right opens the next.</li>
         <li><strong>Windows that remember</strong> where they were and how big, on whichever monitor.</li>
         <li><strong>Open in New Window</strong>: a second main window, so Calendar can stay open beside Mail.</li>
         <li><strong>Start with Windows</strong>, minimized if you like.</li>
+        <li><strong>A Welcome wizard</strong> after your first account: theme, how much mail to keep on your PC, starting with Windows and the default email app.</li>
       </ul>
 
       <h2 id="mail">Mail</h2>
@@ -119,45 +121,6 @@
         <li><strong>Search the calendar</strong> a year back and a year ahead, and filter contacts as you type.</li>
       </ul>
 
-      <h2 id="big-mailboxes">Years of mail: cleanup and organizing</h2>
-      <p>For mailboxes with 5, 10 or 20 years of mail: sort what you keep into folders, clear out what you never needed, and do it across tens of thousands of messages at a time. How to use it: <a href="help/cleanup.html">Cleaning up years of mail</a>.</p>
-      <ul>
-        <li><strong>Clean Up My Inbox</strong> (Home &rarr; Clean Up My Inbox, or right-click any folder &rarr; Sort Through This Folder): reads every message in the folder once, with progress and Stop, then lists its mail in groups, junk first, then biggest first.</li>
-        <li><strong>The groups</strong>:
-          <ul>
-            <li><strong>Likely junk</strong>: mail Microsoft 365 rated spam or bulk.</li>
-            <li><strong>Newsletters and marketing</strong>: recognized from their unsubscribe link and from how marketing addresses look. Small senders are gathered into one Other mailings group.</li>
-            <li><strong>Mail you never act on</strong>: people outside your organization you&rsquo;ve never written to, replied to, forwarded or flagged. It works even if you mark everything read.</li>
-            <li><strong>Co-workers</strong>: filed into Co-workers &rsaquo; Name, as the Rules Wizard files them.</li>
-            <li><strong>Each company</strong>, all of its addresses together.</li>
-            <li><strong>Large messages</strong>, and <strong>mail older than 1, 2 or 5 years</strong>.</li>
-          </ul>
-        </li>
-        <li><strong>Suggestions you can change</strong>:
-          <ul>
-            <li>Delete what nobody keeps, file co-workers, mark notifications read, and leave alone anyone you&rsquo;ve written to.</li>
-            <li>For each group, choose Move, Archive, Delete, Mark as Read or Leave Alone, with sizes shown so you can see what takes the space.</li>
-          </ul>
-        </li>
-        <li><strong>Many groups at once</strong>: show one kind (Newsletters, say), Select All, and Set Selected To one action. Ctrl+click and Shift+click pick groups one by one.</li>
-        <li><strong>Folders where you want them</strong>: pick any folder, or right-click one to make a new folder inside it. Moves can add a rule so future mail goes there too, but not one you already have.</li>
-        <li><strong>Safe to run</strong>:
-          <ul>
-            <li>A summary before anything changes, then the work in small batches, with Stop.</li>
-            <li><strong>One Undo</strong> puts every message back where it was, and removes the rules and folders the run made.</li>
-            <li>Deleted mail goes to Deleted Items, never straight to permanent deletion.</li>
-          </ul>
-        </li>
-        <li><strong>Rules for years of mail</strong>:
-          <ul>
-            <li>The Rules Wizard and Organize Mail into Folders make a folder and rule for every co-worker and company at once, and file the mail you already have.</li>
-            <li>Run Rules Now works on any folder, with progress and Stop.</li>
-            <li>A new rule on a folder of thousands of messages asks before running, and offers Clean Up instead.</li>
-          </ul>
-        </li>
-        <li><strong>Your history on your PC</strong>: keep years of mail from every folder on your PC to read and search offline. File &rarr; Info shows how much is kept, beside your mailbox&rsquo;s size and limit.</li>
-      </ul>
-
       <h2 id="rules">Rules and Quick Steps</h2>
       <ul>
         <li><strong>Rules and Alerts</strong> that run on the server: file, flag, mark or delete mail by sender, recipients, words, Cc or attachments.</li>
@@ -166,28 +129,12 @@
         <li><strong>Organize Mail into Folders</strong>: a step-by-step wizard that makes a folder for each co-worker inside Co-workers and for each company you hear from inside Companies (all of a company&rsquo;s addresses together), with a rule for each, and files the mail already in your Inbox.</li>
         <li><strong>Start Over</strong>: save every rule to a backup file, delete them all and build new ones with Organize Mail into Folders. Import Rules brings any old rule back, creating any folder it needs, with progress shown as it goes.</li>
         <li><strong>Export and import rules</strong> to take them to another mailbox.</li>
+        <li><strong>Rules that copy mail spotted</strong>: when two rules would both move the same message, Exchange keeps a copy in each folder. Rules and Alerts marks them, and Fix Rules That Copy Mail stops the first one there and offers to remove the copies already made.</li>
         <li><strong>Script rules</strong>: run a PowerShell script, batch file or program when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did.</li>
         <li><strong>Always Move Messages in This Conversation</strong> and Always Move Messages From.</li>
         <li><strong>Quick Steps</strong> with Outlook&rsquo;s full list of actions, and Ctrl+Shift+1 to 9 shortcut keys.</li>
         <li><strong>Junk Email</strong>: Junk Email Options with Safe Senders, and Not Junk.</li>
         <li><strong>Automatic Replies</strong> (out of office).</li>
-      </ul>
-
-      <h2 id="ai">AI agents</h2>
-      <ul>
-        <li><strong>Work with Claude and other AI agents:</strong> turn on AI agents in File &rarr; Options &rarr; Advanced and an AI app (Claude Desktop, Claude Code, or any MCP client) can list, search and read the mailboxes you choose, whole conversations included, and save drafts for you to check. It can never send, delete or move mail.</li>
-        <li><strong>Copy for AI and Export for AI:</strong> copy a message, a conversation or a whole folder as clean text to paste into any chatbot.</li>
-        <li><strong>Your choice, per mailbox:</strong> nothing is shared until you allow it, and organizations can turn it off with Group Policy.</li>
-      </ul>
-
-      <h2 id="analytics">Analytics</h2>
-      <ul>
-        <li><strong>File &rarr; Analytics</strong> for any of your accounts, over the last 30 days, 90 days, 12 months or all your mail.</li>
-        <li><strong>The figures</strong>: mail received and sent, your usual reply time and reply rate, what&rsquo;s still unread, mail sent after hours and at weekends, and your busiest day.</li>
-        <li><strong>Charts</strong> of mail over time, your busiest hours and days, a grid of when mail arrives each hour of the week, and pies of who it&rsquo;s from.</li>
-        <li><strong>Top 10s</strong>: senders, the co-workers who write most, companies (with all their addresses together), automated senders, the people and domains you write to, who you leave unread, the longest conversations, who you answer fastest and slowest, and your folders by size.</li>
-        <li><strong>Folder sizes</strong>: point at a folder to see its items, unread and size.</li>
-        <li><strong>Private</strong>: only who each message is from and to, and when, are read, never what it says, and it&rsquo;s all worked out on your PC.</li>
       </ul>
 
       <h2 id="calendar">Calendar</h2>      <ul>
@@ -264,9 +211,10 @@
 
       <h2 id="look">Look and accessibility</h2>
       <ul>
-        <li><strong>Light and Dark Mode</strong>, following Windows until you choose, with Switch Background for a message.</li>
+        <li><strong>Light</strong> in classic Outlook's gray look, <strong>Dark Mode</strong> and <strong>White</strong>, following Windows until you choose, with Switch Background for a message.</li>
         <li><strong>High Contrast</strong>, and Windows&rsquo; own high-contrast themes.</li>
         <li><strong>Holiday themes</strong>, or one that changes with the season.</li>
+        <li><strong>The Theme Editor</strong> (File &rarr; Account): color each part of the window, from the title bar to the message list&rsquo;s date headings, and see it as you pick. Share a theme as a file.</li>
         <li><strong>Zoom</strong> the whole window with Ctrl+mouse wheel.</li>
         <li><strong>Ease of Access options</strong>, screen reader support, and KeyTips (Alt) for the ribbon.</li>
       </ul>
@@ -277,6 +225,65 @@
         <li><strong>Group Policy and Intune templates</strong>, and installer settings to limit sign-in to your organization or use your own app registration.</li>
         <li><strong>Admin consent</strong>: what InCloseMail asks for, and how to approve it for your organization. See <a href="help/admin-consent.html">For administrators</a>.</li>
         <li><strong>Updates from inside the app</strong>, each installer checked for EmuKey&rsquo;s signature before it runs, with What&rsquo;s New on the update bar.</li>
+      </ul>
+
+      <h2 id="only" class="only-heading">Only in InCloseMail</h2>
+      <p>Everything above is classic Outlook's. What follows is what classic Outlook never did.</p>
+
+      <h2 id="big-mailboxes">Years of mail: cleanup and organizing</h2>
+      <p>For mailboxes with 5, 10 or 20 years of mail: sort what you keep into folders, clear out what you never needed, and do it across tens of thousands of messages at a time. How to use it: <a href="help/cleanup.html">Cleaning up years of mail</a>.</p>
+      <ul>
+        <li><strong>Clean Up My Inbox</strong> (Home &rarr; Clean Up My Inbox, or right-click any folder &rarr; Sort Through This Folder): reads every message in the folder once, with progress and Stop, then lists its mail in groups, junk first, then biggest first.</li>
+        <li><strong>The groups</strong>:
+          <ul>
+            <li><strong>Likely junk</strong>: mail Microsoft 365 rated spam or bulk.</li>
+            <li><strong>Newsletters and marketing</strong>: recognized from their unsubscribe link and from how marketing addresses look. Small senders are gathered into one Other mailings group.</li>
+            <li><strong>Mail you never act on</strong>: people outside your organization you&rsquo;ve never written to, replied to, forwarded or flagged. It works even if you mark everything read.</li>
+            <li><strong>Co-workers</strong>: filed into Co-workers &rsaquo; Name, as the Rules Wizard files them.</li>
+            <li><strong>Each company</strong>, all of its addresses together.</li>
+            <li><strong>Large messages</strong>, and <strong>mail older than 1, 2 or 5 years</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Suggestions you can change</strong>:
+          <ul>
+            <li>Delete what nobody keeps, file co-workers, mark notifications read, and leave alone anyone you&rsquo;ve written to.</li>
+            <li>For each group, choose Move, Archive, Delete, Mark as Read or Leave Alone, with sizes shown so you can see what takes the space.</li>
+          </ul>
+        </li>
+        <li><strong>Many groups at once</strong>: show one kind (Newsletters, say), Select All, and Set Selected To one action. Ctrl+click and Shift+click pick groups one by one.</li>
+        <li><strong>Folders where you want them</strong>: pick any folder, or right-click one to make a new folder inside it. Moves can add a rule so future mail goes there too, but not one you already have.</li>
+        <li><strong>Safe to run</strong>:
+          <ul>
+            <li>A summary before anything changes, then the work in small batches, with Stop.</li>
+            <li><strong>One Undo</strong> puts every message back where it was, and removes the rules and folders the run made.</li>
+            <li>Deleted mail goes to Deleted Items, never straight to permanent deletion.</li>
+          </ul>
+        </li>
+        <li><strong>Rules for years of mail</strong>:
+          <ul>
+            <li>The Rules Wizard and Organize Mail into Folders make a folder and rule for every co-worker and company at once, and file the mail you already have.</li>
+            <li>Run Rules Now works on any folder, with progress and Stop.</li>
+            <li>A new rule on a folder of thousands of messages asks before running, and offers Clean Up instead.</li>
+          </ul>
+        </li>
+        <li><strong>Your history on your PC</strong>: keep years of mail from every folder on your PC to read and search offline. File &rarr; Info shows how much is kept, beside your mailbox&rsquo;s size and limit.</li>
+      </ul>
+
+      <h2 id="analytics">Analytics</h2>
+      <ul>
+        <li><strong>File &rarr; Analytics</strong> for any of your accounts, over the last 30 days, 90 days, 12 months or all your mail.</li>
+        <li><strong>The figures</strong>: mail received and sent, your usual reply time and reply rate, what&rsquo;s still unread, mail sent after hours and at weekends, and your busiest day.</li>
+        <li><strong>Charts</strong> of mail over time, your busiest hours and days, a grid of when mail arrives each hour of the week, and pies of who it&rsquo;s from.</li>
+        <li><strong>Top 10s</strong>: senders, the co-workers who write most, companies (with all their addresses together), automated senders, the people and domains you write to, who you leave unread, the longest conversations, who you answer fastest and slowest, and your folders by size.</li>
+        <li><strong>Folder sizes</strong>: point at a folder to see its items, unread and size.</li>
+        <li><strong>Private</strong>: only who each message is from and to, and when, are read, never what it says, and it&rsquo;s all worked out on your PC.</li>
+      </ul>
+
+      <h2 id="ai">AI agents</h2>
+      <ul>
+        <li><strong>Work with Claude and other AI agents:</strong> turn on AI agents in File &rarr; Options &rarr; Advanced and an AI app (Claude Desktop, Claude Code, or any MCP client) can list, search and read the mailboxes you choose, whole conversations included, and save drafts for you to check. It can never send, delete or move mail.</li>
+        <li><strong>Copy for AI and Export for AI:</strong> copy a message, a conversation or a whole folder as clean text to paste into any chatbot.</li>
+        <li><strong>Your choice, per mailbox:</strong> nothing is shared until you allow it, and organizations can turn it off with Group Policy.</li>
       </ul>
 
       <p class="lead-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app.</p>
