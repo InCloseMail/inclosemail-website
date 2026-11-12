@@ -37,6 +37,7 @@
     <nav class="help-nav" aria-label="Help topics">
       <a href="./">Get started</a>
       <a href="mail.html" aria-current="page">Mail</a>
+      <a href="cleanup.html">Cleaning up years of mail</a>
       <a href="calendar.html">Calendar</a>
       <a href="people.html">People</a>
       <a href="tasks.html">Tasks</a>
@@ -72,7 +73,7 @@
       <li><strong>Auto-Complete:</strong> as you type a name in To, Cc or Bcc, InCloseMail suggests people from all your accounts: those you&rsquo;ve written to and your contacts, the From account&rsquo;s first. After a moment it also looks in your organization&rsquo;s directory, so a colleague turns up even if you&rsquo;ve never written to them. The first time, click <strong>To</strong> in a message from that account and allow the Address Book. Up and Down pick a suggestion, Enter or Tab takes it, and the X removes it from the list.</li>
       <li>Send with <strong>Send</strong>, Ctrl+Enter or Alt+S. A message can carry up to 20 MB of attachments.</li>
       <li>Drafts save themselves every 3 minutes. <strong>File &rarr; Options &rarr; Mail</strong> changes that.</li>
-      <li><strong>Signatures:</strong> <strong>Insert &rarr; Signature &rarr; Signatures...</strong>, where you also set the defaults for new messages and for replies.</li>
+      <li><strong>Signatures:</strong> <strong>Insert &rarr; Signature &rarr; Signatures</strong>, where you also set the defaults for new messages and for replies.</li>
       <li><strong>Send later:</strong> <strong>Options &rarr; Delay Delivery</strong>. Exchange holds the message in the Outbox, so it goes out even with InCloseMail closed.</li>
       <li><strong>Quick Parts and templates:</strong> <strong>Insert &rarr; Quick Parts</strong> and <strong>Message &rarr; View Templates</strong>. Both are kept on this PC.</li>
       <li><strong>AutoCorrect</strong> fixes common typos as you type, capitalizes sentences, curls quotes, turns (c) into &copy; and -- into a dash, starts a list from * or 1., and makes web and email addresses links. Ctrl+Z right after takes a change back. Turn each one off in <strong>File &rarr; Options &rarr; Mail &rarr; AutoCorrect and pasting</strong>.</li>
@@ -124,7 +125,7 @@
     </ul>
 
     <h2 id="rules">Rules</h2>
-    <p><strong>Home &rarr; Rules &rarr; Manage Rules &amp; Alerts...</strong> lists your rules. <strong>Create Rule...</strong> starts one from the selected message. On mail in an added account, it makes a rule in that account. Rules are kept and run by Exchange, so they work with InCloseMail closed and show in Outlook on the web. <strong>Run Rules Now</strong> applies them to mail already in a folder, but never forwards it. <strong>Export Rules</strong> and <strong>Import Rules</strong> move your rules to another mailbox.</p>
+    <p><strong>Home &rarr; Rules &rarr; Manage Rules &amp; Alerts</strong> lists your rules. <strong>Create Rule</strong> starts one from the selected message. On mail in an added account, it makes a rule in that account. Rules are kept and run by Exchange, so they work with InCloseMail closed and show in Outlook on the web. <strong>Run Rules Now</strong> applies them to mail already in a folder, but never forwards it. On a big folder, see <a href="cleanup.html#big-folders">Rules on big folders</a>, and <a href="cleanup.html">Cleaning up years of mail</a> for Clean Up My Inbox. <strong>Export Rules</strong> and <strong>Import Rules</strong> move your rules to another mailbox.</p>
 
     <h3 id="suggest-rules">Suggest Rules</h3>
     <p><strong>Home &rarr; Rules &rarr; Suggest Rules</strong> looks through your Inbox and suggests folders to sort it into:</p>
@@ -136,10 +137,10 @@
     <p><strong>Select Folder Plan</strong> ticks the colleagues and companies and leaves single senders for you to choose. <strong>Create Rules</strong> makes a rule for each ticked folder, creates any folder that doesn&rsquo;t exist yet under the Inbox, and moves the mail already in the Inbox there.</p>
 
     <h3 id="start-over">Start over with your rules</h3>
-    <p>When years of rules have piled up, <strong>Start Over...</strong> in Rules and Alerts clears the way. It saves every rule to a backup file in <strong>Documents\InCloseMail\Rules backups</strong>, deletes them, and then offers Suggest Rules to build a new set. Your folders and mail stay as they are. If the backup can&rsquo;t be saved, nothing is deleted. To bring an old rule back, use <strong>Import Rules</strong> with the backup file.</p>
+    <p>When years of rules have piled up, <strong>Start Over</strong> in Rules and Alerts clears the way. It saves every rule to a backup file in <strong>Documents\InCloseMail\Rules backups</strong>, deletes them, and then offers Suggest Rules to build a new set. Your folders and mail stay as they are. If the backup can&rsquo;t be saved, nothing is deleted. To bring an old rule back, use <strong>Import Rules</strong> with the backup file.</p>
 
     <h3 id="script-rules">Script rules</h3>
-    <p><strong>Home &rarr; Rules &rarr; Script Rules...</strong> runs a script of yours when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did, with a script file instead of VBA. A rule can watch your Inbox, an added account&rsquo;s or a shared mailbox&rsquo;s, and match on the sender, the subject and whether there are attachments. The script can be a PowerShell script (.ps1), a batch file (.cmd or .bat) or a program (.exe).</p>
+    <p><strong>Home &rarr; Rules &rarr; Script Rules</strong> runs a script of yours when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did, with a script file instead of VBA. A rule can watch your Inbox, an added account&rsquo;s or a shared mailbox&rsquo;s, and match on the sender, the subject and whether there are attachments. The script can be a PowerShell script (.ps1), a batch file (.cmd or .bat) or a program (.exe).</p>
     <ul>
       <li>The script gets one argument: the path of a JSON file with the message&rsquo;s details (<code>subject</code>, <code>fromAddress</code>, <code>fromName</code>, <code>to</code>, <code>cc</code>, <code>received</code>, <code>hasAttachments</code>, <code>bodyPreview</code>, <code>internetMessageId</code>, <code>mailbox</code> and <code>emlPath</code>, where the whole message is saved as an .eml file). Both files are deleted when the script ends.</li>
       <li>Nothing from the message is put on the script&rsquo;s command line, so a crafted subject can&rsquo;t run anything.</li>

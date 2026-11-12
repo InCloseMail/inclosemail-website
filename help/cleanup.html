@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cleaning up years of mail - InCloseMail Help</title>
+  <meta name="description" content="Clean Up My Inbox in InCloseMail: group a big folder's mail by sender, junk, newsletters, co-workers, size and age, and file or delete thousands of messages at once, with one Undo.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Cleaning up years of mail</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="cleanup.html" aria-current="page">Cleaning up years of mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="admin-consent.html">For administrators</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+    </nav>
+
+    <main class="doc">
+    <p>If you keep everything, your Inbox may hold 5, 10 or 20 years of mail: tens of thousands of messages, with the mail that matters buried among newsletters, notifications and junk. <strong>Clean Up My Inbox</strong> reads the whole folder, groups its mail, suggests what to do with each group, and does it all in one go. It works on any folder, and <strong>Undo All</strong> puts everything back.</p>
+    <p>A good order for a big mailbox:</p>
+    <ol>
+      <li><strong>Start Over with your rules.</strong> This sets up a folder and rule for every co-worker and company, and files their mail. See <a href="mail.html#start-over">Start over with your rules</a>.</li>
+      <li><strong>Clean up what&rsquo;s left</strong> with Clean Up My Inbox, as below.</li>
+      <li><strong>Empty Deleted Items</strong> when you&rsquo;re happy with the result, to free the space.</li>
+    </ol>
+
+    <h2 id="start">Start it</h2>
+    <ul>
+      <li><strong>Home &rarr; Clean Up My Inbox</strong> cleans up the Inbox of the mailbox you&rsquo;re in.</li>
+      <li><strong>Right-click any folder &rarr; Sort Through This Folder</strong> cleans up that folder instead.</li>
+      <li>Don&rsquo;t confuse it with <strong>Clean Up Folder</strong> on the same menu. That is classic Outlook&rsquo;s command, and it does something else: it removes messages whose text is quoted in full in a later reply.</li>
+    </ul>
+    <p>It has three steps, listed on the left of its window: <strong>1. Look</strong>, <strong>2. Choose</strong> and <strong>3. Clean up</strong>.</p>
+
+    <h2 id="look">1. Look</h2>
+    <p>As the window opens, InCloseMail reads every message in the folder. It reads only who sent it, when, its size, whether it&rsquo;s read, and whether it was replied to, forwarded or flagged; it never reads what it says.</p>
+    <ul>
+      <li>A big Inbox takes a few minutes, with a progress bar. <strong>Stop</strong> ends it.</li>
+      <li>InCloseMail also looks at who you write to, and at your rules, so it can leave those people alone and doesn&rsquo;t suggest a rule twice.</li>
+      <li><strong>Look Again</strong> starts over.</li>
+    </ul>
+
+    <h2 id="choose">2. Choose</h2>
+    <p>The folder&rsquo;s mail is listed in groups, junk first and then biggest first. For each group you see how many messages it has, how many are unread, how much space they take, and the newest one.</p>
+
+    <h3 id="groups">The groups</h3>
+    <ul>
+      <li><strong>Likely junk</strong>: mail Microsoft 365 rated spam or bulk mail.</li>
+      <li><strong>Newsletters and marketing</strong>: a group for each sender. InCloseMail recognizes them from their unsubscribe link and from how marketing addresses look (marketing-info@&hellip;, or a mailing service&rsquo;s address such as @e.company.com).</li>
+      <li><strong>Other mailings</strong>: newsletters and marketing from senders with only a few messages each, gathered into one group.</li>
+      <li><strong>Mail you never act on</strong>: people outside your organization you&rsquo;ve never written to, and whose mail you&rsquo;ve never replied to, forwarded or flagged. It works even if you mark everything read. A person row of this kind shows <strong>Never answered</strong>.</li>
+      <li><strong>Co-workers</strong>: people at your own organization, one group each.</li>
+      <li><strong>Companies</strong>: one group for each company you hear from, with all of its addresses together.</li>
+      <li><strong>Notifications</strong>: automatic mail from no-reply addresses, alerts and the like.</li>
+      <li><strong>People and senders</strong>: anyone else with a good number of messages.</li>
+      <li><strong>Size and age</strong>: large messages, and mail older than 1, 2 or 5 years.</li>
+    </ul>
+    <p>The <strong>Show</strong> list shows one kind of group at a time. <strong>Junk and mailings</strong> shows just what&rsquo;s there to clear out.</p>
+
+    <h3 id="suggestions">What it suggests</h3>
+    <ul>
+      <li><strong>Delete</strong> likely junk, newsletters and marketing from anyone you&rsquo;ve never written to, other mailings, and mail you never act on.</li>
+      <li><strong>Move</strong> each co-worker&rsquo;s mail to <strong>Co-workers &rsaquo; their name</strong>, as the Rules Wizard files it. Their folder is used if you have one; otherwise it&rsquo;s made inside Co-workers.</li>
+      <li><strong>Mark as read</strong> unread notifications.</li>
+      <li><strong>Leave alone</strong> everyone else, and anyone you&rsquo;ve written to.</li>
+    </ul>
+    <p>Change any group in its <strong>What to do</strong> list: <strong>Leave alone</strong>, <strong>Move to a folder</strong>, <strong>Archive</strong>, <strong>Delete</strong> or <strong>Mark as read</strong>. <strong>Suggested Choices</strong> puts every group back to its suggestion; <strong>Leave All Alone</strong> clears them all.</p>
+
+    <h3 id="many">Many groups at once</h3>
+    <ol>
+      <li>Pick a kind of group in <strong>Show</strong> (Newsletters, say), then click <strong>Select All</strong>. Or Ctrl+click and Shift+click groups one by one.</li>
+      <li>Choose an action in <strong>Set selected to</strong>, and click <strong>Apply</strong>.</li>
+    </ol>
+    <p><strong>Select None</strong> clears the selection.</p>
+
+    <h3 id="folders">Moving to a folder</h3>
+    <ul>
+      <li>Pick any folder in the group&rsquo;s <strong>Folder</strong> list. Folders inside Deleted Items, Junk Email, Drafts and the Outbox aren&rsquo;t listed.</li>
+      <li>To make a new folder, <strong>right-click a folder in the list &rarr; New Folder Inside</strong>, or choose <strong>New folder in Inbox:</strong> and type its name. New folders are made when the clean-up runs, and every group can use them.</li>
+      <li><strong>Also move future mail with a rule</strong> adds a rule, so mail that arrives later goes to the same folder. It starts ticked for newsletters and for co-workers who still write, unless a rule already files them.</li>
+    </ul>
+
+    <h3 id="overlaps">A message in several groups</h3>
+    <p>A message can be in several groups: its sender&rsquo;s, its company&rsquo;s and its age&rsquo;s, for example. Each message is changed once:</p>
+    <ul>
+      <li><strong>Delete</strong> wins.</li>
+      <li>Then the narrowest group&rsquo;s move: a sender&rsquo;s folder beats a company&rsquo;s.</li>
+      <li>Then Mark as read.</li>
+    </ul>
+    <p>The line under the list always says what it comes to, for example &ldquo;Moves 1,450 messages into 1 folder and deletes 11,971 (to Deleted Items).&rdquo;</p>
+
+    <h2 id="clean-up">3. Clean up</h2>
+    <ul>
+      <li><strong>Next &gt;</strong> shows the summary once more. <strong>Clean Up</strong> runs it in small batches, with progress, and <strong>Stop</strong> stops between batches.</li>
+      <li>Deleted mail goes to <strong>Deleted Items</strong>, never straight to permanent deletion.</li>
+      <li><strong>Undo All</strong> puts every message back in the folder, unread again where it was, and removes the rules and folders the clean-up made. It works after a stopped run too.</li>
+      <li>If your mailbox is read-only, InCloseMail asks to allow changes first.</li>
+    </ul>
+
+    <h2 id="space">Freeing the space</h2>
+    <ul>
+      <li>Deleted mail still counts toward your mailbox&rsquo;s size until Deleted Items is emptied. Use <strong>File &rarr; Info &rarr; Tools &rarr; Empty Deleted Items Folder</strong>, or let Microsoft 365 empty it for you after its usual time.</li>
+      <li><strong>File &rarr; Info</strong> shows how full your mailbox is, and how much of it is kept on this PC.</li>
+      <li><strong>Mailbox Cleanup</strong> (File &rarr; Info &rarr; Tools) lists your folders by size and finds old or large items.</li>
+    </ul>
+
+    <h2 id="big-folders">Rules on big folders</h2>
+    <p>When you create a rule with <strong>Run this rule now</strong> ticked on a folder of 2,500 messages or more, InCloseMail asks first, because running it means reading every message, which can take minutes. You can:</p>
+    <ul>
+      <li>run it on all of them now;</li>
+      <li>create the rule only, and run it later with <strong>Run Rules Now</strong> or the folder&rsquo;s menu;</li>
+      <li>create it and sort through the folder with Clean Up instead.</li>
+    </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>
