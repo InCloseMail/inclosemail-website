@@ -87,10 +87,34 @@
 
     <h2 id="settings-sync">Your settings on every PC</h2>
     <p>If you use InCloseMail on more than one PC, your settings follow you: your options and views, Safe Senders, Quick Steps, Favorites, contact groups, the shared mailboxes and calendars you added, signatures, templates and Quick Parts. They&rsquo;re kept in your own mailbox, in a folder Outlook doesn&rsquo;t show, and your other PCs pick them up within 15 minutes; some take effect the next time InCloseMail starts. Change one thing on each PC and both changes are kept; if both PCs change the same list, such as Safe Senders, before they sync, the two are combined. The first time a second PC joins, its lists are combined with yours too.</p>
-    <p>Window sizes, sign-ins, added accounts and the settings for the copy of your mail stay on each PC. While changes to your mailbox are turned off on a PC (a new PC starts that way), it takes the other PCs&rsquo; settings but shares none of its own; File &rarr; Options &rarr; Advanced says so. To turn syncing off on a PC: <strong>File &rarr; Options &rarr; Advanced &rarr; Keep my settings the same on every PC</strong>.</p>
+    <p>Window sizes, sign-ins, added accounts and the settings for the copy of your mail stay on each PC. While changes to your mailbox are turned off on a PC, it takes the other PCs&rsquo; settings but shares none of its own; File &rarr; Options &rarr; Advanced says so. To turn syncing off on a PC: <strong>File &rarr; Options &rarr; Advanced &rarr; Keep my settings the same on every PC</strong>.</p>
 
     <h2 id="start-with-windows">Starting with Windows</h2>
     <p><strong>File &rarr; Options &rarr; Advanced &rarr; Start InCloseMail when Windows starts</strong> opens InCloseMail when you sign in to Windows. Tick <strong>Start minimized</strong> as well to have it wait on the taskbar; when you open it, it comes back as you left it. Task Manager&rsquo;s <strong>Startup</strong> tab shows it and can turn it off too. Each Windows user sets this for themselves.</p>
+
+    <h2 id="new-pc">Moving to a new PC</h2>
+    <p>Install InCloseMail on the new PC and sign in with the same account. Don&rsquo;t copy the InCloseMail folder from your old PC (<code>%LOCALAPPDATA%\InCloseMail</code>). Your sign-in and the copy of your mail in it are encrypted for your Windows user on the old PC, and the new PC can&rsquo;t read them. You&rsquo;d have to sign in again anyway, and InCloseMail would set the copy it can&rsquo;t read aside (where it takes up space for 30 days) and download your mail again.</p>
+    <p>What comes across by itself:</p>
+    <ul>
+      <li><strong>Your mail, calendar, contacts, tasks, rules, categories and Automatic Replies.</strong> They&rsquo;re in your mailbox. The copy kept for offline use downloads again; for a large mailbox that can take a few hours, and you can use InCloseMail meanwhile.</li>
+      <li><strong>Your options and views, Safe Senders, Quick Steps, Favorites, contact groups, the shared mailboxes and calendars you added, signatures, templates and Quick Parts,</strong> through <a href="#settings-sync">Your settings on every PC</a>, as long as it&rsquo;s on on your old PC (it is unless you turned it off). They arrive within a few minutes of signing in; some take effect the next time InCloseMail starts. If the old PC is still around, open InCloseMail there once before you switch, so its latest changes are saved.</li>
+    </ul>
+    <p>What to set again on the new PC:</p>
+    <ul>
+      <li><strong>Other accounts:</strong> <strong>File &rarr; Add Account</strong> for each one.</li>
+      <li><strong>.pst files:</strong> copy them across, then <strong>File &rarr; Open &amp; Export &rarr; Open Outlook Data File</strong>.</li>
+      <li><strong>Settings kept per PC:</strong> how much mail is kept on this PC, read-only choices, <a href="#start-with-windows">starting with Windows</a>, script rules, AI agents and debug logging.</li>
+      <li><strong>Rules backups</strong> you saved (in <code>Documents\InCloseMail\Rules backups</code>) and any exported files are ordinary files: copy them if you want them.</li>
+    </ul>
+
+    <h2 id="uninstall">Uninstalling</h2>
+    <p><strong>Help &rarr; Uninstall</strong>, or Windows&rsquo; <strong>Settings &rarr; Apps</strong>, removes InCloseMail. Your mail, calendar and contacts stay in your mailbox online, and your synced settings stay there for the next install. On this PC it removes:</p>
+    <ul>
+      <li>The app itself, its Start menu and desktop shortcuts, and its <strong>Start with Windows</strong> entry.</li>
+      <li>Demo Mode&rsquo;s sample data.</li>
+      <li>Unless you clear <strong>Also remove my local mailbox data and sign-in information</strong>: your sign-in, the copy of your mail, your settings and signatures on this PC, the sign-in and debug logs, and temporary copies of attachments. Clear it to keep them for a later reinstall. Settings &rarr; Apps always removes them.</li>
+    </ul>
+    <p>It doesn&rsquo;t remove files you saved yourself (exported .pst and .mbox files, rules backups), other Windows users&rsquo; data on the same PC, or accounts you added to Windows itself (<strong>Settings &rarr; Accounts &rarr; Email &amp; accounts</strong>).</p>
 
     <h2 id="from-outlook">Moving from classic Outlook</h2>
     <p>On a PC with classic Outlook, <strong>File &rarr; Open &amp; Export &rarr; Import from Outlook</strong> brings across your signatures, Auto-Complete List and Quick Access Toolbar. It tells you what it found and asks first. Signatures you already have here are kept, and nothing in Outlook changes. Your rules and categories are in your mailbox, so they&rsquo;re already here.</p>
