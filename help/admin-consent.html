@@ -77,8 +77,11 @@
       <tr><td>Contacts.Read.Shared</td><td>Microsoft Graph</td><td>Contact folders other people shared with them</td><td>Sign-in</td></tr>
       <tr><td>EWS.AccessAsUser.All</td><td>Office 365 Exchange Online</td><td>Finding the shared mailboxes they have access to (Autodiscover only; no other Exchange requests)</td><td>Sign-in (work and school accounts)</td></tr>
       <tr><td>SMTP.Send</td><td>Office 365 Exchange Online</td><td>Sending through SMTP, an option for organizations whose mail to outside addresses Microsoft refuses when it&rsquo;s sent through Graph</td><td>Sign-in (work and school accounts)</td></tr>
+      <tr><td>IMAP.AccessAsUser.All</td><td>Office 365 Exchange Online</td><td>Reading their mailbox over IMAP, as a fallback when Microsoft Graph fails while the mailbox itself is fine (read only)</td><td>Sign-in (work and school accounts)</td></tr>
+      <tr><td>Presence.Read.All</td><td>Microsoft Graph</td><td>Co-workers&rsquo; availability from Teams: the coloured dot on their picture</td><td>Sign-in (work and school accounts)</td></tr>
     </table>
     <p>InCloseMail asks for all of them except Group.Read.All the first time someone signs in, so nobody is asked again later. Personal Outlook.com accounts get only the ones that apply to them. If your organization approves only some, InCloseMail works with what it has, and a feature whose permission is missing asks for it when it&rsquo;s used.</p>
+    <p>To see which permissions an account has, open <strong>File &rarr; Info &rarr; Permissions</strong> in InCloseMail. It lists each feature as allowed or not, and <strong>Allow</strong> asks for a missing one. <strong>Copy details</strong> copies the list to send to an administrator or to support.</p>
 
     <h2 id="groups">Approving Microsoft 365 Groups</h2>
     <p>Group.Read.All isn&rsquo;t part of sign-in, and the <strong>Approve for my organization</strong> button above doesn&rsquo;t include it, so approving InCloseMail never approves Groups by itself. It&rsquo;s asked for only when someone clicks <strong>Browse Groups</strong> on InCloseMail&rsquo;s Home tab.</p>
