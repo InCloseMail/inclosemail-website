@@ -63,6 +63,16 @@
     <p><strong>File &rarr; Add Account</strong> opens another work, school or Outlook.com account beside yours (<strong>Switch Account</strong> is different: it replaces the account you signed in with first, and the accounts added beside it), with its mail in the folder pane and its address in the From list. New messages start <strong>From</strong> whichever mailbox is at the top of the folder pane, unless you pick one in <strong>File &rarr; Options &rarr; Mail &rarr; Start new messages from</strong>; Auto-Complete suggests people from every account, and <strong>Create Rule</strong> works on its mail too (see <a href="mail.html#writing">Writing mail</a> and <a href="mail.html#rules">Rules</a>). Its contacts show under <strong>My Contacts</strong> in People, and its task lists under <strong>My Tasks</strong>, each with the account&rsquo;s address. Right-click an added account for <strong>Remove Account</strong>. To change the order of the mailboxes, drag one up or down in the folder pane, or right-click it for <strong>Move Up</strong> and <strong>Move Down</strong>. <strong>File &rarr; Options &rarr; Mail</strong> sets each account to read-only or to allow changes, separately.</p>
     <p>If an added account can&rsquo;t sign in by itself (your organization removed InCloseMail, say, or the password changed), its mail stays on your PC. Whether this happens at startup or while InCloseMail is open, the account leaves the folder pane, the status bar says so, and Microsoft&rsquo;s sign-in doesn&rsquo;t open by itself. <strong>File &rarr; Account</strong> lists it under <strong>Accounts that need you to sign in again</strong>, with <strong>Sign In Again</strong> and <strong>Remove</strong>. It also signs in by itself again once access comes back. If it isn&rsquo;t signed in again within 30 days, its mail is removed from your PC.</p>
 
+    <h2 id="profiles">Profiles</h2>
+    <p>A profile is a separate set of accounts with its own settings, signatures and copy of your mail, as in classic Outlook: one for work and one for home, say. InCloseMail opens one profile at a time. Everyone starts with one, named <strong>InCloseMail</strong>.</p>
+    <ul>
+      <li><strong>To add one,</strong> go to <strong>File &rarr; Info &rarr; Account Settings &rarr; Manage Profiles</strong> and click <strong>Add</strong>. InCloseMail offers to start with it now; a new profile starts signed out, so you sign in to its account there.</li>
+      <li><strong>To switch,</strong> choose <strong>File &rarr; Info &rarr; Account Settings &rarr; Change Profile</strong>. InCloseMail closes and opens again with <strong>Choose Profile</strong>. While a profile is signed out, the same commands are under <strong>Profiles</strong> on <strong>File &rarr; Info</strong>.</li>
+      <li><strong>To be asked every time,</strong> choose <strong>Prompt for a profile to be used</strong> in Manage Profiles; or choose <strong>Always use this profile</strong> and pick one. <strong>Set as default profile</strong> in Choose Profile does the same.</li>
+      <li><strong>Copy</strong> makes a new profile with the same accounts and settings; its mail is downloaded again. <strong>Remove</strong> deletes a profile&rsquo;s sign-in, settings and mail on this PC (the mailbox itself isn&rsquo;t touched). The profile you&rsquo;re using, and the first one, can&rsquo;t be removed.</li>
+      <li><strong>From a shortcut or script,</strong> <code>InCloseMail.exe --profile "Work"</code> starts with that profile (<code>/profile</code> works too, as with Outlook).</li>
+    </ul>
+
     <h2 id="shared">Shared mailboxes</h2>
     <ul>
       <li>Shared mailboxes you have Full Access to usually appear by themselves. If a bar offers it, click <strong>Allow</strong>, or right-click your mailbox and choose <strong>Find Shared Mailboxes</strong>.</li>
@@ -114,7 +124,7 @@
     <ul>
       <li>The app itself, its Start menu and desktop shortcuts, and its <strong>Start with Windows</strong> entry.</li>
       <li>Demo Mode&rsquo;s sample data.</li>
-      <li>Unless you clear <strong>Also remove my local mailbox data and sign-in information</strong>: your sign-in, the copy of your mail, your settings and signatures on this PC, the sign-in and debug logs, and temporary copies of attachments. Clear it to keep them for a later reinstall. Settings &rarr; Apps always removes them.</li>
+      <li>Unless you clear <strong>Also remove my local mailbox data and sign-in information</strong>: your sign-in, the copy of your mail, your settings and signatures on this PC (in every profile), the sign-in and debug logs, and temporary copies of attachments. Clear it to keep them for a later reinstall. Settings &rarr; Apps always removes them.</li>
     </ul>
     <p>It doesn&rsquo;t remove files you saved yourself (exported .pst and .mbox files, rules backups), other Windows users&rsquo; data on the same PC, or accounts you added to Windows itself (<strong>Settings &rarr; Accounts &rarr; Email &amp; accounts</strong>).</p>
 
