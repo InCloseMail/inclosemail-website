@@ -45,6 +45,7 @@
       <a href="keyboard.html">Keyboard shortcuts</a>
       <a href="troubleshooting.html">Troubleshooting</a>
       <a href="admin-consent.html">For administrators</a>
+      <a href="what-it-uses.html">What InCloseMail uses</a>
       <a href="whats-new.html">What&rsquo;s new</a>
     </nav>
 
@@ -88,7 +89,7 @@
       <li><strong>Undo</strong> (Ctrl+Z) takes back your last moves, deletes, flags and categories, up to 20 of them.</li>
       <li><strong>Follow Up</strong> flags messages. Insert flags for today.</li>
       <li><strong>Categorize</strong> adds color categories. In <strong>All Categories</strong> you can give one a shortcut key.</li>
-      <li><strong>Quick Steps</strong> (Home tab) run several actions with one click. Give one a shortcut in <strong>Manage Quick Steps</strong>.</li>
+      <li><strong>Quick Steps</strong> (Home tab) run several actions on the selected messages with one click. They aren&rsquo;t rules; see <a href="#once-or-always">Once, or from now on?</a></li>
       <li><strong>Clean Up</strong> and <strong>Ignore</strong> (Home tab) deal with long conversations.</li>
       <li><strong>View &rarr; Show as Conversations</strong> threads the list. <strong>View &rarr; Clean Conversation View</strong> reads a whole conversation like a chat in the reading pane.</li>
       <li><strong>File &rarr; Info &rarr; Tools &rarr; Mailbox Cleanup</strong> shows how big your mailbox and its folders are, and finds old or large items to delete or archive. <strong>Archive Old Items</strong> there, and <strong>AutoArchive</strong> in File &rarr; Options &rarr; Advanced, move old mail to the Archive folder.</li>
@@ -98,6 +99,33 @@
       <li>Type <strong>@</strong> and a name in a message to mention someone; they&rsquo;re added to To.</li>
       <li>File &rarr; Options &rarr; Mail &rarr; Tracking decides whether to send <strong>read receipts</strong>: ask each time (the default), always, or never.</li>
       <li>To open email links in InCloseMail, choose it in File &rarr; Options &rarr; General &rarr; <strong>Default Programs</strong>.</li>      <li><strong>Folder &rarr; Recover Deleted Items</strong> brings back what was deleted from Deleted Items, for a while afterwards.</li>
+    </ul>
+
+    <h2 id="once-or-always">Once, or from now on? Quick Steps, rules and similar commands</h2>
+    <p>Some commands act once, on the messages you&rsquo;ve selected. Others keep working on mail that arrives later. Point at a command to see what it does.</p>
+
+    <h3 id="quick-steps">Once, on the selected messages</h3>
+    <ul>
+      <li><strong>Quick Steps</strong> (Home tab, or right-click a message &rarr; <strong>Quick Steps</strong>) run their actions on the messages you&rsquo;ve selected, when you click them: move, copy, categorize, flag, mark as read, reply, forward, delete and more. <strong>A Quick Step is not a rule:</strong> mail that arrives later isn&rsquo;t touched. Point at one to see its actions.
+        <ul>
+          <li>The first time a Quick Step needs a folder or a category (<strong>Move to: ?</strong>, say), it asks for one and remembers it. After that, a click moves the selected messages there at once.</li>
+          <li><strong>Manage Quick Steps</strong> adds, changes and reorders them, and gives one a Ctrl+Shift shortcut.</li>
+          <li>The one exception is the action <strong>Always Move Messages in This Conversation</strong>: a Quick Step with it also moves later messages in that conversation (below), and its tooltip says so.</li>
+        </ul>
+      </li>
+      <li><strong>Move</strong>, <strong>Delete</strong>, <strong>Archive</strong>, <strong>Categorize</strong>, <strong>Follow Up</strong> and <strong>Mark as Read</strong>.</li>
+      <li><strong>Clean Up Conversation</strong> moves the messages that a later message in the conversation quotes in full to Deleted Items. <strong>Clean Up Folder</strong> does it for a whole folder.</li>
+      <li><strong>Run Rules Now</strong> (in Rules and Alerts) applies your rules once, to mail already in a folder.</li>
+    </ul>
+
+    <h3 id="from-now-on">From now on, on new mail too</h3>
+    <ul>
+      <li><strong>Rules</strong> (<strong>Create Rule</strong>, <strong>Manage Rules &amp; Alerts</strong>): Exchange runs them on each new message, even with InCloseMail closed. See <a href="#rules">Rules</a>.</li>
+      <li><strong>Always Move Messages From</strong> (right-click a message &rarr; <strong>Rules</strong>) makes a rule that moves that sender&rsquo;s new mail to a folder you pick. It then asks whether to move the messages already there too.</li>
+      <li><strong>Always Move Messages in This Conversation</strong> (Move menu) moves the conversation&rsquo;s messages now, and new ones as they arrive. Choose it again to stop.</li>
+      <li><strong>Ignore</strong> moves a conversation, and any new messages in it, to Deleted Items. On an ignored conversation, <strong>Stop Ignoring</strong> ends it.</li>
+      <li><strong>Always Move to Other</strong> and <strong>Always Move to Focused</strong> put a sender&rsquo;s new mail on that tab of the <a href="#focused-inbox">Focused Inbox</a>.</li>
+      <li><strong>Script Rules</strong> run a script of yours when matching mail arrives (<a href="#script-rules">Script rules</a>).</li>
     </ul>
 
     <h2 id="smime">Signed and encrypted mail (S/MIME)</h2>
@@ -120,7 +148,7 @@
     <ul>
       <li>Ctrl+E puts the cursor in the search box. Results appear as you type. Esc goes back to the folder.</li>
       <li>The <strong>Search</strong> tab sets the scope: Current Folder, Subfolders, Current Mailbox or All Mailboxes.</li>
-      <li>You can type criteria alongside words, such as <code>from:"Megan"</code>, <code>hasattachments:yes</code> or <code>read:no</code>. The <strong>Refine</strong> buttons and Advanced Find write them in the language InCloseMail is shown in (in German, <code>von:</code>, <code>hatanlagen:ja</code>, <code>erhalten:diese woche</code>), and you can type them in any of its languages. English always works.</li>
+      <li>You can type criteria alongside words, such as <code>from:"Megan"</code>, <code>hasattachments:yes</code> or <code>read:no</code>. The <strong>Refine</strong> buttons and Advanced Find write them in the language InCloseMail is shown in (in German, <code>von:</code>, <code>hatanlagen:ja</code>, <code>empfangen:diese woche</code>), and you can type them in any of its languages. English always works.</li>
       <li><strong>Advanced Find</strong> is Ctrl+Shift+F. <strong>New Search Folder</strong> is Ctrl+Shift+P: unread, flagged or important mail, mail from (or from and to) certain people, mail sent directly to you or to a group, categorized, large, old, with attachments, or with certain words.</li>
       <li><strong>File &rarr; Options &rarr; Search</strong> sets how many results show and whether Deleted Items is included.</li>
     </ul>

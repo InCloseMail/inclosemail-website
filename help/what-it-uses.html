@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What InCloseMail Uses - InCloseMail Help</title>
+  <meta name="description" content="Every online service InCloseMail connects to, the parts of Windows it relies on, and the third-party components it includes, with their licenses.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>What InCloseMail uses</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="cleanup.html">Cleaning up years of mail</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="admin-consent.html">For administrators</a>
+      <a href="what-it-uses.html" aria-current="page">What InCloseMail uses</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+    </nav>
+
+    <main class="doc">
+    <p>Everything InCloseMail connects to, relies on and includes, in one place. The permissions it asks Microsoft for are explained in <a href="admin-consent.html">For administrators</a>, and what it does with your data in the <a href="../privacy.html">Privacy Policy</a>.</p>
+
+    <h2 id="microsoft-services">Microsoft online services</h2>
+    <p>Your mail, calendar, contacts and tasks go only between your PC and Microsoft.</p>
+    <ul>
+      <li><strong>Microsoft sign-in</strong> (login.microsoftonline.com, and Windows&rsquo; own account sign-in): signs you in and gives the app its permissions.</li>
+      <li><strong>Microsoft Graph</strong> (graph.microsoft.com): almost everything. Mail, folders, rules, the calendar, contacts, Microsoft To Do, the Address Book, mailbox settings and Automatic Replies.</li>
+      <li><strong>Exchange Online</strong> (autodiscover-s.outlook.com and outlook.office365.com), for work or school accounts only:
+        <ul>
+          <li>Finds the shared mailboxes you have access to, so they appear by themselves.</li>
+          <li>Sends through Exchange Online&rsquo;s SMTP server, only if you turn on <strong>File &rarr; Options &rarr; Mail &rarr; Send through Exchange Online&rsquo;s SMTP server</strong>.</li>
+          <li>Runs <strong>File &rarr; Options &rarr; Advanced &rarr; Check other ways to reach your mailbox</strong> (IMAP and SMTP), only when you click it. It reads nothing and sends nothing.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="other-services">Other online services</h2>
+    <ul>
+      <li><strong>GitHub</strong> (api.github.com, github.com, raw.githubusercontent.com): checks for a new version when the app starts, downloads one only when you choose to install it, and reads the beta list. Turn the check off in <strong>File &rarr; Options &rarr; General</strong>.</li>
+      <li><strong>EmuKey&rsquo;s usage counter</strong> (on Cloudflare): once a day, a random install ID, the app&rsquo;s version and the Windows version. Never your name, address, account, mail or files. Turn it off in <strong>File &rarr; Options &rarr; General</strong>. See <a href="../privacy.html">Privacy</a>.</li>
+      <li><strong>Google Calendar&rsquo;s public holiday calendars</strong> (calendar.google.com): only when you use <strong>Add Holidays</strong> in the calendar options, to read the holidays of the countries you pick. Nothing about you is sent.</li>
+      <li><strong>Internet calendars</strong> you subscribe to: read from the address you give.</li>
+      <li><strong>Pictures in messages</strong>: downloaded from the sender&rsquo;s servers only when you choose to. The demo mailbox&rsquo;s newsletters use sample pictures from picsum.photos in the same way.</li>
+      <li><strong>Links</strong> open in your web browser only when you click them.</li>
+    </ul>
+
+    <h2 id="windows">Parts of Windows</h2>
+    <ul>
+      <li><strong>.NET 10</strong> (Microsoft, MIT License): what InCloseMail is built on. The installer includes what it needs.</li>
+      <li><strong>Microsoft Edge WebView2 Runtime</strong>: shows message text and the message editor. It comes with Windows 11 and current Windows 10; if it&rsquo;s missing, the app offers Microsoft&rsquo;s installer (go.microsoft.com).</li>
+      <li><strong>Windows&rsquo; account sign-in</strong> (Web Account Manager): the Windows sign-in window and single sign-on with the account you use for Windows.</li>
+      <li><strong>Windows&rsquo; data protection</strong> (DPAPI): encrypts your sign-in and the local copy of your mailbox, so only your Windows account can read them.</li>
+      <li><strong>Windows&rsquo; spell checker</strong>, <strong>notifications</strong>, <strong>speech</strong> (Read Aloud) and the <strong>certificate store</strong> (signed and encrypted mail).</li>
+    </ul>
+
+    <h2 id="components">Components included</h2>
+    <p>The installer includes these, each under its own license. The full license texts are in <strong>THIRD-PARTY-NOTICES.txt</strong> and the <strong>licenses</strong> folder where InCloseMail is installed.</p>
+    <table>
+      <thead><tr><th>Component</th><th>What it&rsquo;s for</th><th>License</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/microsoftgraph/msgraph-sdk-dotnet">Microsoft Graph SDK</a></td><td>Talking to Microsoft Graph</td><td>MIT</td></tr>
+        <tr><td><a href="https://github.com/AzureAD/microsoft-authentication-library-for-dotnet">Microsoft Authentication Library (MSAL)</a>, with its Windows broker and token cache</td><td>Signing in</td><td>MIT</td></tr>
+        <tr><td><a href="https://www.nuget.org/packages/Microsoft.Web.WebView2">Microsoft WebView2 SDK</a></td><td>Showing messages with the WebView2 Runtime</td><td>Microsoft&rsquo;s WebView2 SDK license</td></tr>
+        <tr><td><a href="https://github.com/fluentribbon/Fluent.Ribbon">Fluent.Ribbon</a></td><td>The ribbon and the File tab</td><td>MIT</td></tr>
+        <tr><td><a href="https://github.com/CommunityToolkit/dotnet">.NET Community Toolkit (MVVM)</a></td><td>The app&rsquo;s inner workings</td><td>MIT</td></tr>
+        <tr><td><a href="https://github.com/CommunityToolkit/WindowsCommunityToolkit">Windows Community Toolkit Notifications</a></td><td>Desktop alerts for new mail and reminders</td><td>MIT</td></tr>
+        <tr><td><a href="https://github.com/jstedfast/MailKit">MailKit</a> and MimeKit</td><td>Reading and writing raw messages (.eml, signed and encrypted mail), SMTP and the IMAP check</td><td>MIT</td></tr>
+        <tr><td><a href="https://github.com/dotnet/efcore">Microsoft.Data.Sqlite</a></td><td>The local copy of your mailbox</td><td>MIT</td></tr>
+        <tr><td><a href="https://github.com/ericsink/SQLitePCL.raw">SQLitePCLRaw</a> with <a href="https://www.zetetic.net/sqlcipher/">SQLCipher</a></td><td>The encrypted database file behind the local copy</td><td>Apache 2.0; SQLCipher BSD-style</td></tr>
+        <tr><td><a href="https://github.com/ironfede/openmcdf">OpenMcdf</a></td><td>Opening Outlook .msg files</td><td>MPL 2.0</td></tr>
+        <tr><td><a href="https://github.com/iluvadev/XstReader">XstReader</a></td><td>Importing Outlook Data Files (.pst)</td><td>MS-PL</td></tr>
+        <tr><td><a href="https://github.com/ROM-Knowledgeware/PSTFileFormat">PSTFileFormat</a></td><td>Exporting to Outlook Data Files (.pst)</td><td>LGPL 3.0</td></tr>
+        <tr><td><a href="https://github.com/dotnet/diagnostics">Microsoft .NET diagnostics client</a></td><td>Saving a report if the window stops responding, only when debug logging is on</td><td>MIT</td></tr>
+      </tbody>
+    </table>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>
