@@ -37,7 +37,7 @@
     <nav class="help-nav" aria-label="Help topics">
       <a href="./">Get started</a>
       <a href="mail.html">Mail</a>
-      <a href="cleanup.html">Cleaning up years of mail</a>
+      <a href="cleanup.html">Cleaning up mail</a>
       <a href="ai-agents.html" aria-current="page">AI agents</a>
       <a href="calendar.html">Calendar</a>
       <a href="people.html">People</a>
@@ -65,11 +65,20 @@
     <p>It&rsquo;s off until you turn it on, and it works only while InCloseMail is open, only for you on this PC.</p>
 
     <h2 id="connect">Connect your AI app</h2>
-    <p>In the same place, <strong>Copy Setup for AI Apps</strong> puts the settings an AI app needs on the clipboard. They tell the app to start InCloseMail with <code>--mcp</code>, which connects it to the InCloseMail you have open.</p>
+    <p>In the same place, InCloseMail gives you what your AI app needs. Either way, the app starts InCloseMail with <code>--mcp</code>, which connects it to the InCloseMail you have open.</p>
+
+    <h3 id="claude-code">Claude Code: one click</h3>
+    <ol>
+      <li>Click <strong>Connect Claude Code</strong>. InCloseMail shows a short message, already filled in for your PC.</li>
+      <li>Click <strong>Copy Message</strong>, paste it into Claude Code (the app or the terminal) and send it. Claude sets up the connection and checks that it works.</li>
+      <li>Start a new session in Claude Code and ask it about your mail.</li>
+    </ol>
+    <p>If you&rsquo;d rather do it yourself, the message boils down to running this once in a terminal (your path may differ):</p>
+    <pre><code>claude mcp add --scope user inclosemail -- "C:\Program Files\InCloseMail\InCloseMail.exe" --mcp</code></pre>
 
     <h3 id="claude-desktop">Claude Desktop</h3>
     <ol>
-      <li>Click <strong>Copy Setup for AI Apps</strong> in InCloseMail.</li>
+      <li>Click <strong>Copy Setup for Claude Desktop</strong> in InCloseMail. It puts the settings on the clipboard.</li>
       <li>In Claude Desktop, open <strong>Settings &rarr; Developer &rarr; Edit Config</strong>. This opens <code>claude_desktop_config.json</code>.</li>
       <li>Paste the settings in. If the file already has an <code>mcpServers</code> section, add the <code>inclosemail</code> entry to it rather than pasting a second one.</li>
       <li>Save the file and restart Claude Desktop. <strong>InCloseMail</strong> then shows in its list of connectors.</li>
@@ -83,10 +92,6 @@
     }
   }
 }</code></pre>
-
-    <h3 id="claude-code">Claude Code</h3>
-    <p>Run this once in a terminal:</p>
-    <pre><code>claude mcp add inclosemail -- "C:\Program Files\InCloseMail\InCloseMail.exe" --mcp</code></pre>
 
     <h3 id="other-apps">Other AI apps</h3>
     <p>Any app that can start a local MCP server can use InCloseMail: give it the command <code>InCloseMail.exe</code> with the argument <code>--mcp</code>, as in the settings above.</p>
@@ -138,7 +143,7 @@
     <p>Nothing is ever deleted for good: mail goes to <strong>Deleted Items</strong>, which you empty yourself.</p>
 
     <h2 id="clean-up-account">Clean up your whole account</h2>
-    <p>InCloseMail has tools for tidying by hand: <a href="cleanup.html">Clean Up My Inbox</a>, <a href="mail.html#suggest-rules">Suggest Rules</a>, <a href="mail.html#start-over">Start over with your rules</a> and the Rules Wizard. They still work, but you don&rsquo;t need them. With an agent connected, you can describe the account you want in a few sentences and let it do the whole job: it reads your folders, rules and mail, works out a plan, and proposes the changes. You only check and apply them.</p>
+    <p>InCloseMail has tools for tidying by hand: <a href="cleanup.html">Clean Up My Inbox</a>, <a href="mail.html#suggest-rules">the Rules Wizard</a> and <a href="mail.html#start-over">Start over with your rules</a>. They still work, but you don&rsquo;t need them. With an agent connected, you can describe the account you want in a few sentences and let it do the whole job: it reads your folders, rules and mail, works out a plan, and proposes the changes. You only check and apply them.</p>
     <p>Why this works well:</p>
     <ul>
       <li><strong>It sees the whole account at once.</strong> It notices that three folders hold the same company&rsquo;s mail, that a rule files into a folder you renamed, or that half your Inbox is status alerts.</li>
@@ -191,16 +196,16 @@
     <ul>
       <li>Only the mailboxes you ticked, only while InCloseMail is open, and only AI apps running on this PC as you.</li>
       <li>What you let the agent read goes to that AI app, and from there to its provider (Anthropic, for Claude), under the app&rsquo;s own terms. InCloseMail sends nothing anywhere else.</li>
-      <li><strong>Open Log</strong> (next to Copy Setup) shows what agents asked for and when: which tool and which mailbox, never what the mail says.</li>
+      <li><strong>Open Log</strong> (next to Copy Setup for Claude Desktop) shows what agents asked for and when: which tool and which mailbox, never what the mail says.</li>
       <li>Untick the AI agents box to cut every agent off at once.</li>
     </ul>
 
     <h2 id="copy-for-ai">Without connecting an app</h2>
     <p>To use a chatbot in your browser instead, give it text yourself:</p>
     <ul>
-      <li><strong>Right-click a message &rarr; Copy for AI</strong> copies the whole conversation as clean text (who wrote what and when, without the quoted repeats), to paste into ChatGPT, Claude or any other AI.</li>
-      <li><strong>Right-click messages &rarr; Export for AI</strong> saves the selected messages in full as one Markdown file.</li>
-      <li><strong>Right-click a folder &rarr; Export Folder for AI</strong> saves its newest messages (up to 500) the same way.</li>
+      <li><strong>Right-click a message &rarr; AI &rarr; Copy for AI</strong> copies the whole conversation as clean text (who wrote what and when, without the quoted repeats), to paste into ChatGPT, Claude or any other AI.</li>
+      <li><strong>Right-click messages &rarr; AI &rarr; Export for AI</strong> saves the selected messages in full as one Markdown file.</li>
+      <li><strong>Right-click a folder &rarr; Export &rarr; Export Folder for AI</strong> saves its newest messages (up to 500) the same way.</li>
     </ul>
 
     <h2 id="admins">For administrators</h2>
@@ -210,6 +215,7 @@
     <ul>
       <li><strong>The agent says InCloseMail isn&rsquo;t running, or AI agents are off:</strong> open InCloseMail, check the box in File &rarr; Options &rarr; Advanced &rarr; AI agents, and ask again.</li>
       <li><strong>InCloseMail doesn&rsquo;t show in Claude Desktop:</strong> check the config file is valid JSON (one <code>mcpServers</code> section, commas between entries), then restart Claude Desktop completely (from the tray icon too).</li>
+      <li><strong>Claude Code doesn&rsquo;t see InCloseMail:</strong> start a new Claude Code session after connecting (a session that was already open doesn&rsquo;t pick it up). Running <code>claude mcp get inclosemail</code> in a terminal shows whether it&rsquo;s set up and connected; if not, click <strong>Connect Claude Code</strong> again and send the message once more.</li>
       <li><strong>A mailbox is missing:</strong> it&rsquo;s unticked under Mailboxes they may use, or isn&rsquo;t open in InCloseMail.</li>
       <li><strong>Drafts aren&rsquo;t saved:</strong> tick the drafts box, and check the mailbox isn&rsquo;t read-only.</li>
       <li><strong>During an update</strong> the connection closes so the update can install; your AI app connects again afterwards.</li>
