@@ -51,7 +51,7 @@
     </nav>
 
     <main class="doc">
-    <p>Filing mail, writing rules and sorting folders by hand is a chore. An AI agent such as <strong>Claude</strong> can do it for you: connect it to InCloseMail and it can read and search the mailboxes you choose, draft replies, and <strong>propose</strong> folders, rules and clean-ups. You see every proposed change with the agent&rsquo;s reason, and nothing changes until you click <strong>Apply</strong>. <strong>Undo</strong> puts it all back.</p>
+    <p>Filing mail, writing rules and sorting folders by hand is a chore. An AI agent such as <strong>Claude</strong> can do it for you: connect it to InCloseMail and it can read and search the mailboxes you choose, draft replies, translate mail written in other languages, and <strong>propose</strong> folders, rules and clean-ups. You see every proposed change with the agent&rsquo;s reason, and nothing changes until you click <strong>Apply</strong>. <strong>Undo</strong> puts it all back.</p>
     <p>It works with Claude Desktop, Claude Code and any other AI app that uses the Model Context Protocol (MCP). InCloseMail never sends mail for an agent.</p>
 
     <h2 id="turn-on">Turn it on</h2>
@@ -95,6 +95,7 @@
     <ul>
       <li><strong>Read:</strong> list your mailboxes and folders, list and search messages (as the search box does, with <code>from:</code>, <code>subject:</code> and so on), and read a message or a whole conversation. Messages reach the agent as clean text, without the quoted earlier replies.</li>
       <li><strong>Read your rules:</strong> each rule in the order it runs, what it looks for and what it does.</li>
+      <li><strong>Translate:</strong> show its translation of a message in InCloseMail, in place of the original. See <a href="#translate">Translate mail</a>.</li>
       <li><strong>Save drafts</strong> in Drafts, if you allowed it. You check them and send them yourself. Never in a mailbox that is read-only in InCloseMail.</li>
       <li><strong>Propose changes</strong> for you to approve. See below.</li>
     </ul>
@@ -135,6 +136,15 @@
     </ul>
     <p>One exception: when a new rule does more than move or delete mail by sender or subject, InCloseMail runs it as <strong>Run Rules Now</strong> does, and Undo can&rsquo;t bring that mail back. The window says so after Apply.</p>
     <p>Nothing is ever deleted for good: mail goes to <strong>Deleted Items</strong>, which you empty yourself.</p>
+
+    <h2 id="translate">Translate mail</h2>
+    <p>Got a message in a language you don&rsquo;t read? Select it in InCloseMail and ask the agent, for example:</p>
+    <ul>
+      <li>&ldquo;Translate the email I have open.&rdquo;</li>
+      <li>&ldquo;Translate the latest message from Lukas into English.&rdquo;</li>
+    </ul>
+    <p>The agent reads the message, translates it, and InCloseMail shows the translation in place of the original, in the Reading Pane and in the message&rsquo;s own window, subject included. A bar above it says who translated it and from what language. Click <strong>Show original</strong> to see the message as it came, and <strong>Show translation</strong> to go back.</p>
+    <p>Nothing in your mailbox changes: the translation is only on your screen, and it lasts until you close InCloseMail. The agent translates into your language unless you ask for another. To reply in the sender&rsquo;s language, ask it to draft the reply.</p>
 
     <h2 id="privacy">Your privacy</h2>
     <ul>
