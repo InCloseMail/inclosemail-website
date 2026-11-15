@@ -369,5 +369,8 @@ a.brand { color: inherit; text-decoration: none; }
 .doc .consent-button:hover { background: var(--accent); filter: brightness(1.1); }
 .doc .consent-result { border-left: 4px solid var(--accent); background: var(--surface); padding: 12px 16px; margin: 8px 0 4px; }
 .doc .consent-result.error { border-left-color: #c42b1c; }
+/* An example request to an AI agent (help/ai-agents.html). */
+.doc blockquote { border-left: 4px solid var(--accent); background: var(--surface); padding: 12px 16px; margin: 0 0 12px; }
+.doc blockquote p { margin: 0; }
 
 .cta-demo { margin: 14px 0 0; }

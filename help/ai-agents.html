@@ -137,6 +137,47 @@
     <p>One exception: when a new rule does more than move or delete mail by sender or subject, InCloseMail runs it as <strong>Run Rules Now</strong> does, and Undo can&rsquo;t bring that mail back. The window says so after Apply.</p>
     <p>Nothing is ever deleted for good: mail goes to <strong>Deleted Items</strong>, which you empty yourself.</p>
 
+    <h2 id="clean-up-account">Clean up your whole account</h2>
+    <p>InCloseMail has tools for tidying by hand: <a href="cleanup.html">Clean Up My Inbox</a>, <a href="mail.html#suggest-rules">Suggest Rules</a>, <a href="mail.html#start-over">Start over with your rules</a> and the Rules Wizard. They still work, but you don&rsquo;t need them. With an agent connected, you can describe the account you want in a few sentences and let it do the whole job: it reads your folders, rules and mail, works out a plan, and proposes the changes. You only check and apply them.</p>
+    <p>Why this works well:</p>
+    <ul>
+      <li><strong>It sees the whole account at once.</strong> It notices that three folders hold the same company&rsquo;s mail, that a rule files into a folder you renamed, or that half your Inbox is status alerts.</li>
+      <li><strong>You say what you want, not how.</strong> &ldquo;Keep anything from real people, file the rest by company&rdquo; is enough. The agent turns it into folders, rules and moves.</li>
+      <li><strong>Nothing changes until you say so.</strong> Each step is a proposal with a reason on every change, and Undo puts it back.</li>
+    </ul>
+
+    <h3 id="clean-up-instructions">Tell it what you want</h3>
+    <p>The more the agent knows about how you work, the better its plan. A good request says what you want to end up with, what matters to you, and what to leave alone. For example:</p>
+    <blockquote>
+      <p>&ldquo;Clean up my whole mailbox. I want a short Inbox with only mail from real people and things I have to act on. File everything else into folders by company, under one Companies folder. Status pages and alerts (Linode, PhoenixNAP, Atlassian) go in their own folders and are marked as read. Newsletters I haven&rsquo;t opened in a year can go to Deleted Items. Tidy my rules too: merge the ones that do the same thing and remove ones that file into folders I no longer use. Don&rsquo;t touch my Clients folder or anything from my accountant. Tell me your plan before you propose anything.&rdquo;</p>
+    </blockquote>
+    <p>Shorter requests work too:</p>
+    <ul>
+      <li>&ldquo;Look at my whole account and tell me what you&rsquo;d clean up. Don&rsquo;t change anything yet.&rdquo;</li>
+      <li>&ldquo;I have 20 years of mail in my Inbox. Sort it into a sensible set of folders, with rules so it stays that way.&rdquo;</li>
+      <li>&ldquo;My folders are a mess. Suggest a simpler structure and move things into it.&rdquo;</li>
+      <li>&ldquo;Find rules that never match anything or file into folders I don&rsquo;t use, and remove them.&rdquo;</li>
+      <li>&ldquo;Check what landed in my Inbox this month and suggest rules for anything that keeps coming.&rdquo;</li>
+    </ul>
+
+    <h3 id="clean-up-steps">How it goes</h3>
+    <ol>
+      <li><strong>Ask for the plan first.</strong> The agent looks through your folders, rules and mail and tells you what it found and what it would do. Talk it over and change anything you don&rsquo;t like before it proposes a thing.</li>
+      <li><strong>Go a step at a time.</strong> A big account takes a few proposals: say, folders first, then rules, then the old mail. Each proposal holds up to 100 changes; each change moves up to 500 messages, and for more the agent proposes a rule and runs it on the folder.</li>
+      <li><strong>Check each proposal</strong> in the <a href="#review">AI Agent Proposal</a> window, untick anything you don&rsquo;t want, and click Apply. The agent is told what you applied, so it can carry on with the next step.</li>
+      <li><strong>Look at the result</strong> in InCloseMail. If a step went wrong, click <a href="#undo">Undo</a> in its window, or tell the agent what to change.</li>
+      <li><strong>Empty Deleted Items</strong> yourself when you&rsquo;re happy. Until then nothing is gone.</li>
+    </ol>
+    <p>Afterwards, your rules keep new mail where it belongs, as they always have; the agent only wrote them for you. Every month or so, ask it to look again.</p>
+
+    <h3 id="clean-up-limits">Good to know</h3>
+    <ul>
+      <li><strong>What it reads goes to your AI app&rsquo;s provider.</strong> A whole-account clean-up means the agent reads a lot of your mail. If you&rsquo;d rather it didn&rsquo;t read the messages themselves, ask it to work from senders and subjects only, and untick any mailbox it shouldn&rsquo;t see. See <a href="#privacy">Your privacy</a>.</li>
+      <li><strong>It can&rsquo;t delete folders or empty Deleted Items.</strong> It can make, rename and move folders; delete the empty ones yourself.</li>
+      <li><strong>It changes a rule by replacing it:</strong> a new rule in its place, and the old one deleted. Both show in the proposal.</li>
+      <li><strong>Mail filed by a new rule run on a folder</strong> can&rsquo;t always be undone (see <a href="#undo">Undo</a>). For a large clean-up, ask the agent to say which changes those are.</li>
+    </ul>
+
     <h2 id="translate">Translate mail</h2>
     <p>Got a message in a language you don&rsquo;t read? Select it in InCloseMail and ask the agent, for example:</p>
     <ul>
