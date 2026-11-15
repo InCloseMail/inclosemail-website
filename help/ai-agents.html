@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI agents - InCloseMail Help</title>
+  <meta name="description" content="Connect Claude and other AI apps to InCloseMail: let them read the mailboxes you choose, draft replies, and propose folders, rules and clean-ups that change nothing until you click Apply, with Undo.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>AI agents</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="cleanup.html">Cleaning up years of mail</a>
+      <a href="ai-agents.html" aria-current="page">AI agents</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="admin-consent.html">For administrators</a>
+      <a href="what-it-uses.html">What InCloseMail uses</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+    </nav>
+
+    <main class="doc">
+    <p>Filing mail, writing rules and sorting folders by hand is a chore. An AI agent such as <strong>Claude</strong> can do it for you: connect it to InCloseMail and it can read and search the mailboxes you choose, draft replies, and <strong>propose</strong> folders, rules and clean-ups. You see every proposed change with the agent&rsquo;s reason, and nothing changes until you click <strong>Apply</strong>. <strong>Undo</strong> puts it all back.</p>
+    <p>It works with Claude Desktop, Claude Code and any other AI app that uses the Model Context Protocol (MCP). InCloseMail never sends mail for an agent.</p>
+
+    <h2 id="turn-on">Turn it on</h2>
+    <ol>
+      <li>Open <strong>File &rarr; Options &rarr; Advanced</strong> and find <strong>AI agents</strong>.</li>
+      <li>Tick <strong>Let AI agents on this PC read my mail through InCloseMail</strong>.</li>
+      <li>Under <strong>Mailboxes they may use</strong>, untick any mailbox the agent should stay out of: an added account, or a shared mailbox, say.</li>
+      <li>To let the agent write drafts for you, tick <strong>Let them save drafts in Drafts for me to check and send</strong>.</li>
+      <li>Click <strong>OK</strong>.</li>
+    </ol>
+    <p>It&rsquo;s off until you turn it on, and it works only while InCloseMail is open, only for you on this PC.</p>
+
+    <h2 id="connect">Connect your AI app</h2>
+    <p>In the same place, <strong>Copy Setup for AI Apps</strong> puts the settings an AI app needs on the clipboard. They tell the app to start InCloseMail with <code>--mcp</code>, which connects it to the InCloseMail you have open.</p>
+
+    <h3 id="claude-desktop">Claude Desktop</h3>
+    <ol>
+      <li>Click <strong>Copy Setup for AI Apps</strong> in InCloseMail.</li>
+      <li>In Claude Desktop, open <strong>Settings &rarr; Developer &rarr; Edit Config</strong>. This opens <code>claude_desktop_config.json</code>.</li>
+      <li>Paste the settings in. If the file already has an <code>mcpServers</code> section, add the <code>inclosemail</code> entry to it rather than pasting a second one.</li>
+      <li>Save the file and restart Claude Desktop. <strong>InCloseMail</strong> then shows in its list of connectors.</li>
+    </ol>
+    <p>The settings look like this (your path may differ):</p>
+    <pre><code>{
+  "mcpServers": {
+    "inclosemail": {
+      "command": "C:\\Program Files\\InCloseMail\\InCloseMail.exe",
+      "args": [ "--mcp" ]
+    }
+  }
+}</code></pre>
+
+    <h3 id="claude-code">Claude Code</h3>
+    <p>Run this once in a terminal:</p>
+    <pre><code>claude mcp add inclosemail -- "C:\Program Files\InCloseMail\InCloseMail.exe" --mcp</code></pre>
+
+    <h3 id="other-apps">Other AI apps</h3>
+    <p>Any app that can start a local MCP server can use InCloseMail: give it the command <code>InCloseMail.exe</code> with the argument <code>--mcp</code>, as in the settings above.</p>
+
+    <h2 id="what-it-can-do">What an agent can do</h2>
+    <ul>
+      <li><strong>Read:</strong> list your mailboxes and folders, list and search messages (as the search box does, with <code>from:</code>, <code>subject:</code> and so on), and read a message or a whole conversation. Messages reach the agent as clean text, without the quoted earlier replies.</li>
+      <li><strong>Read your rules:</strong> each rule in the order it runs, what it looks for and what it does.</li>
+      <li><strong>Save drafts</strong> in Drafts, if you allowed it. You check them and send them yourself. Never in a mailbox that is read-only in InCloseMail.</li>
+      <li><strong>Propose changes</strong> for you to approve. See below.</li>
+    </ul>
+    <p>An agent can never send mail, and it can&rsquo;t change anything on its own.</p>
+
+    <h2 id="proposals">Let it organize your mail</h2>
+    <p>Ask the agent in your own words, for example:</p>
+    <ul>
+      <li>&ldquo;Look at my Inbox and suggest folders and rules for the mail I get most.&rdquo;</li>
+      <li>&ldquo;File everything from Linode and PhoenixNAP status pages into their own folders, and make rules for new mail.&rdquo;</li>
+      <li>&ldquo;Find newsletters I never open and clear them out.&rdquo;</li>
+      <li>&ldquo;My rules have grown messy. Tidy them up.&rdquo;</li>
+    </ul>
+    <p>The agent looks first (your folders, rules and mail), then sends one <strong>proposal</strong>. It can propose:</p>
+    <ul>
+      <li><strong>Folders:</strong> make, rename or move a folder.</li>
+      <li><strong>Rules:</strong> add a rule (who it&rsquo;s from, words in the subject or body, who it was sent to, with exceptions; move it, mark it as read, categorize it or put it in Deleted Items), and run a new rule on mail already in a folder. Turn rules on or off, delete them, or change their order.</li>
+      <li><strong>Mail:</strong> move messages, mark them as read, or put them in Deleted Items (up to 500 messages per change; for more, it proposes a rule and runs it).</li>
+    </ul>
+
+    <h3 id="review">Review it</h3>
+    <p>InCloseMail opens the proposal in its own window, <strong>AI Agent Proposal</strong>, with the agent&rsquo;s summary at the top and a list of changes. Each change says what it does, in plain words, with the agent&rsquo;s <strong>Why</strong>. For messages, it shows a few of their subjects.</p>
+    <ul>
+      <li>Every change starts ticked. Untick any you don&rsquo;t want. <strong>Select All</strong> and <strong>Clear All</strong> do them all.</li>
+      <li><strong>Apply</strong> makes the ticked changes: folders first, then rules (in one save), then mail. If one doesn&rsquo;t work, it says why in red under that change, and the rest still go ahead.</li>
+      <li><strong>Decline</strong> changes nothing. Closing the window without applying does the same.</li>
+      <li>If the mailbox is read-only in InCloseMail, Apply asks to allow changes first, as any change does.</li>
+      <li>The agent is told what happened (applied, partly applied, declined or undone), so it can carry on.</li>
+    </ul>
+    <p>You can keep working in InCloseMail while the window is open.</p>
+
+    <h3 id="undo">Undo</h3>
+    <p>After Apply, <strong>Undo</strong> puts things back as they were:</p>
+    <ul>
+      <li>the rules it touched go back to how they were, and new rules are removed;</li>
+      <li>moved messages go back to their folders, and messages it marked as read are unread again;</li>
+      <li>new folders go to Deleted Items, if they&rsquo;re still empty.</li>
+    </ul>
+    <p>One exception: when a new rule does more than move or delete mail by sender or subject, InCloseMail runs it as <strong>Run Rules Now</strong> does, and Undo can&rsquo;t bring that mail back. The window says so after Apply.</p>
+    <p>Nothing is ever deleted for good: mail goes to <strong>Deleted Items</strong>, which you empty yourself.</p>
+
+    <h2 id="privacy">Your privacy</h2>
+    <ul>
+      <li>Only the mailboxes you ticked, only while InCloseMail is open, and only AI apps running on this PC as you.</li>
+      <li>What you let the agent read goes to that AI app, and from there to its provider (Anthropic, for Claude), under the app&rsquo;s own terms. InCloseMail sends nothing anywhere else.</li>
+      <li><strong>Open Log</strong> (next to Copy Setup) shows what agents asked for and when: which tool and which mailbox, never what the mail says.</li>
+      <li>Untick the AI agents box to cut every agent off at once.</li>
+    </ul>
+
+    <h2 id="copy-for-ai">Without connecting an app</h2>
+    <p>To use a chatbot in your browser instead, give it text yourself:</p>
+    <ul>
+      <li><strong>Right-click a message &rarr; Copy for AI</strong> copies the whole conversation as clean text (who wrote what and when, without the quoted repeats), to paste into ChatGPT, Claude or any other AI.</li>
+      <li><strong>Right-click messages &rarr; Export for AI</strong> saves the selected messages in full as one Markdown file.</li>
+      <li><strong>Right-click a folder &rarr; Export Folder for AI</strong> saves its newest messages (up to 500) the same way.</li>
+    </ul>
+
+    <h2 id="admins">For administrators</h2>
+    <p>To keep AI agents off for everyone, use the <strong>Turn off AI agents</strong> policy (registry value <code>DisableAiAgents</code>, 1, under <code>SOFTWARE\Policies\InCloseMail</code>) in InCloseMail&rsquo;s Group Policy and Intune templates. File &rarr; Options then says your organization has turned them off. Copy for AI and Export for AI stay, as they only make text the person chooses to paste or save. See <a href="admin-consent.html">For administrators</a>.</p>
+
+    <h2 id="problems">If it doesn&rsquo;t work</h2>
+    <ul>
+      <li><strong>The agent says InCloseMail isn&rsquo;t running, or AI agents are off:</strong> open InCloseMail, check the box in File &rarr; Options &rarr; Advanced &rarr; AI agents, and ask again.</li>
+      <li><strong>InCloseMail doesn&rsquo;t show in Claude Desktop:</strong> check the config file is valid JSON (one <code>mcpServers</code> section, commas between entries), then restart Claude Desktop completely (from the tray icon too).</li>
+      <li><strong>A mailbox is missing:</strong> it&rsquo;s unticked under Mailboxes they may use, or isn&rsquo;t open in InCloseMail.</li>
+      <li><strong>Drafts aren&rsquo;t saved:</strong> tick the drafts box, and check the mailbox isn&rsquo;t read-only.</li>
+      <li><strong>During an update</strong> the connection closes so the update can install; your AI app connects again afterwards.</li>
+    </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

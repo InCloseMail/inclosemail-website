@@ -38,6 +38,7 @@
       <a href="./">Get started</a>
       <a href="mail.html">Mail</a>
       <a href="cleanup.html">Cleaning up years of mail</a>
+      <a href="ai-agents.html">AI agents</a>
       <a href="calendar.html">Calendar</a>
       <a href="people.html">People</a>
       <a href="tasks.html">Tasks</a>
@@ -97,6 +98,9 @@
 
     <h2 id="script-rules">Script rules</h2>
     <p>People can set up rules that run a script of theirs (.ps1, .cmd, .bat or .exe) when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did. The script runs as the signed-in Windows user, gets the message only as files (never on its command line), and PowerShell runs it with the RemoteSigned execution policy, which your own execution policy overrides. To turn script rules off, use the <strong>Don&rsquo;t run script rules</strong> policy (registry value <code>DisableScriptRules</code>, 1) in InCloseMail&rsquo;s Group Policy and Intune templates.</p>
+
+    <h2 id="ai-agents">AI agents</h2>
+    <p>People can let AI apps on their PC that use the Model Context Protocol (Claude Desktop, Claude Code and others) read the mailboxes they choose, save drafts, and propose folders, rules and messages to move, which change nothing until the person clicks Apply. It&rsquo;s off until they turn it on, works only while InCloseMail is open, and never sends mail; see <a href="ai-agents.html">AI agents</a>. To turn it off for everyone, use the <strong>Turn off AI agents</strong> policy (registry value <code>DisableAiAgents</code>, 1) in InCloseMail&rsquo;s Group Policy and Intune templates. Copy for AI and Export for AI stay, as they only make text the person chooses to paste or save.</p>
 
     <h2 id="remove">Removing InCloseMail</h2>
     <p>In the Entra admin center, <strong>Enterprise applications &rarr; InCloseMail &rarr; Properties &rarr; Delete</strong> removes it and every approval. Signed-in copies stop working at once.</p>
