@@ -18,8 +18,9 @@
               --accent: #4fbfb6; --accent-2: #f0a85a; --grid: #333333; --page-end: #000000; }
     }
     * { box-sizing: border-box; }
-    /* Past the end of the page (below a short page, overscroll): white in light mode, black in dark mode. */
-    html { background: var(--page-end); }
+    /* Past the end of the page (below a short page, overscroll): white in light mode, black in dark mode.
+       :root and !important outrank the Dark Reader extension's "html { background: white !important }". */
+    :root { background: var(--page-end) !important; }
     body { background: var(--bg); color: var(--text); margin: 0; }
     body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; font-size: 15px; line-height: 1.45; }
     .wrap { max-width: 1040px; margin: 0 auto; padding: 24px max(16px, env(safe-area-inset-left)) 48px; display: flex; flex-direction: column; gap: 28px; }
