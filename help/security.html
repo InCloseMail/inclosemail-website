@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lock InCloseMail - InCloseMail Help</title>
+  <meta name="description" content="Ask for Windows Hello or an authenticator code before InCloseMail opens your mail, and how to lock your mailbox down everywhere else too.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Lock InCloseMail</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="cleanup.html">Cleaning up mail</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="security.html" aria-current="page">Lock InCloseMail</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="admin-consent.html">For administrators</a>
+      <a href="what-it-uses.html">What InCloseMail uses</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+    </nav>
+
+    <main class="doc">
+    <p>InCloseMail can ask for a second step before it opens your mail: <strong>Windows Hello</strong> (your face, fingerprint or PIN) or a code from an <strong>authenticator app</strong> on your phone. Then someone at your unlocked PC, or a program running as you, can&rsquo;t read your mail in InCloseMail without it.</p>
+
+    <h2 id="turn-on">Turn it on</h2>
+    <ol>
+      <li>Go to <strong>File &rsaquo; Options &rsaquo; Trust Center &rsaquo; Lock InCloseMail</strong> and click <strong>Turn On</strong>. (The first-run wizard offers it too.)</li>
+      <li>Choose how to unlock:
+        <ul>
+          <li><strong>Windows Hello</strong> (recommended). It locks InCloseMail&rsquo;s window, AI agents&rsquo; access <em>and the copy of your mail on this PC</em>: the files are encrypted with a key only Windows Hello (or your recovery words) can open. Windows asks for your face, fingerprint or PIN up to three times while it&rsquo;s set up. If Windows Hello isn&rsquo;t set up on the PC, set it up first in Windows Settings &rsaquo; Accounts &rsaquo; Sign-in options.</li>
+          <li><strong>A code from an authenticator app</strong> (Microsoft Authenticator, Google Authenticator or another). It locks the window and AI agents&rsquo; access only. The copy of your mail on this PC stays protected by your Windows sign-in alone, because a code can&rsquo;t lock files: checking it needs a secret that&rsquo;s on the PC too. In your app, add an account, choose to enter a setup key, and type the key InCloseMail shows.</li>
+        </ul>
+      </li>
+      <li>Choose when it locks. It always asks when InCloseMail starts, and also, if you like, <strong>when Windows locks</strong> (Windows+L, or the screen locking by itself) and <strong>after a number of minutes without use</strong>.</li>
+      <li><strong>Write down your 12 recovery words</strong>, on paper, in order, and keep them somewhere safe away from the PC. They&rsquo;re the only way in if you lose your way to unlock: a new PC, Windows Hello reset, a lost phone. InCloseMail shows them once.</li>
+    </ol>
+    <p>With Windows Hello, InCloseMail starts again to finish, and you sign in once more, in your browser: with the lock on, InCloseMail keeps its own sign-in, locked, rather than leaving it with Windows (see <a href="#limits">what it can&rsquo;t lock</a>).</p>
+
+    <h2 id="locked">When it&rsquo;s locked</h2>
+    <ul>
+      <li>InCloseMail shows <strong>InCloseMail is locked</strong> before any mail. With Windows Hello, Windows asks at once; with an authenticator app, type the 6-digit code it shows.</li>
+      <li>Locked means paused: InCloseMail doesn&rsquo;t sync or show new-mail alerts until it&rsquo;s unlocked. When it locks while you&rsquo;re writing, the message is saved to <strong>Drafts</strong>, and InCloseMail says so when you unlock.</li>
+      <li>AI agents (Claude and others) are told &ldquo;InCloseMail is locked; unlock it to continue&rdquo;, and get nothing until you unlock it.</li>
+      <li><strong>Lost your way to unlock?</strong> Click <strong>Use your recovery words instead</strong>. Afterwards InCloseMail asks you to set up a new way to unlock and gives you new words.</li>
+      <li><strong>Lost the words too?</strong> <strong>Start over on this PC</strong> deletes this PC&rsquo;s copy of your mail and your sign-in, and turns the lock off. Your mail is still on the server: sign in again and it comes back. Messages in the Outbox and changes not sent yet are lost.</li>
+    </ul>
+    <p>To change how it unlocks, get new recovery words, or turn it off, use <strong>Change</strong> or <strong>Turn Off</strong> in the same place. Each asks for your current way to unlock first. <strong>Lock Now</strong> locks it at once.</p>
+
+    <h2 id="lock-down">Locking your mail down everywhere</h2>
+    <p>The lock protects <strong>InCloseMail on this PC</strong>. Your mail itself lives in Microsoft 365 or Outlook.com, and anything else signed in to your account can still read it: Outlook on the web in a browser, Outlook on your phone, another PC. So, to really lock your mail down:</p>
+    <ol>
+      <li><strong>Make InCloseMail the only way in.</strong> Sign out of your mail everywhere else and, if you can, have the other ways turned off.</li>
+      <li><strong>Make Microsoft&rsquo;s own sign-in strong.</strong> Every new sign-in, in a browser or an app, should need MFA, ideally a passkey or Windows Hello rather than a code.</li>
+      <li><strong>Turn on InCloseMail&rsquo;s lock with Windows Hello</strong>, and have it lock when Windows locks.</li>
+    </ol>
+    <table>
+      <thead><tr><th>Lock</th><th>Protects against</th><th>Set up by</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Microsoft&rsquo;s MFA</strong> (your account)</td><td>Someone with your password signing in from their own PC or phone</td><td>You (personal account) or your IT admin (work or school)</td></tr>
+        <tr><td><strong>InCloseMail&rsquo;s lock</strong> (this PC)</td><td>Someone at your unlocked PC, or a program running as you, reading your mail in InCloseMail or on disk</td><td>You, in File &rsaquo; Options &rsaquo; Trust Center</td></tr>
+      </tbody>
+    </table>
+
+    <h3 id="everyone">What you can do yourself</h3>
+    <ol>
+      <li><strong>Sign out of Outlook on the web in every browser</strong> (outlook.office.com, outlook.live.com), on every PC you use. Sign out, don&rsquo;t just close the tab: a closed tab keeps you signed in.</li>
+      <li><strong>Don&rsquo;t choose &ldquo;Stay signed in?&rdquo;</strong> when a browser asks after a Microsoft sign-in. It keeps the browser signed in for weeks without asking again.</li>
+      <li><strong>Don&rsquo;t sign your browser&rsquo;s profile in to your work account</strong> (Edge: Settings &rsaquo; Profiles). A signed-in profile signs in to Outlook on the web by itself.</li>
+      <li><strong>End every other sign-in.</strong> Work or school account: <a href="https://mysignins.microsoft.com">My Sign-Ins</a> &rsaquo; Security info, sign out everywhere. Personal account: <a href="https://account.microsoft.com">account.microsoft.com</a> &rsaquo; Security, sign out everywhere. InCloseMail is signed out too; sign it in again afterwards.</li>
+      <li><strong>Remove your mail from devices you don&rsquo;t need it on</strong>: mail apps on your phone and tablet, Outlook on other PCs, other mail programs.</li>
+      <li><strong>Use strong MFA on your account</strong>: a passkey (in Microsoft Authenticator or a security key) or Windows Hello for Business. These can&rsquo;t be phished the way a texted code or an approve/deny prompt can.</li>
+      <li><strong>Delete app passwords</strong> if you ever made any. They skip MFA entirely.</li>
+      <li><strong>Check where your mail goes</strong>: no forwarding to an outside address you didn&rsquo;t set up (InCloseMail&rsquo;s Rules and Alerts, or Outlook on the web&rsquo;s settings), and no apps you don&rsquo;t recognise allowed to read your mail.</li>
+    </ol>
+    <p><strong>Outlook.com, Hotmail and other personal accounts</strong> have no admin switches, so it&rsquo;s this list: also consider going passwordless (account.microsoft.com &rsaquo; Security &rsaquo; Advanced security options), and turn off POP (Outlook.com &rsaquo; Settings &rsaquo; Mail &rsaquo; Forwarding and IMAP) if you don&rsquo;t use it.</p>
+
+    <h3 id="admins">For IT admins (Microsoft 365 work or school accounts)</h3>
+    <p>These need an Exchange Online or Entra ID admin. <strong>Try them on a test mailbox first.</strong></p>
+    <p><strong>Turn off the other ways into the mailbox.</strong> InCloseMail reads and sends mail through Microsoft Graph, which isn&rsquo;t one of Exchange Online&rsquo;s per-mailbox switches, so it should keep working with the others off. In Exchange Online PowerShell:</p>
+    <pre><code>$off = @{
+    OWAEnabled                       = $false  # Outlook on the web
+    OneWinNativeOutlookEnabled       = $false  # new Outlook for Windows
+    MAPIEnabled                      = $false  # classic Outlook for Windows and Mac
+    ActiveSyncEnabled                = $false  # phone mail apps (Exchange ActiveSync)
+    OutlookMobileEnabled             = $false  # Outlook for iOS and Android
+    PopEnabled                       = $false
+    ImapEnabled                      = $false
+    EwsEnabled                       = $false  # Exchange Web Services programs
+    SmtpClientAuthenticationDisabled = $true   # leave SMTP allowed if InCloseMail sends through SMTP
+}
+Set-CASMailbox -Identity user@contoso.com @off</code></pre>
+    <p>Then sign in to InCloseMail on the test mailbox and read, send and move a message. <strong>Check other ways to reach your mailbox</strong> (File &rsaquo; Options &rsaquo; Advanced) will show IMAP and SMTP as unavailable; that&rsquo;s expected. If shared mailboxes stop appearing by themselves, add them by hand (right-click your mailbox &rsaquo; Add Shared Mailbox). A softer option than turning Outlook on the web off is app enforced restrictions: read-only, no downloads in browsers on unmanaged PCs.</p>
+    <p><strong>Make browser sign-ins short-lived and strong</strong> (Conditional Access, Entra ID P1):</p>
+    <ul>
+      <li>Require <strong>authentication strength &rsaquo; Phishing-resistant MFA</strong> (passkeys, Windows Hello for Business, certificates).</li>
+      <li>For <strong>Office 365</strong> with client apps <strong>Browser</strong>: <strong>Sign-in frequency</strong> (for example 1 hour) and <strong>Persistent browser session &rsaquo; Never persistent</strong>. Limited to browsers, InCloseMail isn&rsquo;t asked to sign in every hour.</li>
+      <li>Block the <strong>device code flow</strong>, turn off app passwords, don&rsquo;t let users consent to unknown apps reading mail, and block automatic forwarding to outside addresses.</li>
+    </ul>
+    <p>Afterwards, end sessions that were already signed in: Entra admin center &rsaquo; the user &rsaquo; <strong>Revoke sessions</strong>. InCloseMail asks to sign in again once. On Entra-joined PCs, Windows itself gives browsers single sign-on, so the Windows sign-in is part of the lock too: require Windows Hello for Business and a short screen lock.</p>
+
+    <h2 id="limits">What it can&rsquo;t lock</h2>
+    <ul>
+      <li><strong>InCloseMail while it&rsquo;s unlocked.</strong> A program running as you can read what InCloseMail shows. Locking when Windows locks, or after a few idle minutes, keeps that time short.</li>
+      <li><strong>Windows&rsquo; own sign-in.</strong> When InCloseMail signs in through Windows, Windows keeps the sign-in where InCloseMail&rsquo;s lock can&rsquo;t reach it. So with the lock on Windows Hello, InCloseMail signs in through the browser and keeps its sign-in locked, unless your organization&rsquo;s policy says to sign in through Windows.</li>
+      <li><strong>Mail you saved or exported</strong> (PST and .mbox files, Export for AI, attachments you saved). Those are files of their own.</li>
+      <li><strong>Pictures in messages</strong> that InCloseMail&rsquo;s message view has downloaded and keeps in its own browser cache.</li>
+      <li><strong>Your Microsoft 365 admins</strong> and Microsoft itself can still reach the mailbox.</li>
+    </ul>
+    <p>To check it works: lock the PC and unlock it; InCloseMail asks for Windows Hello before showing any mail.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>
