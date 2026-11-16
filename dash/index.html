@@ -240,6 +240,22 @@
       return tr;
     };
 
+    // Each release's InCloseMail.msi downloads and size, as the Worker's /api gives them.
+    async function githubReleases() {
+      const releases = [];
+      for (let page = 1; page <= 5; page++) {
+        const res = await fetch(`https://api.github.com/repos/InCloseMail/inclosemail-releases/releases?per_page=100&page=${page}`, { headers: { Accept: 'application/vnd.github+json' } });
+        if (!res.ok) break;
+        const list = await res.json();
+        for (const x of list) {
+          const msi = x.assets.filter((a) => a.name.endsWith('.msi'));
+          releases.push({ tag: x.tag_name, published: x.published_at, downloads: msi.reduce((s, a) => s + a.download_count, 0), size: msi.length ? msi[0].size : null });
+        }
+        if (list.length < 100) break;
+      }
+      return releases;
+    }
+
     let data;
     function draw() {
       if (!data) return;
@@ -340,7 +356,12 @@
 
     fetch('api', { cache: 'no-store' })
       .then((r) => { if (!r.ok) throw new Error(r.status === 403 ? 'Sign in through Cloudflare Access to see the numbers.' : `The numbers didn't load (${r.status}).`); return r.json(); })
-      .then((d) => { data = d; draw(); })
+      .then(async (d) => {
+        // GitHub often refuses the Worker (it limits requests from Cloudflare's shared addresses); then this browser
+        // asks GitHub itself.
+        if (!d.releases || !d.releases.length) d.releases = await githubReleases().catch(() => []);
+        data = d; draw();
+      })
       .catch((e) => { const p = document.getElementById('error'); p.hidden = false; p.textContent = e.message || "The numbers didn't load."; set('asof', ''); });
     let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(draw, 150); });
   </script>
