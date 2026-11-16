@@ -7,6 +7,7 @@
   --accent: #0f6b66;
   --hero-bg: #0f6b66;
   --hero-text: #ffffff;
+  --page-end: #ffffff;
 }
 
 /* Dark: from the system setting unless the visitor picked light with the button, or picked dark with it. */
@@ -20,6 +21,7 @@
     --accent: #4fbfb6;
     --hero-bg: #0a403d;
     --hero-text: #ffffff;
+    --page-end: #000000;
     color-scheme: dark;
   }
 }
@@ -33,6 +35,7 @@
   --accent: #4fbfb6;
   --hero-bg: #0a403d;
   --hero-text: #ffffff;
+  --page-end: #000000;
   color-scheme: dark;
 }
 
@@ -40,9 +43,9 @@
 
 * { box-sizing: border-box; }
 
-/* The page's own color all the way down, below a short page's footer too, in light and dark. No bounce past the
-   top or bottom: Chrome on Windows (touchpad, touchscreen) can show a white strip there in dark mode. */
-html { -webkit-text-size-adjust: 100%; background: var(--bg); min-height: 100%; overscroll-behavior-y: none; }
+/* Past the end of the page (below a short page's footer, overscroll): white in light mode, black in dark mode.
+   The page itself keeps its color on body. */
+html { -webkit-text-size-adjust: 100%; background: var(--page-end); }
 
 body {
   margin: 0;
