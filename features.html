@@ -50,7 +50,8 @@
       <a href="#look">Look, language and accessibility</a>
       <a href="#it">For IT</a>
       <a href="#only">Only available from InCloseMail</a>
-      <a href="#your-colors">Your own colors</a>
+      <a href="#blacklist">Blacklist</a>
+      <a href="#dark-mode">Dark Mode that reads the pictures</a>
       <a href="#big-mailboxes">Years of mail: cleanup</a>
       <a href="#analytics">Analytics</a>
       <a href="#ai">AI agents</a>
@@ -72,7 +73,7 @@
         <li><strong>Dialogs from the keyboard:</strong> arrow keys move between the buttons and choices, and Space or Enter picks one. In File &rarr; Options the arrow keys move through the sections and Tab goes into one; in the message list, Left folds the date group you leave and Right opens the next.</li>
         <li><strong>Windows that remember</strong> where they were and how big, on whichever monitor.</li>
         <li><strong>Open in New Window</strong>: a second main window, so Calendar can stay open beside Mail.</li>
-        <li><strong>Start with Windows</strong>, minimized if you like.</li>
+        <li><strong>Start with Windows</strong>, minimized if you like, and <strong>Start in this folder</strong>: the folder InCloseMail opens on, as in Outlook (File &rarr; Options &rarr; General).</li>
         <li><strong>A Welcome wizard</strong> after your first account: theme, how much mail to keep on your PC (up to 20 years, or all of it), starting with Windows, whether InCloseMail may change your mailbox, the reading pane, and the default email app.</li>
       </ul>
 
@@ -85,7 +86,7 @@
         <li><strong>Categories</strong> with colors, Quick Click and shortcut keys; <strong>follow-up flags</strong> and reminders on messages.</li>
         <li><strong>Filter Email</strong>: Unread, Has Attachments, Categorized, Flagged, Important, Sent To Me.</li>
         <li><strong>Quick Actions</strong>: point at a message in the list for Flag and Delete buttons on it, or choose your own (Archive, Mark as Read, Move to Folder).</li>
-        <li><strong>Ignore</strong>, <strong>Clean Up</strong> (conversation, folder, folder and subfolders) and <strong>Archive</strong>.</li>
+        <li><strong>Ignore</strong>, <strong>Clean Up</strong> (conversation, folder, folder and subfolders) and <strong>Archive</strong>. Clean Up has Outlook&rsquo;s options: the folder cleaned-up messages go to, recreating the folder hierarchy there, and leaving unread, categorized, flagged or digitally signed messages where they are.</li>
         <li><strong>Undo</strong> for moves, deletes, read/unread, flags and categories, up to 20 steps.</li>
         <li><strong>Recover Deleted Items</strong>, Delete All, Copy Folder, Save Folder As and Mark All as Read.</li>
         <li><strong>Attachments</strong>: preview pictures, text and PDFs in the reading pane; Save All; Remove Attachment.</li>
@@ -109,6 +110,7 @@
         <li><strong>Delay Delivery</strong>, Message Options (importance, sensitivity, receipts, replies sent to, expiry) and Save Sent Item To.</li>
         <li><strong>Reply, Reply All, Forward</strong>, Forward as Attachment, Reply with Meeting and Resend This Message.</li>
         <li><strong>Replies in the reading pane</strong> or in their own window, with Pop Out.</li>
+        <li><strong>Preface comments with</strong> your name: what you type into the quoted original of a reply or forward starts with [Your name], in blue, as in Outlook (File &rarr; Options &rarr; Mail).</li>
         <li><strong>Drafts that save themselves</strong> every few minutes.</li>
         <li><strong>Send through Exchange Online&rsquo;s SMTP server</strong> for organizations whose mail Microsoft turns away when it&rsquo;s sent through Graph.</li>
       </ul>
@@ -135,7 +137,7 @@
         <li><strong>Script rules</strong>: run a PowerShell script, batch file or program when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did.</li>
         <li><strong>Always Move Messages in This Conversation</strong> and Always Move Messages From.</li>
         <li><strong>Quick Steps</strong> with Outlook&rsquo;s full list of actions, and Ctrl+Shift+1 to 9 shortcut keys.</li>
-        <li><strong>Junk Email</strong>: Junk Email Options with Safe Senders, Safe Recipients and phishing protection, Never Block Sender, Sender&rsquo;s Domain or Group, and Not Junk.</li>
+        <li><strong>Junk Email</strong>: Junk Email Options with Safe Senders, Safe Recipients and phishing protection, Never Block Sender, Sender&rsquo;s Domain or Group, and Not Junk. For senders you never want to see again, there&rsquo;s the <a href="#blacklist">Blacklist</a>.</li>
         <li><strong>Automatic Replies</strong> (out of office).</li>
       </ul>
 
@@ -159,6 +161,7 @@
         <li><strong>Contact groups</strong> to send to several people under one name.</li>
         <li><strong>Colleagues&rsquo; shared contacts</strong>, the contacts of every account you&rsquo;ve added, and the organization&rsquo;s Global Address List.</li>
         <li><strong>Contacts&rsquo; pictures</strong> beside the sender of a message, when the directory has none.</li>
+        <li><strong>Duplicate contacts caught</strong>: saving a contact you already have offers to add it anyway or update the one you have, as Outlook does.</li>
         <li><strong>Mail Merge</strong>: one message per contact, with merge fields.</li>
       </ul>
 
@@ -215,11 +218,9 @@
 
       <h2 id="look">Look, language and accessibility</h2>
       <ul>
-        <li><strong>Light</strong> in classic Outlook's gray look, <strong>Dark Mode</strong> and <strong>White</strong>, following Windows until you choose, with Switch Background for a message.</li>
-        <li><strong>High Contrast</strong>, and Windows&rsquo; own high-contrast themes.</li>
-        <li><strong>Ocean, Forest, Plum and Graphite</strong>, each in light and dark.</li>
-        <li><strong>Holiday themes</strong>, or one that changes with the season.</li>
-        <li><strong>The Theme Editor</strong> (File &rarr; Account): color each part of the window, from the title bar to the message list&rsquo;s date headings, and see it as you pick. Share a theme as a file; <strong>Import Theme</strong> adds one someone shared with you.</li>
+        <li><strong>Light</strong> in classic Outlook's gray look, <strong>Dark Mode</strong> and <strong>White</strong>, following Windows until you choose, with Switch Background for a message. <strong>High Contrast</strong>, and Windows&rsquo; own high-contrast themes.</li>
+        <li><strong>Themes</strong> (only in InCloseMail): Ocean, Forest, Plum and Graphite, each in light and dark, and holiday themes, or one that changes with the season.</li>
+        <li><strong>The Theme Editor</strong> (only in InCloseMail; File &rarr; Account, or File &rarr; Options &rarr; General): start from any theme and color each part of the window (title bar, ribbon, folder pane, message list, reading pane header, status bar, calendar), watching InCloseMail change as you pick. Keep as many as you like; they follow you to your other PCs. <strong>Export</strong> saves one as an .icmtheme file to share, and <strong>Import Theme</strong> adds one someone shared with you.</li>
         <li><strong>In your language</strong>: English, Deutsch, Fran&ccedil;ais, Espa&ntilde;ol, Italiano, Portugu&ecirc;s (Brasil), 日本語, 한국어, 简体中文 and 繁體中文, following Windows until you choose one in Options &rarr; Language. Folder names such as Inbox come from your mailbox, in the language it&rsquo;s set to.</li>
         <li><strong>Other Settings</strong> for the message list: fonts, grid lines and a compact layout.</li>
         <li><strong>Zoom</strong> the whole window with Ctrl+mouse wheel.</li>
@@ -238,6 +239,16 @@
       <h2 id="only" class="only-heading">Only available from InCloseMail</h2>
       <p>Everything above is classic Outlook's. What follows is what classic Outlook never did.</p>
 
+      <h2 id="blacklist">Blacklist</h2>
+      <p>Some senders you never want to hear from again. Outlook&rsquo;s Block Sender only works where its Junk filter runs, and a rule per sender soon becomes a list nobody can keep track of. InCloseMail keeps them in one list that works everywhere.</p>
+      <ul>
+        <li><strong>One click</strong>: <strong>Blacklist Email Address</strong>, the button at the right of a message&rsquo;s header (under the sun in Dark Mode; also in Home &rarr; Junk and the message&rsquo;s right-click Junk menu), asks once, then sends that message and everything the sender sends from now on to Junk Email.</li>
+        <li><strong>Works everywhere</strong>: the blacklist is one rule on your mailbox, &ldquo;Blacklist (InCloseMail)&rdquo;, that Exchange runs before your other rules, so it works on your phone, in Outlook on the web and with InCloseMail closed.</li>
+        <li><strong>One list to manage</strong>: Home &rarr; Junk &rarr; <strong>Manage Blacklist</strong> shows every address, with Add and Remove.</li>
+        <li><strong>No surprises with your rules</strong>: if a rule you already have also handles that sender (an Always Move Messages From, say), InCloseMail tells you and asks whether to leave that rule alone or delete it.</li>
+        <li><strong>On every PC</strong>: since the list lives in your mailbox, every PC you use sees the same one.</li>
+      </ul>
+
       <h2 id="dark-mode">Dark Mode that reads the pictures</h2>
       <p>Dark Mode turns a message dark. Outlook stops there: the pictures stay as they were sent, so a traffic report or a chart is a white slab on the dark page. InCloseMail looks at each picture in the message and decides.</p>
       <ul>
@@ -245,24 +256,17 @@
         <li><strong>Dark logos and icons on a clear background turn light</strong>, instead of vanishing dark on dark.</li>
         <li><strong>Photos stay as sent</strong>, product shots on white included.</li>
         <li><strong>Pictures from the web too</strong>: once you download a message's pictures, each one is sorted the same way as it arrives, with nothing fetched twice.</li>
-        <li><strong>Worked out on your PC</strong> as the message opens, with no white flash. The sun button in the message header shows the original.</li>
+        <li><strong>Mail designed dark is left as it is</strong> in Dark Mode: a newsletter or report on a black or navy page already reads well.</li>
+        <li><strong>And the other way round in light mode</strong>: mail designed dark (a usage report on a navy page, say) is shown on a white page, its photos as sent and its dark charts and panels turned light with it, so the reading pane is never a black block in a light window.</li>
+        <li><strong>Worked out on your PC</strong> as the message opens, with no white flash. In Dark Mode, the sun button in the message header shows the original.</li>
       </ul>
 
       <h2 id="also-only">Also only here</h2>
       <ul>
         <li><strong>Demo Mode</strong>: a full sample mailbox, calendar and contacts to look around in or show someone, with no account, or from Help &rarr; Demo Mode while you&rsquo;re signed in.</li>
         <li><strong>A mailbox that keeps working when Microsoft 365 doesn&rsquo;t</strong>: changes and sent mail wait on your PC through an outage, and File &rarr; Options &rarr; Advanced checks whether your mailbox answers another way (IMAP and SMTP).</li>
+        <li><strong>Lock InCloseMail</strong>: Windows Hello or an authenticator code before your mail opens, when Windows locks or after a while away, with the copy of your mail on your PC encrypted too. See <a href="help/security.html">Lock InCloseMail</a>.</li>
         <li><strong>Permissions in plain words</strong>: File &rarr; Info &rarr; Permissions shows everything InCloseMail is allowed to do in your account.</li>
-      </ul>
-
-      <h2 id="your-colors">Classic Outlook, in your colors</h2>
-      <p>Outlook&rsquo;s layout and menus stay where you expect them; the colors are up to you.</p>
-      <ul>
-        <li><strong>The Theme Editor</strong> (File &rarr; Account, or File &rarr; Options &rarr; General): pick a color for each part of the window (title bar, ribbon, folder pane, message list, reading pane header, status bar, calendar) and see InCloseMail change as you go. <strong>Export</strong> saves a theme as an .icmtheme file to share, and <strong>Import Theme</strong> (beside the Theme Editor) adds one someone shared with you and shows it.</li>
-        <li><strong>Start from any theme</strong>: Light, White, Dark, Ocean, Forest, Plum, Graphite or any holiday theme. The colors you don&rsquo;t change follow it.</li>
-        <li><strong>Keep as many as you like</strong>: saved themes join the theme list, and Delete removes one you no longer want.</li>
-        <li><strong>Share</strong> a theme as a file, and open one someone sent you.</li>
-        <li><strong>On every PC</strong>: your themes follow you with the rest of your settings.</li>
       </ul>
 
       <h2 id="big-mailboxes">Years of mail: cleanup and organizing</h2>

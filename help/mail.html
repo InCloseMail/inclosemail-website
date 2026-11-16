@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mail - InCloseMail Help</title>
-  <meta name="description" content="Reading and writing mail in InCloseMail: Focused Inbox, search, rules, junk mail and phishing warnings.">
+  <meta name="description" content="Reading and writing mail in InCloseMail: Focused Inbox, search, rules, the blacklist, junk mail and phishing warnings.">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
@@ -59,6 +59,7 @@
       <li><strong>View &rarr; View Settings &rarr; Other Settings</strong> sets the list&rsquo;s column, row and message preview fonts, adds grid lines between rows, and can always use the single-line or the compact layout, wherever the reading pane is.</li>
       <li>Pictures from the web are blocked until you click <strong>Download pictures</strong>, so senders can&rsquo;t tell when you open their mail. <strong>Always download from</strong> beside it adds the sender, or their whole domain, to your Safe Senders, and pictures in Safe Senders&rsquo; mail download by themselves (<strong>File &rarr; Options &rarr; Trust Center &rarr; Automatic Download</strong> turns that off). Pictures are fetched from the web each time you read the message; they don&rsquo;t take up space in your copy of the mail.</li>
       <li>Files that can run code, such as .exe and .js files, are blocked, as they are in Outlook.</li>
+      <li><strong>Dark Mode</strong> shows messages dark, with their photos as sent and their charts and report pictures dark too. Mail designed dark, on a black or navy page, is shown as it is. The sun at the right of the message header (<strong>Switch Background</strong>) shows a message as it was sent. In light mode it&rsquo;s the other way round: mail designed dark is shown on a white page, its photos as sent.</li>
       <li><strong>File &rarr; Options &rarr; Mail</strong> sets when a message counts as read: right away, after waiting, or when you select another message.</li>
       <li><strong>Filter Email</strong> (Home &rarr; Find) shows only the Unread, Has Attachments, Categorized, Flagged or Important messages, or those Sent To: Me or CC: Me. <strong>Clear Filter</strong> shows them all again.</li>
       <li><strong>How the list looks:</strong> <strong>View &rarr; Change View</strong> (Compact, Single or Preview), <strong>Message Preview</strong> (off, or 1 to 3 lines), <strong>Columns</strong>, the arrangement buttons, <strong>Reverse Sort</strong> and <strong>Show in Groups</strong>. <strong>Save Current View As a New View</strong> and <strong>Manage Views</strong> keep views of your own, and <strong>View Settings &rarr; Conditional Formatting</strong> colors messages that match.</li>
@@ -82,6 +83,7 @@
       <li><strong>Auto-Complete:</strong> as you type a name in To, Cc or Bcc, InCloseMail suggests people from all your accounts: those you&rsquo;ve written to and your contacts, the From account&rsquo;s first. After a moment it also looks in your organization&rsquo;s directory, so a colleague turns up even if you&rsquo;ve never written to them. The first time, click <strong>To</strong> in a message from that account and allow the Address Book. Up and Down pick a suggestion, Enter or Tab takes it, and the X removes it from the list.</li>
       <li>Send with <strong>Send</strong>, Ctrl+Enter or Alt+S. A message can carry up to 20 MB of attachments.</li>
       <li>Drafts save themselves every 3 minutes. <strong>File &rarr; Options &rarr; Mail</strong> changes that.</li>
+      <li><strong>Commenting inside the original:</strong> tick <strong>File &rarr; Options &rarr; Mail &rarr; Replies and forwards &rarr; Preface comments with</strong>, and what you type into the quoted message of a reply or forward starts with [Your name] (or the text you put in the box), in blue, so the reader can tell your comments from the original.</li>
       <li><strong>Signatures:</strong> <strong>Insert &rarr; Signature &rarr; Signatures</strong>, where you also set the defaults for new messages and for replies.</li>
       <li><strong>Send later:</strong> <strong>Options &rarr; Delay Delivery</strong>. Exchange holds the message in the Outbox, so it goes out even with InCloseMail closed.</li>
       <li><strong>Quick Parts and templates:</strong> <strong>Insert &rarr; Quick Parts</strong> and <strong>Message &rarr; View Templates</strong>. Both are kept on this PC.</li>
@@ -130,7 +132,7 @@
         </ul>
       </li>
       <li><strong>Move</strong>, <strong>Delete</strong>, <strong>Archive</strong>, <strong>Categorize</strong>, <strong>Follow Up</strong> and <strong>Mark as Read</strong>.</li>
-      <li><strong>Clean Up Conversation</strong> moves the messages that a later message in the conversation quotes in full to Deleted Items. <strong>Clean Up Folder</strong> does it for a whole folder.</li>
+      <li><strong>Clean Up Conversation</strong> moves the messages that a later message in the conversation quotes in full to Deleted Items. <strong>Clean Up Folder</strong> does it for a whole folder. <strong>File &rarr; Options &rarr; Mail &rarr; Conversation Clean Up</strong> sets the folder they go to (Deleted Items unless you pick another), whether subfolders are recreated there, and which messages stay put: unread, categorized, flagged or digitally signed.</li>
       <li><strong>Run Rules Now</strong> (in Rules and Alerts) applies your rules once, to mail already in a folder.</li>
     </ul>
 
@@ -139,6 +141,7 @@
       <li><strong>Rules</strong> (<strong>Create Rule</strong>, <strong>Manage Rules &amp; Alerts</strong>): Exchange runs them on each new message, even with InCloseMail closed. See <a href="#rules">Rules</a>.</li>
       <li><strong>Always Move Messages From</strong> (right-click a message &rarr; <strong>Rules</strong>) makes a rule that moves that sender&rsquo;s new mail to a folder you pick, and moves the messages of theirs already in this folder at once.</li>
       <li><strong>Always Move Messages in This Conversation</strong> (Move menu) moves the conversation&rsquo;s messages now, and new ones as they arrive. Choose it again to stop.</li>
+      <li><strong>Blacklist Email Address</strong> sends the sender&rsquo;s mail to Junk Email from now on (<a href="#blacklist">Blacklist</a>).</li>
       <li><strong>Ignore</strong> moves a conversation, and any new messages in it, to Deleted Items. On an ignored conversation, <strong>Stop Ignoring</strong> ends it.</li>
       <li><strong>Always Move to Other</strong> and <strong>Always Move to Focused</strong> put a sender&rsquo;s new mail on that tab of the <a href="#focused-inbox">Focused Inbox</a>.</li>
       <li><strong>Script Rules</strong> run a script of yours when matching mail arrives (<a href="#script-rules">Script rules</a>).</li>
@@ -207,6 +210,16 @@ Copy-Item -LiteralPath $m.emlPath -Destination "C:\Invoices\$($m.internetMessage
       <li>Outside mail that claims to be internal or verified, such as &ldquo;verified as an internal communication&rdquo;, is a strong sign of phishing, since your organization doesn&rsquo;t mark mail that way.</li>
       <li>In <strong>Junk E-mail Options &rarr; Phishing</strong>, list <strong>People to protect</strong>, such as your CEO. Mail from outside your organization that uses one of those names in the sender&rsquo;s name or address is marked as possible phishing, even when the name is misspelled by a letter.</li>
       <li>To turn the warning bar off, clear <strong>Warn me about messages that look like phishing</strong> on the same tab.</li>
+    </ul>
+
+    <h3 id="blacklist">Blacklist</h3>
+    <p>The blacklist is for senders you never want to hear from again. Their mail goes straight to Junk Email on every device, even when InCloseMail is closed, because the blacklist is a rule on your mailbox, &ldquo;Blacklist (InCloseMail)&rdquo;, that runs before your other rules.</p>
+    <ul>
+      <li><strong>Add a sender:</strong> open one of their messages and click <strong>Blacklist Email Address</strong>, the button at the right of the message header (under the sun in Dark Mode). It&rsquo;s also in <strong>Home &rarr; Junk</strong> and on the message&rsquo;s right-click <strong>Junk</strong> menu. Confirm, and that message moves to Junk Email along with everything they send from now on.</li>
+      <li><strong>If a rule of yours also handles that sender</strong> (an Always Move Messages From, say), InCloseMail shows it and asks what to do: add the sender and leave the rule alone, add the sender and delete the rule, or cancel. Deleting a rule deletes all of it, including its other senders and conditions.</li>
+      <li><strong>See and change the list:</strong> <strong>Home &rarr; Junk &rarr; Manage Blacklist</strong> lists every address. Type an address and click <strong>Add</strong>, or select one and click <strong>Remove</strong>.</li>
+      <li>Changes need InCloseMail to be allowed to change your mailbox. The list is the same on every PC, since it lives in your mailbox; if you turn the rule off in Rules and Alerts, adding an address turns it back on.</li>
+      <li><strong>Blacklist or Block Sender?</strong> Block Sender adds to Junk E-mail Options&rsquo; Blocked Senders, which InCloseMail applies while it&rsquo;s running. The blacklist works everywhere, all the time.</li>
     </ul>
     </main>
   </div>

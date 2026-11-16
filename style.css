@@ -233,6 +233,22 @@ section { margin-bottom: 40px; }
   font-size: 0.95rem;
 }
 
+/* The lead feature of a list (Blacklist): the whole row, so it reads first. */
+.features li.feature-key {
+  grid-column: 1 / -1;
+  border-left-width: 5px;
+  padding: 18px 20px;
+}
+
+.features li.feature-key strong {
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+
+.features li.feature-key span {
+  font-size: 1rem;
+}
+
 /* "See all features" under the homepage's feature cards. */
 .more-link { margin: 16px 0 0; font-weight: 600; }
 
