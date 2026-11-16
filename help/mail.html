@@ -137,7 +137,7 @@
     <h3 id="from-now-on">From now on, on new mail too</h3>
     <ul>
       <li><strong>Rules</strong> (<strong>Create Rule</strong>, <strong>Manage Rules &amp; Alerts</strong>): Exchange runs them on each new message, even with InCloseMail closed. See <a href="#rules">Rules</a>.</li>
-      <li><strong>Always Move Messages From</strong> (right-click a message &rarr; <strong>Rules</strong>) makes a rule that moves that sender&rsquo;s new mail to a folder you pick. It then asks whether to move the messages already there too.</li>
+      <li><strong>Always Move Messages From</strong> (right-click a message &rarr; <strong>Rules</strong>) makes a rule that moves that sender&rsquo;s new mail to a folder you pick, and moves the messages of theirs already in this folder at once.</li>
       <li><strong>Always Move Messages in This Conversation</strong> (Move menu) moves the conversation&rsquo;s messages now, and new ones as they arrive. Choose it again to stop.</li>
       <li><strong>Ignore</strong> moves a conversation, and any new messages in it, to Deleted Items. On an ignored conversation, <strong>Stop Ignoring</strong> ends it.</li>
       <li><strong>Always Move to Other</strong> and <strong>Always Move to Focused</strong> put a sender&rsquo;s new mail on that tab of the <a href="#focused-inbox">Focused Inbox</a>.</li>
@@ -202,6 +202,7 @@ Copy-Item -LiteralPath $m.emlPath -Destination "C:\Invoices\$($m.internetMessage
     <ul>
       <li><strong>Home &rarr; Junk</strong> has Block Sender, Never Block Sender, Never Block Sender&rsquo;s Domain, Never Block this Group or Mailing List, Not Junk and Junk E-mail Options.</li>
       <li>InCloseMail&rsquo;s Safe Senders list is kept on this PC and works while the app is running. For filtering that works everywhere, also add senders in Outlook on the web.</li>
+      <li><strong>Junk E-mail Options</strong> also has <strong>Safe Recipients</strong>, <strong>Blocked Senders</strong> and <strong>International</strong>, where you can block country domains (such as .ru) and mail in other alphabets. While InCloseMail is running, new mail they block goes to Junk Email; safe senders, safe recipients and your contacts always get through. <strong>Block Sender</strong> adds to Blocked Senders.</li>
       <li>When a message has signs of phishing, a bar appears above it. Click <strong>Why is this suspicious?</strong> for the reasons and what to do. <strong>Block Sender</strong> and <strong>I know this sender</strong> are there too. The bar never moves or blocks anything by itself.</li>
       <li>Outside mail that claims to be internal or verified, such as &ldquo;verified as an internal communication&rdquo;, is a strong sign of phishing, since your organization doesn&rsquo;t mark mail that way.</li>
       <li>In <strong>Junk E-mail Options &rarr; Phishing</strong>, list <strong>People to protect</strong>, such as your CEO. Mail from outside your organization that uses one of those names in the sender&rsquo;s name or address is marked as possible phishing, even when the name is misspelled by a letter.</li>
