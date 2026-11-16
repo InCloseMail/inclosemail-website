@@ -173,12 +173,12 @@
     const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
 
     // A bar chart: rows of {key, label, value, extra?, tip}; drawn to the box's width, with a tooltip.
-    function bars(box, rows, { color = 'var(--accent)', extraColor = 'var(--accent-2)', height = 200 } = {}) {
+    function bars(box, rows, { color = 'var(--accent)', extraColor = 'var(--accent-2)', height = 200, top: ceiling } = {}) {
       box.replaceChildren();
       if (!rows.length) { const p = document.createElement('p'); p.className = 'empty'; p.textContent = 'Nothing yet.'; box.appendChild(p); return; }
       const w = Math.max(280, box.clientWidth), h = height, left = 36, bottom = 22, top = 8;
       const max = Math.max(1, ...rows.map((r) => r.value));
-      const step = Math.pow(10, Math.floor(Math.log10(max))); const nice = Math.ceil(max / step) * step;
+      const step = Math.pow(10, Math.floor(Math.log10(max))); const nice = ceiling || Math.ceil(max / step) * step;
       const y = (v) => h - bottom - (v / nice) * (h - bottom - top);
       const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, role: 'img' }, box);
       for (let i = 0; i <= 4; i++) {
@@ -329,7 +329,7 @@
       });
       bars(document.getElementById('c-uptodate'), upToDate.map((u) => ({
         label: day(u.d), value: u.value, tip: `${day(u.d)}: ${u.value}% on ${u.r.tag} or newer (${fmt.format(u.s.n)} of ${fmt.format(u.s.all)})`,
-      })));
+      })), { top: 100 });
       const last = upToDate.find((u) => u.d === addDays(today, -1));
       set('u-yesterday', last ? last.value + '%' : '—');
       set('u-yesterday-of', last ? `${fmt.format(last.s.n)} of ${fmt.format(last.s.all)} on ${last.r.tag} or newer` : 'No reports yesterday');
@@ -338,9 +338,13 @@
       const sized = rel.filter((r) => r.size);
       const big = sized[sized.length - 1], prev = sized[sized.length - 2];
       const monthAgo = sized.filter((r) => Date.parse(r.published) <= Date.now() - 30 * 86400000).pop();
-      const change = (a, b) => { const d = (a.size - b.size) / 1048576; return (d >= 0 ? '+' : '−') + Math.abs(d).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' MB'; };
+      const change = (a, b, what) => {
+        const d = (a.size - b.size) / 1048576;
+        if (Math.abs(d) < 0.05) return `Same size as ${what}`;
+        return (d > 0 ? '+' : '−') + Math.abs(d).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ` MB since ${what}`;
+      };
       set('u-size', big ? mb(big.size) : '—');
-      set('u-size-change', !big ? '' : [prev && `${change(big, prev)} since ${prev.tag}`, monthAgo && `${change(big, monthAgo)} in 30 days`].filter(Boolean).join('; ') || big.tag);
+      set('u-size-change', !big ? '' : [prev && change(big, prev, prev.tag), monthAgo && change(big, monthAgo, `${monthAgo.tag}, 30 days ago`)].filter(Boolean).join('; ') || big.tag);
 
       const tbody = document.getElementById('r-table');
       tbody.replaceChildren(...rel.slice().reverse().map((r) => {
