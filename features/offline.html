@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline and Send/Receive - InCloseMail features</title>
+  <meta name="description" content="An encrypted copy of your mail on your PC, Work Offline, Send/Receive groups and Desktop Alerts.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Classic Outlook, feature for feature</p>
+      <h1>Offline and Send/Receive</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html" aria-current="page">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>A local copy of your mail</strong>, encrypted on your PC, readable and searchable without a connection.</li>
+        <li><strong>Work Offline</strong>, with changes waiting until you&rsquo;re back online.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/opt-cache-light.png"><img src="img/opt-cache-light.png" width="815" height="225" loading="lazy" alt="File &rarr; Options &rarr; Advanced &rarr; Mail kept on this PC: how far back to download, only the folders you open or all mail folders, and whole messages or only the headers."></a>
+        <a class="shot-dark" href="img/opt-cache-dark.png"><img src="img/opt-cache-dark.png" width="815" height="225" loading="lazy" alt="File &rarr; Options &rarr; Advanced &rarr; Mail kept on this PC: how far back to download, only the folders you open or all mail folders, and whole messages or only the headers. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>New mail within seconds</strong>, with Outlook&rsquo;s Send/Receive groups, Show Progress and Cancel All.</li>
+      </ul>
+      <figure class="shot feature-shot narrow" style="max-width:498px">
+        <a class="shot-light" href="img/sendreceive-light.png"><img src="img/sendreceive-light.png" width="498" height="152" loading="lazy" alt="The Send / Receive tab: Send/Receive All Folders, Update Folder, Send All, Send/Receive Groups, Show Progress, Cancel All, Work Offline and Check Sync Now."></a>
+        <a class="shot-dark" href="img/sendreceive-dark.png"><img src="img/sendreceive-dark.png" width="498" height="152" loading="lazy" alt="The Send / Receive tab: Send/Receive All Folders, Update Folder, Send All, Send/Receive Groups, Show Progress, Cancel All, Work Offline and Check Sync Now. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Desktop Alerts</strong> with Delete and Flag, a new-mail sound, and the envelope by the clock.</li>
+        <li><strong>Large mailboxes</strong> kept within Exchange&rsquo;s limits, so they aren&rsquo;t throttled.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="accounts.html"><span>Previous</span>Accounts and sharing</a>
+        <a class="next" href="pst.html"><span>Next</span>.pst files and coming from Outlook</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

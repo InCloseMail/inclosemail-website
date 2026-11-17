@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar - InCloseMail features</title>
+  <meta name="description" content="Day, Work Week, Week, Month and Schedule views, meetings, the Scheduling Assistant and shared calendars.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Classic Outlook, feature for feature</p>
+      <h1>Calendar</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html" aria-current="page">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>Day, Work Week, Week, Month and Schedule views</strong>, Next 7 Days, Time Scale, a second time zone and week numbers.</li>
+        <li><strong>Appointments and meetings</strong> with recurrence, reminders, categories, attachments, Private and Show As.</li>
+        <li><strong>Scheduling Assistant</strong> with suggested times and AutoPick, <strong>Room Finder</strong>, and <strong>Teams meetings</strong>.</li>
+        <li><strong>Answer invitations</strong> with Accept, Tentative and Decline, Propose New Time, and Forward a meeting.</li>
+        <li><strong>Drag to move or resize</strong>, Ctrl+drag to copy, and type in a time slot to add an appointment.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/calendar-light.png"><img src="img/calendar-light.png" width="1586" height="994" loading="lazy" alt="The calendar in Work Week view: a week of meetings in their category colors, an all-day event, the month calendar and My Calendars on the left, and the week&rsquo;s tasks and flagged mail along the bottom."></a>
+        <a class="shot-dark" href="img/calendar-dark.png"><img src="img/calendar-dark.png" width="1586" height="994" loading="lazy" alt="The calendar in Work Week view: a week of meetings in their category colors, an all-day event, the month calendar and My Calendars on the left, and the week&rsquo;s tasks and flagged mail along the bottom. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>My Calendars and Calendar Groups</strong>, shown side by side or overlaid in their own colors.</li>
+        <li><strong>Shared calendars</strong>, <strong>Share Calendar</strong> with permission levels, and <strong>internet calendars</strong> (.ics links).</li>
+        <li><strong>The Reminders window</strong>, for every account you&rsquo;ve added, with Dismiss, Snooze (including &ldquo;before start&rdquo; times) and Join Online.</li>
+        <li><strong>Add Holidays</strong>, the Daily Task List, and the Preview and List views.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/calendar-month-light.png"><img src="img/calendar-month-light.png" width="1586" height="994" loading="lazy" alt="The calendar in Month view, with each day&rsquo;s appointments and &ldquo;+2 more&rdquo; on the busy days."></a>
+        <a class="shot-dark" href="img/calendar-month-dark.png"><img src="img/calendar-month-dark.png" width="1586" height="994" loading="lazy" alt="The calendar in Month view, with each day&rsquo;s appointments and &ldquo;+2 more&rdquo; on the busy days. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Print the calendar</strong> in Daily, Weekly Agenda, Weekly Calendar, Monthly, Tri-fold and Calendar Details styles.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="rules.html"><span>Previous</span>Rules and Quick Steps</a>
+        <a class="next" href="people.html"><span>Next</span>People</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

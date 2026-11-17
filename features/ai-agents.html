@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI agents - InCloseMail features</title>
+  <meta name="description" content="Let Claude and other AI apps read and draft mail and propose changes you approve, or copy mail as clean text for any chatbot.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Only available from InCloseMail</p>
+      <h1>AI agents</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html" aria-current="page">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>Work with Claude and other AI agents:</strong> turn on AI agents in File &rarr; Options &rarr; Advanced and an AI app (Claude Desktop, Claude Code, or any MCP client) can list, search and read the mailboxes you choose, whole conversations and rules included, and save drafts for you to check. It can never send mail.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/opt-ai-light.png"><img src="img/opt-ai-light.png" width="986" height="365" loading="lazy" alt="File &rarr; Options &rarr; Advanced &rarr; AI agents: the setting that lets AI agents on this PC read your mail through InCloseMail, what they can and can&rsquo;t do, the mailboxes they may use, and whether they may save drafts for you to check."></a>
+        <a class="shot-dark" href="img/opt-ai-dark.png"><img src="img/opt-ai-dark.png" width="986" height="365" loading="lazy" alt="File &rarr; Options &rarr; Advanced &rarr; AI agents: the setting that lets AI agents on this PC read your mail through InCloseMail, what they can and can&rsquo;t do, the mailboxes they may use, and whether they may save drafts for you to check. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Let an AI organize your mail, with your approval:</strong> ask the agent to tidy up and it proposes folders, rules and messages to move, mark as read or put in Deleted Items. InCloseMail shows each change with the agent&rsquo;s reason; nothing changes until you click Apply, and Undo puts it all back. See <a href="../help/ai-agents.html">AI agents</a> in Help to set it up.</li>
+        <li><strong>Copy for AI and Export for AI:</strong> copy a message, a conversation or a whole folder as clean text to paste into any chatbot.</li>
+        <li><strong>Your choice, per mailbox:</strong> nothing is shared until you allow it, and organizations can turn it off with Group Policy.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="analytics.html"><span>Previous</span>Analytics</a>
+        <a class="next" href="also-only.html"><span>Next</span>Also only here</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

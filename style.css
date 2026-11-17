@@ -391,3 +391,117 @@ a.brand { color: inherit; text-decoration: none; }
 .doc blockquote p { margin: 0; }
 
 .cta-demo { margin: 14px 0 0; }
+
+/* ---------- Features: the overview (features.html) and one page per feature area (features/*.html). ---------- */
+
+/* "Features > Only available from InCloseMail" above a feature page's title. */
+.crumb { margin: 18px 0 0; font-size: 0.9rem; opacity: 0.9; }
+.crumb a { color: var(--hero-text); }
+.hero-small .crumb + h1 { margin-top: 4px; }
+
+.features-hub { max-width: 1040px; padding-top: 32px; padding-bottom: 24px; }
+.hub-lead { margin: 0 0 32px; }
+
+/* A card per feature area: a picture, the name and one line. */
+.feature-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.feature-card:hover { border-color: var(--accent); }
+.feature-card:hover strong { color: var(--accent); }
+.feature-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.card-thumb {
+  display: block;
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.card-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+.feature-card strong { display: block; margin: 12px 16px 4px; }
+.feature-card .card-text { display: block; margin: 0 16px 14px; color: var(--muted); font-size: 0.95rem; }
+
+/* A feature page: the list of feature pages beside the text (below it on a phone), and wider pictures. */
+.feature-layout { max-width: 1140px; grid-template-columns: 220px minmax(0, 1fr); }
+.feature-nav .nav-heading {
+  margin: 14px 0 4px;
+  padding: 0 10px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.feature-page { max-width: 900px; }
+.feature-page > ul:first-child, .feature-page > p:first-child { margin-top: 0; }
+
+.feature-shot { margin: 8px 0 28px; }
+.feature-shot.narrow img { width: auto; max-width: 100%; }
+.feature-shot a { display: block; }
+.feature-shot figcaption { text-align: left; }
+
+.feedback-note { margin-top: 28px; }
+
+/* Previous and next feature at the bottom of each page. */
+.prev-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 32px 0 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.prev-next a {
+  display: block;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.prev-next a:hover { border-color: var(--accent); }
+.prev-next span { display: block; color: var(--muted); font-size: 0.85rem; font-weight: normal; }
+.prev-next .next { text-align: right; grid-column: 2; }
+
+/* The thumbnails follow the page's light or dark mode, like the screenshots. */
+.card-thumb .shot-dark { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .card-thumb .shot-light { display: none; }
+  :root:not([data-theme="light"]) .card-thumb .shot-dark { display: block; }
+}
+
+:root[data-theme="dark"] .card-thumb .shot-light { display: none; }
+:root[data-theme="dark"] .card-thumb .shot-dark { display: block; }
+
+@media (max-width: 720px) {
+  /* On a phone the text comes first; the list of feature pages follows it. */
+  .feature-layout { grid-template-columns: minmax(0, 1fr); }
+  .feature-layout .feature-nav { order: 2; border-top: 1px solid var(--border); padding-top: 16px; }
+  .feature-nav .nav-heading { flex-basis: 100%; }
+  .prev-next { grid-template-columns: minmax(0, 1fr); }
+  .prev-next .next { grid-column: 1; }
+}

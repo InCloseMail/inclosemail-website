@@ -16,6 +16,18 @@
       if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
     } catch (e) {}
   </script>
+  <script>
+    // The features used to be one long page: an old link such as features.html#mail opens that feature's own page.
+    (function () {
+      var pages = {"layout": "layout", "mail": "mail", "writing": "writing", "search": "search", "rules": "rules", "calendar": "calendar", "people": "people", "tasks": "tasks", "accounts": "accounts", "offline": "offline", "pst": "pst", "security": "security", "look": "look", "it": "it", "blacklist": "blacklist", "dark-mode": "dark-mode", "big-mailboxes": "years-of-mail", "analytics": "analytics", "ai": "ai-agents", "also-only": "also-only"};
+      function go() {
+        var page = pages[location.hash.slice(1)];
+        if (page) location.replace('features/' + page + '.html');
+      }
+      go();
+      window.addEventListener('hashchange', go);
+    })();
+  </script>
 </head>
 <body>
   <header class="hero hero-small">
@@ -33,313 +45,230 @@
     </div>
   </header>
 
-  <div class="wrap help-layout">
-    <nav class="help-nav" aria-label="Feature areas">
-      <a href="#layout">The Outlook layout</a>
-      <a href="#mail">Mail</a>
-      <a href="#writing">Writing and sending</a>
-      <a href="#search">Search</a>
-      <a href="#rules">Rules and Quick Steps</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#people">People</a>
-      <a href="#tasks">Tasks</a>
-      <a href="#accounts">Accounts and sharing</a>
-      <a href="#offline">Offline and Send/Receive</a>
-      <a href="#pst">.pst files and Outlook</a>
-      <a href="#security">Security and privacy</a>
-      <a href="#look">Look, language and accessibility</a>
-      <a href="#it">For IT</a>
-      <a href="#only">Only available from InCloseMail</a>
-      <a href="#blacklist">Blacklist</a>
-      <a href="#dark-mode">Dark Mode that reads the pictures</a>
-      <a href="#big-mailboxes">Years of mail: cleanup</a>
-      <a href="#analytics">Analytics</a>
-      <a href="#ai">AI agents</a>
-    </nav>
+  <main class="wrap features-hub">
+    <p class="hub-lead">InCloseMail is a Windows email client for Microsoft 365 and Outlook.com that works the way classic Outlook does. It was checked against classic Outlook screen by screen, so if you reach for something out of habit, it&rsquo;s where you expect it. Pick an area to see everything it does there, with pictures. For how to use each feature, see the <a href="help/">help pages</a>.</p>
 
-    <main class="doc features-page">
-      <p>InCloseMail is a Windows email client for Microsoft 365 and Outlook.com that works the way classic Outlook does. It was checked against classic Outlook screen by screen, so if you reach for something out of habit, it&rsquo;s where you expect it. Here is everything it does. For how to use each feature, see the <a href="help/">help pages</a>.</p>
-
-      <h2 id="layout">The Outlook layout</h2>
-      <ul>
-        <li><strong>The ribbon</strong> with Outlook&rsquo;s tabs (File, Home, Send / Receive, Folder, View and Help) and the Quick Access Toolbar, with Undo.</li>
-        <li><strong>Tell me what you want to do</strong> (Alt+Q): type part of a command&rsquo;s name and run it.</li>
-        <li><strong>The folder pane</strong> with Favorites, unread counts, folders in your own order, and Normal, Minimized or Off.</li>
-        <li><strong>Folders, many at once:</strong> pick several with Ctrl or Shift, then move, delete or Move to Spam them together; cut and paste folders with Ctrl+X and Ctrl+V, and delete with the Delete key. Empty Folder, Delete All, Clean Up, Mark All as Read and Properties, as on Outlook&rsquo;s folder menu.</li>
-        <li><strong>The message list and reading pane</strong>, with the reading pane on the right, at the bottom or off, and Reading view.</li>
-        <li><strong>The To-Do Bar</strong> with the month calendar, upcoming appointments and flagged mail.</li>
-        <li><strong>Outlook&rsquo;s keyboard shortcuts</strong>, Ctrl+1 to Ctrl+4 between Mail, Calendar, People and Tasks, and F1 for help on what&rsquo;s on screen.</li>
-        <li><strong>Outlook&rsquo;s right-click menus</strong> on messages, folders, names, calendar items, contacts and tasks.</li>
-        <li><strong>Dialogs from the keyboard:</strong> arrow keys move between the buttons and choices, and Space or Enter picks one. In File &rarr; Options the arrow keys move through the sections and Tab goes into one; in the message list, Left folds the date group you leave and Right opens the next.</li>
-        <li><strong>Windows that remember</strong> where they were and how big, on whichever monitor.</li>
-        <li><strong>Open in New Window</strong>: a second main window, so Calendar can stay open beside Mail.</li>
-        <li><strong>Start with Windows</strong>, minimized if you like, and <strong>Start in this folder</strong>: the folder InCloseMail opens on, as in Outlook (File &rarr; Options &rarr; General).</li>
-        <li><strong>A Welcome wizard</strong> after your first account: theme, how much mail to keep on your PC (up to 20 years, or all of it), starting with Windows, whether InCloseMail may change your mailbox, the reading pane, and the default email app.</li>
-      </ul>
-
-      <h2 id="mail">Mail</h2>
-      <ul>
-        <li><strong>Conversations</strong>, including your replies from Sent Items, Conversation Settings, and <strong>Clean Conversation View</strong> to read a whole thread like a chat.</li>
-        <li><strong>Focused Inbox</strong> with Focused, Other and All, and Always Move to Other / Focused.</li>
-        <li><strong>Arrange and group</strong> by date, sender, subject, size, flag, categories, importance and more; collapsible groups and Reverse Sort.</li>
-        <li><strong>Change View, View Settings and Manage Views</strong>: Compact, Single and Preview, columns, message preview lines, and conditional formatting.</li>
-        <li><strong>Categories</strong> with colors, Quick Click and shortcut keys; <strong>follow-up flags</strong> and reminders on messages.</li>
-        <li><strong>Filter Email</strong>: Unread, Has Attachments, Categorized, Flagged, Important, Sent To Me.</li>
-        <li><strong>Quick Actions</strong>: point at a message in the list for Flag and Delete buttons on it, or choose your own (Archive, Mark as Read, Move to Folder).</li>
-        <li><strong>Ignore</strong>, <strong>Clean Up</strong> (conversation, folder, folder and subfolders) and <strong>Archive</strong>. Clean Up has Outlook&rsquo;s options: the folder cleaned-up messages go to, recreating the folder hierarchy there, and leaving unread, categorized, flagged or digitally signed messages where they are.</li>
-        <li><strong>Undo</strong> for moves, deletes, read/unread, flags and categories, up to 20 steps.</li>
-        <li><strong>Recover Deleted Items</strong>, Delete All, Copy Folder, Save Folder As and Mark All as Read.</li>
-        <li><strong>Attachments</strong>: preview pictures, text and PDFs in the reading pane; Save All; Remove Attachment.</li>
-        <li><strong>The People Pane</strong> with everyone on a message and their mail, attachments and meetings.</li>
-        <li><strong>Voting buttons</strong> with View Tracking, Flag for Recipients, read receipts, message properties with internet headers, and Edit Message.</li>
-        <li><strong>Create an appointment or task</strong> from a message by dragging it onto Calendar or Tasks.</li>
-        <li><strong>Read Aloud</strong> with Windows&rsquo; voices, and zoom for the reading pane.</li>
-        <li><strong>Print</strong> in Outlook&rsquo;s Memo Style with a preview, Quick Print, and Save As text, HTML or .eml.</li>
-        <li><strong>Mailbox Cleanup</strong>: mailbox size by folder, find old or large items, and AutoArchive.</li>
-      </ul>
-
-      <h2 id="writing">Writing and sending</h2>
-      <ul>
-        <li><strong>Signatures</strong>, separate for new messages and replies, with pictures.</li>
-        <li><strong>Auto-Complete</strong> in To, Cc and Bcc, Check Names, the Address Book and the Global Address List.</li>
-        <li><strong>Formatting</strong>: styles, Format Painter, tables, pictures, line and paragraph spacing, borders and shading, symbols, horizontal lines and date and time.</li>
-        <li><strong>Paste Options</strong> and Paste Special, <strong>AutoCorrect</strong> as you type, and <strong>Spelling &amp; Grammar</strong> (F7) with proofing languages.</li>
-        <li><strong>Quick Parts</strong> and <strong>My Templates</strong> for the text you write often.</li>
-        <li><strong>Insert</strong> Outlook items, business cards and your calendar&rsquo;s free time into a message.</li>
-        <li><strong>@mentions</strong> that add people to the To line.</li>
-        <li><strong>Delay Delivery</strong>, Message Options (importance, sensitivity, receipts, replies sent to, expiration) and Save Sent Item To.</li>
-        <li><strong>Reply, Reply All, Forward</strong>, Forward as Attachment, Reply with Meeting and Resend This Message.</li>
-        <li><strong>Replies in the reading pane</strong> or in their own window, with Pop Out.</li>
-        <li><strong>Preface comments with</strong> your name: what you type into the quoted original of a reply or forward starts with [Your name], in blue, as in Outlook (File &rarr; Options &rarr; Mail).</li>
-        <li><strong>Drafts that save themselves</strong> every few minutes.</li>
-        <li><strong>Send through Exchange Online&rsquo;s SMTP server</strong> for organizations whose mail Microsoft turns away when it&rsquo;s sent through Graph.</li>
-      </ul>
-
-      <h2 id="search">Search</h2>
-      <ul>
-        <li><strong>Instant search</strong> as you type, in the current folder, subfolders, the current mailbox or all mailboxes.</li>
-        <li><strong>Refine</strong>: From, Subject, Sent To, Has Attachments, Unread, Flagged, Important, Categorized and dates.</li>
-        <li><strong>Advanced Find</strong> (Ctrl+Shift+F) and <strong>Recent Searches</strong>.</li>
-        <li><strong>Search Folders</strong> that Exchange keeps up to date, so Outlook sees them too, from Outlook&rsquo;s list: mail from or to certain people, sent directly to you, large or old mail, mail with certain words, and more.</li>
-        <li><strong>Find Related</strong> messages in a conversation or from a sender, and Find (F4) in a message.</li>
-        <li><strong>Search the calendar</strong> a year back and a year ahead, and filter contacts as you type.</li>
-      </ul>
-
-      <h2 id="rules">Rules and Quick Steps</h2>
-      <ul>
-        <li><strong>Rules and Alerts</strong> that run on the server: file, flag, mark or delete mail by sender, recipients, words, Cc or attachments.</li>
-        <li><strong>Run Rules Now</strong> on mail already in a folder, run a new rule as soon as it&rsquo;s saved, or <strong>Run Selected Rule</strong> on its own any time, in any of your mailboxes.</li>
-        <li><strong>Rules Wizard</strong>: suggests a folder and rule for the co-workers and companies you write to (or every busy sender, if you choose), from your mail&rsquo;s analytics, and creates them in one go.</li>
-        <li><strong>Organize Mail into Folders</strong>: a step-by-step wizard that makes a folder for each co-worker inside Co-workers and for each company you hear from inside Companies (all of a company&rsquo;s addresses together), with a rule for each, and files the mail already in your Inbox. Status page mail that many companies send through one service (Statuspage) goes to each company&rsquo;s own folder, by the name in its subject.</li>
-        <li><strong>Start Over</strong>: save every rule to a backup file, delete them all and build new ones with Organize Mail into Folders. Import Rules brings any old rule back, creating any folder it needs, with progress shown as it goes.</li>
-        <li><strong>Export and import rules</strong> to take them to another mailbox.</li>
-        <li><strong>Rules that copy mail spotted</strong>: when two rules would both move the same message, Exchange keeps a copy in each folder. Rules and Alerts marks them, and Fix Rules That Copy Mail stops the first one there and offers to remove the copies already made.</li>
-        <li><strong>Script rules</strong>: run a PowerShell script, batch file or program when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did.</li>
-        <li><strong>Always Move Messages in This Conversation</strong> and Always Move Messages From.</li>
-        <li><strong>Quick Steps</strong> with Outlook&rsquo;s full list of actions, and Ctrl+Shift+1 to 9 shortcut keys.</li>
-        <li><strong>Junk Email</strong>: Junk Email Options with Safe Senders, Safe Recipients and phishing protection, Never Block Sender, Sender&rsquo;s Domain or Group, and Not Junk. For senders you never want to see again, there&rsquo;s the <a href="#blacklist">Blacklist</a>.</li>
-        <li><strong>Automatic Replies</strong> (out of office).</li>
-      </ul>
-
-      <h2 id="calendar">Calendar</h2>      <ul>
-        <li><strong>Day, Work Week, Week, Month and Schedule views</strong>, Next 7 Days, Time Scale, a second time zone and week numbers.</li>
-        <li><strong>Appointments and meetings</strong> with recurrence, reminders, categories, attachments, Private and Show As.</li>
-        <li><strong>Scheduling Assistant</strong> with suggested times and AutoPick, <strong>Room Finder</strong>, and <strong>Teams meetings</strong>.</li>
-        <li><strong>Answer invitations</strong> with Accept, Tentative and Decline, Propose New Time, and Forward a meeting.</li>
-        <li><strong>Drag to move or resize</strong>, Ctrl+drag to copy, and type in a time slot to add an appointment.</li>
-        <li><strong>My Calendars and Calendar Groups</strong>, shown side by side or overlaid in their own colors.</li>
-        <li><strong>Shared calendars</strong>, <strong>Share Calendar</strong> with permission levels, and <strong>internet calendars</strong> (.ics links).</li>
-        <li><strong>The Reminders window</strong>, for every account you&rsquo;ve added, with Dismiss, Snooze (including &ldquo;before start&rdquo; times) and Join Online.</li>
-        <li><strong>Add Holidays</strong>, the Daily Task List, and the Preview and List views.</li>
-        <li><strong>Print the calendar</strong> in Daily, Weekly Agenda, Weekly Calendar, Monthly, Tri-fold and Calendar Details styles.</li>
-      </ul>
-
-      <h2 id="people">People</h2>
-      <ul>
-        <li><strong>Contacts</strong> with the full contact form, pictures and contact folders.</li>
-        <li><strong>People, Business Card, Phone and List</strong> views, with an A&ndash;Z index.</li>
-        <li><strong>Contact groups</strong> to send to several people under one name.</li>
-        <li><strong>Colleagues&rsquo; shared contacts</strong>, the contacts of every account you&rsquo;ve added, and the organization&rsquo;s Global Address List.</li>
-        <li><strong>Contacts&rsquo; pictures</strong> beside the sender of a message, when the directory has none.</li>
-        <li><strong>Duplicate contacts caught</strong>: saving a contact you already have offers to add it anyway or update the one you have, as Outlook does.</li>
-        <li><strong>Mail Merge</strong>: one message per contact, with merge fields.</li>
-      </ul>
-
-      <h2 id="tasks">Tasks</h2>
-      <ul>
-        <li><strong>Your Microsoft To Do tasks</strong>, the same ones Outlook on the web shows, in all your lists and in the lists of every account you&rsquo;ve added.</li>
-        <li><strong>The task form</strong> with start and due dates, status, priority, reminders, categories and recurrence.</li>
-        <li><strong>Outlook&rsquo;s task views</strong>: To-Do List (with flagged mail), Detailed, Prioritized, Active, Completed, Today, Next 7 Days and Overdue.</li>
-        <li><strong>Send Status Report</strong> on a task.</li>
-      </ul>
-
-      <h2 id="accounts">Accounts and sharing</h2>
-      <ul>
-        <li><strong>Microsoft 365 work and school accounts and Outlook.com</strong> accounts, signed in through Windows.</li>
-        <li><strong>Several accounts at once</strong>, each with its own mail and calendar.</li>
-        <li><strong>Shared mailboxes</strong>, found automatically as Outlook finds them, clearly marked, with <strong>Send As</strong> and Send on Behalf.</li>
-        <li><strong>Microsoft 365 Groups</strong>: group conversations and group calendars.</li>
-        <li><strong>Your aliases</strong> in the From list, and the From address new messages start with.</li>
-        <li><strong>The same settings on every PC</strong>, kept in the mailbox of every account you use, with Check Sync Now.</li>
-        <li><strong>Profiles</strong>, as in Outlook: keep Work and Home apart, each with its own accounts and settings, choose one when InCloseMail starts, or switch with Change Profile.</li>
-        <li><strong>Mailbox size</strong> as Outlook shows it, with your plan&rsquo;s limit.</li>
-      </ul>
-
-      <h2 id="offline">Offline and Send/Receive</h2>
-      <ul>
-        <li><strong>A local copy of your mail</strong>, encrypted on your PC, readable and searchable without a connection.</li>
-        <li><strong>Work Offline</strong>, with changes waiting until you&rsquo;re back online.</li>
-        <li><strong>New mail within seconds</strong>, with Outlook&rsquo;s Send/Receive groups, Show Progress and Cancel All.</li>
-        <li><strong>Desktop Alerts</strong> with Delete and Flag, a new-mail sound, and the envelope by the clock.</li>
-        <li><strong>Large mailboxes</strong> kept within Exchange&rsquo;s limits, so they aren&rsquo;t throttled.</li>
-      </ul>
-
-      <h2 id="pst">.pst files and coming from Outlook</h2>
-      <ul>
-        <li><strong>Open Outlook Data File</strong>: read a .pst of any size in the folder pane, without copying it.</li>
-        <li><strong>Import a .pst</strong> into your mailbox, folders and all, with the original dates and attachments.</li>
-        <li><strong>Export to a .pst</strong> that Outlook can open, from a whole mailbox or one folder, or to <strong>.mbox</strong> for other mail apps.</li>
-        <li><strong>Import from Outlook</strong>: your signatures, Auto-Complete List and Quick Access Toolbar from classic Outlook on the same PC.</li>
-        <li><strong>Open .eml, .msg and .ics files</strong>, and InCloseMail as your default mail app for email links.</li>
-        <li>None of this needs Outlook installed.</li>
-      </ul>
-
-      <h2 id="security">Security and privacy</h2>
-      <ul>
-        <li><strong>&ldquo;Why is this suspicious?&rdquo;</strong> A plain-language explanation for messages that look like phishing, with Block Sender and I know this sender.</li>
-        <li><strong>People to protect</strong>: outside mail that uses your CEO&rsquo;s name, or another you list, is flagged, even when the name is misspelled by a letter. Outside mail that claims to be internal or &ldquo;verified&rdquo; is flagged too.</li>
-        <li><strong>A second look before sending</strong>: forgotten attachments, outside recipients and replies to many people.</li>
-        <li><strong>Read-only mode</strong> for any account you want to keep as it is, or allow only the kinds of change you choose.</li>
-        <li><strong>S/MIME</strong>: read signed and encrypted mail, and sign and encrypt your own.</li>
-        <li><strong>Pictures from the web blocked</strong> until you download them (or always download from a sender or their domain, who join your Safe Senders), scripts off, and attachments that can run code blocked, as in Outlook.</li>
-        <li><strong>Continuous Access Evaluation</strong>: when an administrator ends your sessions, InCloseMail notices within minutes.</li>
-        <li><strong>Stay signed in safely</strong>: sign-in through Windows, with tokens and the local copy of your mail encrypted on your PC. See the <a href="privacy.html">privacy policy</a>.</li>
-      </ul>
-
-      <h2 id="look">Look, language and accessibility</h2>
-      <ul>
-        <li><strong>Light</strong> in classic Outlook's gray look, <strong>Dark Mode</strong> and <strong>White</strong>, following Windows until you choose, with Switch Background for a message. <strong>High Contrast</strong>, and Windows&rsquo; own high-contrast themes.</li>
-        <li><strong>Themes</strong> (only in InCloseMail): Ocean, Forest, Plum and Graphite, each in light and dark, and holiday themes, or one that changes with the season.</li>
-        <li><strong>The Theme Editor</strong> (only in InCloseMail; File &rarr; Account, or File &rarr; Options &rarr; General): start from any theme and color each part of the window (title bar, ribbon, folder pane, message list, reading pane header, status bar, calendar), watching InCloseMail change as you pick. Keep as many as you like; they follow you to your other PCs. <strong>Export</strong> saves one as an .icmtheme file to share, and <strong>Import Theme</strong> adds one someone shared with you.</li>
-        <li><strong>In your language</strong>: English, Deutsch, Fran&ccedil;ais, Espa&ntilde;ol, Italiano, Portugu&ecirc;s (Brasil), 日本語, 한국어, 简体中文 and 繁體中文, following Windows until you choose one in Options &rarr; Language. Folder names such as Inbox come from your mailbox, in the language it&rsquo;s set to.</li>
-        <li><strong>Other Settings</strong> for the message list: fonts, grid lines and a compact layout.</li>
-        <li><strong>Zoom</strong> the whole window with Ctrl+mouse wheel.</li>
-        <li><strong>Ease of Access options</strong>, screen reader support, and KeyTips (Alt) for the ribbon.</li>
-      </ul>
-
-      <h2 id="it">For IT</h2>
-      <ul>
-        <li><strong>A signed Windows Installer package</strong> (.msi) for silent, per-machine installs.</li>
-        <li><strong>Group Policy and Intune templates</strong>, and installer settings to limit sign-in to your organization or use your own app registration.</li>
-        <li><strong>Admin consent</strong>: what InCloseMail asks for, and how to approve it for your organization. See <a href="help/admin-consent.html">For administrators</a>.</li>
-        <li><strong>Uninstall from inside the app</strong> (Help &rarr; Uninstall), leaving nothing behind if you choose.</li>
-        <li><strong>Updates from inside the app</strong>, each installer checked for EmuKey&rsquo;s signature before it runs, with What&rsquo;s New on the update bar.</li>
-      </ul>
-
-      <h2 id="only" class="only-heading">Only available from InCloseMail</h2>
-      <p>Everything above is classic Outlook's. What follows is what classic Outlook never did.</p>
-
-      <h2 id="blacklist">Blacklist</h2>
-      <p>Some senders you never want to hear from again. Outlook&rsquo;s Block Sender only works where its Junk filter runs, and a rule per sender soon becomes a list nobody can keep track of. InCloseMail keeps them in one list that works everywhere.</p>
-      <ul>
-        <li><strong>One click</strong>: <strong>Blacklist Email Address</strong>, the button at the right of a message&rsquo;s header (under the sun in Dark Mode; also in Home &rarr; Junk and the message&rsquo;s right-click Junk menu), asks once, then sends that message and everything the sender sends from now on to Junk Email.</li>
-        <li><strong>Works everywhere</strong>: the blacklist is one rule on your mailbox, &ldquo;Blacklist (InCloseMail)&rdquo;, that Exchange runs before your other rules, so it works on your phone, in Outlook on the web and with InCloseMail closed.</li>
-        <li><strong>One list to manage</strong>: Home &rarr; Junk &rarr; <strong>Manage Blacklist</strong> shows every address, with Add and Remove.</li>
-        <li><strong>No surprises with your rules</strong>: if a rule you already have also handles that sender (for example, an Always Move Messages From rule), InCloseMail tells you and asks whether to leave that rule alone or delete it.</li>
-        <li><strong>On every PC</strong>: since the list lives in your mailbox, every PC you use sees the same one.</li>
-      </ul>
-
-      <h2 id="dark-mode">Dark Mode that reads the pictures</h2>
-      <p>Dark Mode turns a message dark. Outlook stops there: the pictures stay as they were sent, so a traffic report or a chart is a white slab on the dark page. InCloseMail looks at each picture in the message and decides.</p>
-      <ul>
-        <li><strong>Charts, report panels and pictures of text go dark</strong> with the message, keeping their colors, so a whole emailed report reads as one dark page.</li>
-        <li><strong>Dark logos and icons on a clear background turn light</strong>, instead of vanishing dark on dark.</li>
-        <li><strong>Photos stay as sent</strong>, product shots on white included.</li>
-        <li><strong>Pictures from the web too</strong>: once you download a message's pictures, each one is sorted the same way as it arrives, with nothing fetched twice.</li>
-        <li><strong>Mail designed dark is left as it is</strong> in Dark Mode: a newsletter or report on a black or navy page already reads well.</li>
-        <li><strong>And the other way around in light mode</strong>: mail designed dark (for example, a usage report on a navy page) is shown on a white page, its photos as sent and its dark charts and panels turned light with it, so the reading pane is never a black block in a light window.</li>
-        <li><strong>Worked out on your PC</strong> as the message opens, with no white flash. In Dark Mode, the sun button in the message header shows the original.</li>
-      </ul>
-
-      <h2 id="also-only">Also only here</h2>
-      <ul>
-        <li><strong>Demo Mode</strong>: a full sample mailbox, calendar and contacts to look around in or show someone, with no account, or from Help &rarr; Demo Mode while you&rsquo;re signed in.</li>
-        <li><strong>A mailbox that keeps working when Microsoft 365 doesn&rsquo;t</strong>: changes and sent mail wait on your PC through an outage, and File &rarr; Options &rarr; Advanced checks whether your mailbox answers another way (IMAP and SMTP).</li>
-        <li><strong>Lock InCloseMail</strong>: Windows Hello or an authenticator code before your mail opens, when Windows locks or after a while away, with the copy of your mail on your PC encrypted too. See <a href="help/security.html">Lock InCloseMail</a>.</li>
-        <li><strong>Permissions in plain words</strong>: File &rarr; Info &rarr; Permissions shows everything InCloseMail is allowed to do in your account.</li>
-      </ul>
-
-      <h2 id="big-mailboxes">Years of mail: cleanup and organizing, with AI</h2>
-      <p>For mailboxes with 20+ years of mail: sort what you keep into folders, clear out what you never needed, and do it across tens of thousands of messages at a time. The easiest way is to let an AI agent such as Claude do it for you, across your whole account. You can also do it yourself with the tools below, one folder at a time. How to use them: <a href="help/ai-agents.html#clean-up-account">Clean up your whole account with an AI agent</a> and <a href="help/cleanup.html">Cleaning up mail</a>.</p>
-      <ul>
-        <li><strong>Let AI clean up for you</strong>: connect Claude in one click (File &rarr; Options &rarr; Advanced &rarr; AI agents &rarr; Connect Claude Code) and describe the mailbox you want in your own words, for example &ldquo;a short Inbox with only real people; everything else filed by company.&rdquo; It looks at your whole account at once and proposes the folders, rules and moves, each with its reason:
-          <ul>
-            <li>It spots what one folder at a time misses: three folders holding the same company&rsquo;s mail, a rule filing into a folder you renamed, an Inbox half full of status alerts.</li>
-            <li>Nothing changes until you check what you want and click Apply, and one Undo puts it all back. It can never send mail.</li>
-          </ul>
+    <section aria-labelledby="classic">
+      <h2 id="classic">Classic Outlook, feature for feature</h2>
+      <ul class="feature-cards">
+        <li>
+          <a class="feature-card" href="features/layout.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-layout-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-layout-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>The Outlook layout</strong>
+            <span class="card-text">The ribbon, folder pane, message list, reading pane and To-Do Bar, with Outlook&rsquo;s keys and menus.</span>
+          </a>
         </li>
-        <li><strong>Clean Up My Inbox</strong> (Home &rarr; Clean Up My Inbox, or right-click any folder &rarr; Clean Up &rarr; Sort Through This Folder): reads every message in the folder once, with progress and Stop, then lists its mail in groups, junk first, then biggest first.</li>
-        <li><strong>The groups</strong>:
-          <ul>
-            <li><strong>Likely junk</strong>: mail Microsoft 365 rated spam or bulk.</li>
-            <li><strong>Newsletters and marketing</strong>: recognized from their unsubscribe link and from how marketing addresses look. Small senders are gathered into one Other mailings group.</li>
-            <li><strong>Mail you never act on</strong>: people outside your organization you&rsquo;ve never written to, replied to, forwarded or flagged. It works even if you mark everything read.</li>
-            <li><strong>Co-workers</strong>: filed into Co-workers &rsaquo; Name, as the Rules Wizard files them.</li>
-            <li><strong>Each company</strong>, all of its addresses together.</li>
-            <li><strong>Large messages</strong>, and <strong>mail older than 1, 2 or 5 years</strong>.</li>
-          </ul>
+        <li>
+          <a class="feature-card" href="features/mail.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-mail-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-mail-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Mail</strong>
+            <span class="card-text">Conversations, Focused Inbox, views and groups, categories and flags, Clean Up, Archive and Undo.</span>
+          </a>
         </li>
-        <li><strong>Suggestions you can change</strong>:
-          <ul>
-            <li>Delete what nobody keeps, file co-workers, mark notifications read, and leave alone anyone you&rsquo;ve written to.</li>
-            <li>For each group, choose Move, Archive, Delete, Mark as Read or Leave Alone, with sizes shown so you can see what takes the space.</li>
-          </ul>
+        <li>
+          <a class="feature-card" href="features/writing.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-writing-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-writing-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Writing and sending</strong>
+            <span class="card-text">Signatures, Auto-Complete, formatting, Quick Parts and templates, Delay Delivery and message options.</span>
+          </a>
         </li>
-        <li><strong>Many groups at once</strong>: show one kind (for example, Newsletters), Select All, and Set Selected To one action. Ctrl+click and Shift+click pick groups one by one.</li>
-        <li><strong>Folders where you want them</strong>: pick any folder, or right-click one to make a new folder inside it. Moves can add a rule so future mail goes there too, but not one you already have.</li>
-        <li><strong>Safe to run</strong>:
-          <ul>
-            <li>A summary before anything changes, then the work in small batches, with Stop.</li>
-            <li><strong>One Undo</strong> puts every message back where it was, and removes the rules and folders the run made.</li>
-            <li>Deleted mail goes to Deleted Items, never straight to permanent deletion.</li>
-          </ul>
+        <li>
+          <a class="feature-card" href="features/search.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-search-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-search-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Search</strong>
+            <span class="card-text">Instant search in a folder, the mailbox or all mailboxes, Refine, Advanced Find and Search Folders.</span>
+          </a>
         </li>
-        <li><strong>Rules for years of mail</strong>:
-          <ul>
-            <li>The Rules Wizard and Organize Mail into Folders make a folder and rule for every co-worker and company at once, and file the mail you already have.</li>
-            <li>Run Rules Now works on any folder, with progress and Stop.</li>
-            <li>A new rule on a folder of thousands of messages asks before running, and offers Clean Up instead.</li>
-          </ul>
+        <li>
+          <a class="feature-card" href="features/rules.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-rules-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-rules-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Rules and Quick Steps</strong>
+            <span class="card-text">Rules and Alerts that run on the server, the Rules Wizard, Quick Steps, Junk Email and Automatic Replies.</span>
+          </a>
         </li>
-        <li><strong>Your history on your PC</strong>: keep years of mail from every folder on your PC to read and search offline. File &rarr; Info shows how much is kept, beside your mailbox&rsquo;s size and limit.</li>
+        <li>
+          <a class="feature-card" href="features/calendar.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-calendar-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-calendar-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Calendar</strong>
+            <span class="card-text">Day, Work Week, Week, Month and Schedule views, meetings, the Scheduling Assistant and shared calendars.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/people.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-people-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-people-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>People</strong>
+            <span class="card-text">The full contact form, People, Business Card and List views, contact groups and the Global Address List.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/tasks.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-tasks-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-tasks-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Tasks</strong>
+            <span class="card-text">Your Microsoft To Do tasks with Outlook&rsquo;s task form and views.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/accounts.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-accounts-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-accounts-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Accounts and sharing</strong>
+            <span class="card-text">Several accounts at once, shared mailboxes with Send As, Microsoft 365 Groups, profiles and the same settings on every PC.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/offline.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-offline-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-offline-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Offline and Send/Receive</strong>
+            <span class="card-text">An encrypted copy of your mail on your PC, Work Offline, Send/Receive groups and Desktop Alerts.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/pst.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-pst-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-pst-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>.pst files and coming from Outlook</strong>
+            <span class="card-text">Open, import and export Outlook Data Files, and bring your signatures and Auto-Complete names from Outlook.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/security.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-security-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-security-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Security and privacy</strong>
+            <span class="card-text">Plain-language phishing warnings, a second look before sending, read-only mode and S/MIME.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/look.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-look-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-look-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Look, language and accessibility</strong>
+            <span class="card-text">Light, Dark Mode, White and High Contrast, themes and the Theme Editor, ten languages and keyboard access.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/it.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-it-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-it-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>For IT, help and feedback</strong>
+            <span class="card-text">A signed .msi, Group Policy and Intune templates, admin consent, updates from inside the app, and Report a Bug.</span>
+          </a>
+        </li>
       </ul>
+    </section>
 
-      <h2 id="analytics">Analytics</h2>
-      <ul>
-        <li><strong>File &rarr; Analytics</strong> for any of your accounts, over the last 30 days, 90 days, 12 months or all your mail.</li>
-        <li><strong>The figures</strong>: mail received and sent, your usual reply time and reply rate, what&rsquo;s still unread, mail sent after hours and on weekends, and your busiest day.</li>
-        <li><strong>Charts</strong> of mail over time, your busiest hours and days, a grid of when mail arrives each hour of the week, and pies of who it&rsquo;s from.</li>
-        <li><strong>Top 10s</strong>: senders, the co-workers who write most, companies (with all their addresses together), automated senders, the people and domains you write to, who you leave unread, the longest conversations, who you answer fastest and slowest, and your folders by size.</li>
-        <li><strong>Folder sizes</strong>: point at a folder to see its items, unread and size.</li>
-        <li><strong>Private</strong>: only who each message is from and to, and when, are read, never what it says, and it&rsquo;s all worked out on your PC.</li>
+    <section aria-labelledby="only">
+      <h2 id="only">Only available from InCloseMail</h2>
+      <p class="section-lead">Everything above is classic Outlook&rsquo;s. These are what classic Outlook never did.</p>
+      <ul class="feature-cards">
+        <li>
+          <a class="feature-card" href="features/blacklist.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-blacklist-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-blacklist-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Blacklist</strong>
+            <span class="card-text">One click and everything a sender sends from now on goes straight to Junk Email, on every device.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/dark-mode.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-dark-mode-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-dark-mode-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Dark Mode that reads the pictures</strong>
+            <span class="card-text">Emailed charts and reports go dark with the message, dark logos turn light, and photos stay as sent.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/years-of-mail.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-years-of-mail-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-years-of-mail-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Years of mail: cleanup and organizing, with AI</strong>
+            <span class="card-text">Sort 20+ years of mail into folders and clear out what you never needed, with one Undo.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/analytics.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-analytics-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-analytics-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Analytics</strong>
+            <span class="card-text">Who writes to you most, how fast you reply, your busiest hours and biggest folders, worked out on your PC.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/ai-agents.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-ai-agents-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-ai-agents-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>AI agents</strong>
+            <span class="card-text">Let Claude and other AI apps read and draft mail and propose changes you approve, or copy mail as clean text for any chatbot.</span>
+          </a>
+        </li>
+        <li>
+          <a class="feature-card" href="features/also-only.html">
+            <span class="card-thumb">
+              <img class="shot-light" src="features/img/thumb-also-only-light.png" width="480" height="300" loading="lazy" alt="">
+              <img class="shot-dark" src="features/img/thumb-also-only-dark.png" width="480" height="300" loading="lazy" alt="">
+            </span>
+            <strong>Also only here</strong>
+            <span class="card-text">Demo Mode, a mailbox that keeps working through an outage, Lock InCloseMail and permissions in plain words.</span>
+          </a>
+        </li>
       </ul>
+    </section>
 
-      <h2 id="ai">AI agents</h2>
-      <ul>
-        <li><strong>Work with Claude and other AI agents:</strong> turn on AI agents in File &rarr; Options &rarr; Advanced and an AI app (Claude Desktop, Claude Code, or any MCP client) can list, search and read the mailboxes you choose, whole conversations and rules included, and save drafts for you to check. It can never send mail.</li>
-        <li><strong>Let an AI organize your mail, with your approval:</strong> ask the agent to tidy up and it proposes folders, rules and messages to move, mark as read or put in Deleted Items. InCloseMail shows each change with the agent's reason; nothing changes until you click Apply, and Undo puts it all back. See <a href="help/ai-agents.html">AI agents</a> in Help to set it up.</li>
-        <li><strong>Copy for AI and Export for AI:</strong> copy a message, a conversation or a whole folder as clean text to paste into any chatbot.</li>
-        <li><strong>Your choice, per mailbox:</strong> nothing is shared until you allow it, and organizations can turn it off with Group Policy.</li>
-      </ul>
-
-      <p class="lead-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app.</p>
-    </main>
-  </div>
+    <p class="lead-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+  </main>
 
   <footer>
     <div class="wrap footer-row">
       <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
       <nav aria-label="Legal">
+        <a href="features.html">Features</a>
         <a href="help/">Help</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>

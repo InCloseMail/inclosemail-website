@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing and sending - InCloseMail features</title>
+  <meta name="description" content="Signatures, Auto-Complete, formatting, Quick Parts and templates, Delay Delivery and message options.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Classic Outlook, feature for feature</p>
+      <h1>Writing and sending</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html" aria-current="page">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>Signatures</strong>, separate for new messages and replies, with pictures.</li>
+        <li><strong>Auto-Complete</strong> in To, Cc and Bcc, Check Names, the Address Book and the Global Address List.</li>
+        <li><strong>Formatting</strong>: styles, Format Painter, tables, pictures, line and paragraph spacing, borders and shading, symbols, horizontal lines and date and time.</li>
+        <li><strong>Paste Options</strong> and Paste Special, <strong>AutoCorrect</strong> as you type, and <strong>Spelling &amp; Grammar</strong> (F7) with proofing languages.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/compose-light.png"><img src="img/compose-light.png" width="1226" height="430" loading="lazy" alt="A new message window: the Message tab with Clipboard, Basic Text, Names, Include, Tags, Draft and My Templates; the Send button; From, To, Cc and Subject; and the message text."></a>
+        <a class="shot-dark" href="img/compose-dark.png"><img src="img/compose-dark.png" width="1226" height="430" loading="lazy" alt="A new message window: the Message tab with Clipboard, Basic Text, Names, Include, Tags, Draft and My Templates; the Send button; From, To, Cc and Subject; and the message text. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Quick Parts</strong> and <strong>My Templates</strong> for the text you write often.</li>
+        <li><strong>Insert</strong> Outlook items, business cards and your calendar&rsquo;s free time into a message.</li>
+        <li><strong>@mentions</strong> that add people to the To line.</li>
+        <li><strong>Delay Delivery</strong>, Message Options (importance, sensitivity, receipts, replies sent to, expiration) and Save Sent Item To.</li>
+        <li><strong>Reply, Reply All, Forward</strong>, Forward as Attachment, Reply with Meeting and Resend This Message.</li>
+        <li><strong>Replies in the reading pane</strong> or in their own window, with Pop Out.</li>
+        <li><strong>Preface comments with</strong> your name: what you type into the quoted original of a reply or forward starts with [Your name], in blue, as in Outlook (File &rarr; Options &rarr; Mail).</li>
+        <li><strong>Drafts that save themselves</strong> every few minutes.</li>
+        <li><strong>Send through Exchange Online&rsquo;s SMTP server</strong> for organizations whose mail Microsoft turns away when it&rsquo;s sent through Graph.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="mail.html"><span>Previous</span>Mail</a>
+        <a class="next" href="search.html"><span>Next</span>Search</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

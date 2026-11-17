@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Also only here - InCloseMail features</title>
+  <meta name="description" content="Demo Mode, a mailbox that keeps working through an outage, Lock InCloseMail and permissions in plain words.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Only available from InCloseMail</p>
+      <h1>Also only here</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html" aria-current="page">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>Demo Mode</strong>: a full sample mailbox, calendar and contacts to look around in or show someone, with no account, or from Help &rarr; Demo Mode while you&rsquo;re signed in. Every picture on these pages was taken in it.</li>
+        <li><strong>A mailbox that keeps working when Microsoft 365 doesn&rsquo;t</strong>: changes and sent mail wait on your PC through an outage, and File &rarr; Options &rarr; Advanced checks whether your mailbox answers another way (IMAP and SMTP).</li>
+        <li><strong>Lock InCloseMail</strong>: Windows Hello or an authenticator code before your mail opens, when Windows locks or after a while away, with the copy of your mail on your PC encrypted too. See <a href="../help/security.html">Lock InCloseMail</a>.</li>
+        <li><strong>Permissions in plain words</strong>: File &rarr; Info &rarr; Permissions shows everything InCloseMail is allowed to do in your account.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/info-light.png"><img src="img/info-light.png" width="953" height="800" loading="lazy" alt="File &rarr; Info in Demo Mode: the account, Exit Demo, Account Settings, Changes to your mailbox, Automatic Replies, Mailbox Settings with the mailbox&rsquo;s free space, and Rules and Alerts."></a>
+        <a class="shot-dark" href="img/info-dark.png"><img src="img/info-dark.png" width="953" height="800" loading="lazy" alt="File &rarr; Info in Demo Mode: the account, Exit Demo, Account Settings, Changes to your mailbox, Automatic Replies, Mailbox Settings with the mailbox&rsquo;s free space, and Rules and Alerts. In Dark Mode."></a>
+      </figure>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="ai-agents.html"><span>Previous</span>AI agents</a>
+        <a class="next" href="../features.html"><span>Back to</span>All features</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

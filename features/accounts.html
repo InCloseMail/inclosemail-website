@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accounts and sharing - InCloseMail features</title>
+  <meta name="description" content="Several accounts at once, shared mailboxes with Send As, Microsoft 365 Groups, profiles and the same settings on every PC.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Classic Outlook, feature for feature</p>
+      <h1>Accounts and sharing</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html" aria-current="page">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>Microsoft 365 work and school accounts and Outlook.com</strong> accounts, signed in through Windows.</li>
+        <li><strong>Several accounts at once</strong>, each with its own mail and calendar.</li>
+        <li><strong>Shared mailboxes</strong>, found automatically as Outlook finds them, clearly marked, with <strong>Send As</strong> and Send on Behalf.</li>
+      </ul>
+      <figure class="shot feature-shot narrow" style="max-width:231px">
+        <a class="shot-light" href="img/folderpane-light.png"><img src="img/folderpane-light.png" width="231" height="545" loading="lazy" alt="The folder pane with two accounts, demo.user@contoso.com and user.demo@acme.com, each followed by its shared mailboxes, marked SMB."></a>
+        <a class="shot-dark" href="img/folderpane-dark.png"><img src="img/folderpane-dark.png" width="231" height="545" loading="lazy" alt="The folder pane with two accounts, demo.user@contoso.com and user.demo@acme.com, each followed by its shared mailboxes, marked SMB. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Microsoft 365 Groups</strong>: group conversations and group calendars.</li>
+        <li><strong>Your aliases</strong> in the From list, and the From address new messages start with.</li>
+        <li><strong>The same settings on every PC</strong>, kept in the mailbox of every account you use, with Check Sync Now.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/opt-sync-light.png"><img src="img/opt-sync-light.png" width="986" height="230" loading="lazy" alt="File &rarr; Options &rarr; Advanced: Keep my settings the same on every PC, the mailbox they&rsquo;re kept in, and Check Sync Now."></a>
+        <a class="shot-dark" href="img/opt-sync-dark.png"><img src="img/opt-sync-dark.png" width="986" height="230" loading="lazy" alt="File &rarr; Options &rarr; Advanced: Keep my settings the same on every PC, the mailbox they&rsquo;re kept in, and Check Sync Now. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Profiles</strong>, as in Outlook: keep Work and Home apart, each with its own accounts and settings, choose one when InCloseMail starts, or switch with Change Profile.</li>
+        <li><strong>Mailbox size</strong> as Outlook shows it, with your plan&rsquo;s limit.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="tasks.html"><span>Previous</span>Tasks</a>
+        <a class="next" href="offline.html"><span>Next</span>Offline and Send/Receive</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

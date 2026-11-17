@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>.pst files and coming from Outlook - InCloseMail features</title>
+  <meta name="description" content="Open, import and export Outlook Data Files, and bring your signatures and Auto-Complete names from Outlook.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Classic Outlook, feature for feature</p>
+      <h1>.pst files and coming from Outlook</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html" aria-current="page">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>Open Outlook Data File</strong>: read a .pst of any size in the folder pane, without copying it.</li>
+        <li><strong>Import a .pst</strong> into your mailbox, folders and all, with the original dates and attachments.</li>
+        <li><strong>Export to a .pst</strong> that Outlook can open, from a whole mailbox or one folder, or to <strong>.mbox</strong> for other mail apps.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/openexport-light.png"><img src="img/openexport-light.png" width="913" height="630" loading="lazy" alt="File &rarr; Open &amp; Export: Import/Export, Open Outlook Data File, Import from Outlook, Export to .pst and Open Item, each with what it does."></a>
+        <a class="shot-dark" href="img/openexport-dark.png"><img src="img/openexport-dark.png" width="913" height="630" loading="lazy" alt="File &rarr; Open &amp; Export: Import/Export, Open Outlook Data File, Import from Outlook, Export to .pst and Open Item, each with what it does. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Import from Outlook</strong>: your signatures, Auto-Complete List and Quick Access Toolbar from classic Outlook on the same PC.</li>
+        <li><strong>Open .eml, .msg and .ics files</strong>, and InCloseMail as your default mail app for email links.</li>
+        <li>None of this needs Outlook installed.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="offline.html"><span>Previous</span>Offline and Send/Receive</a>
+        <a class="next" href="security.html"><span>Next</span>Security and privacy</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

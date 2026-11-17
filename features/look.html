@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Look, language and accessibility - InCloseMail features</title>
+  <meta name="description" content="Light, Dark Mode, White and High Contrast, themes and the Theme Editor, ten languages and keyboard access.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Classic Outlook, feature for feature</p>
+      <h1>Look, language and accessibility</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html" aria-current="page">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <ul>
+        <li><strong>Light</strong> in classic Outlook&rsquo;s gray look, <strong>Dark Mode</strong> and <strong>White</strong>, following Windows until you choose, with Switch Background for a message. <strong>High Contrast</strong>, and Windows&rsquo; own high-contrast themes.</li>
+        <li><strong>Themes</strong> (only in InCloseMail): Ocean, Forest, Plum and Graphite, each in light and dark, and holiday themes, or one that changes with the season.</li>
+        <li><strong>The Theme Editor</strong> (only in InCloseMail; File &rarr; Account, or File &rarr; Options &rarr; General): start from any theme and color each part of the window (title bar, ribbon, folder pane, message list, reading pane header, status bar, calendar), watching InCloseMail change as you pick. Keep as many as you like; they follow you to your other PCs. <strong>Export</strong> saves one as an .icmtheme file to share, and <strong>Import Theme</strong> adds one someone shared with you.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/theme-editor-light.png"><img src="img/theme-editor-light.png" width="886" height="634" loading="lazy" alt="The Theme Editor: a theme name and the theme it starts from; the list of colors by part of the window (title bar, background, text, accent, selected item, ribbon); and, for the color picked, its hex value, red, green and blue sliders and colors to pick from."></a>
+        <a class="shot-dark" href="img/theme-editor-dark.png"><img src="img/theme-editor-dark.png" width="886" height="634" loading="lazy" alt="The Theme Editor: a theme name and the theme it starts from; the list of colors by part of the window (title bar, background, text, accent, selected item, ribbon); and, for the color picked, its hex value, red, green and blue sliders and colors to pick from. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>In your language</strong>: English, Deutsch, Fran&ccedil;ais, Espa&ntilde;ol, Italiano, Portugu&ecirc;s (Brasil), 日本語, 한국어, 简体中文 and 繁體中文, following Windows until you choose one in Options &rarr; Language. Folder names such as Inbox come from your mailbox, in the language it&rsquo;s set to.</li>
+        <li><strong>Other Settings</strong> for the message list: fonts, grid lines and a compact layout.</li>
+        <li><strong>Zoom</strong> the whole window with Ctrl+mouse wheel.</li>
+        <li><strong>Ease of Access options</strong>, screen reader support, and KeyTips (Alt) for the ribbon.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="security.html"><span>Previous</span>Security and privacy</a>
+        <a class="next" href="it.html"><span>Next</span>For IT, help and feedback</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

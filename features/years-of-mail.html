@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Years of mail: cleanup and organizing, with AI - InCloseMail features</title>
+  <meta name="description" content="Sort 20+ years of mail into folders and clear out what you never needed, with one Undo.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href=".././">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <p class="crumb"><a href="../features.html">Features</a> &rsaquo; Only available from InCloseMail</p>
+      <h1>Years of mail: cleanup and organizing, with AI</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout feature-layout">
+    <nav class="help-nav feature-nav" aria-label="Feature pages">
+      <a href="../features.html">All features</a>
+      <span class="nav-heading">Classic Outlook, feature for feature</span>
+      <a href="layout.html">The Outlook layout</a>
+      <a href="mail.html">Mail</a>
+      <a href="writing.html">Writing and sending</a>
+      <a href="search.html">Search</a>
+      <a href="rules.html">Rules and Quick Steps</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="accounts.html">Accounts and sharing</a>
+      <a href="offline.html">Offline and Send/Receive</a>
+      <a href="pst.html">.pst files and coming from Outlook</a>
+      <a href="security.html">Security and privacy</a>
+      <a href="look.html">Look, language and accessibility</a>
+      <a href="it.html">For IT, help and feedback</a>
+      <span class="nav-heading">Only from InCloseMail</span>
+      <a href="blacklist.html">Blacklist</a>
+      <a href="dark-mode.html">Dark Mode that reads the pictures</a>
+      <a href="years-of-mail.html" aria-current="page">Years of mail: cleanup and organizing, with AI</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="also-only.html">Also only here</a>
+    </nav>
+
+    <main class="doc feature-page">
+      <p>For mailboxes with 20+ years of mail: sort what you keep into folders, clear out what you never needed, and do it across tens of thousands of messages at a time. The easiest way is to let an AI agent such as Claude do it for you, across your whole account. You can also do it yourself with the tools below, one folder at a time. How to use them: <a href="../help/ai-agents.html#clean-up-account">Clean up your whole account with an AI agent</a> and <a href="../help/cleanup.html">Cleaning up mail</a>.</p>
+      <ul>
+        <li><strong>Let AI clean up for you</strong>: connect Claude in one click (File &rarr; Options &rarr; Advanced &rarr; AI agents &rarr; Connect Claude Code) and describe the mailbox you want in your own words, for example &ldquo;a short Inbox with only real people; everything else filed by company.&rdquo; It looks at your whole account at once and proposes the folders, rules and moves, each with its reason:
+          <ul>
+            <li>It spots what one folder at a time misses: three folders holding the same company&rsquo;s mail, a rule filing into a folder you renamed, an Inbox half full of status alerts.</li>
+            <li>Nothing changes until you check what you want and click Apply, and one Undo puts it all back. It can never send mail.</li>
+          </ul>
+        </li>
+        <li><strong>Clean Up My Inbox</strong> (Home &rarr; Clean Up My Inbox, or right-click any folder &rarr; Clean Up &rarr; Sort Through This Folder): reads every message in the folder once, with progress and Stop, then lists its mail in groups, junk first, then biggest first.</li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/cleanup-light.png"><img src="img/cleanup-light.png" width="1226" height="654" loading="lazy" alt="Clean Up Inbox after reading the folder: groups such as Other mailings, Likely junk, Fabrikam, Microsoft Teams and Statuspage, each with its type, messages, unread, size, newest date and what to do (Delete, Leave alone, Mark as read), above a summary of what will happen."></a>
+        <a class="shot-dark" href="img/cleanup-dark.png"><img src="img/cleanup-dark.png" width="1226" height="654" loading="lazy" alt="Clean Up Inbox after reading the folder: groups such as Other mailings, Likely junk, Fabrikam, Microsoft Teams and Statuspage, each with its type, messages, unread, size, newest date and what to do (Delete, Leave alone, Mark as read), above a summary of what will happen. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>The groups</strong>:
+          <ul>
+            <li><strong>Likely junk</strong>: mail Microsoft 365 rated spam or bulk.</li>
+            <li><strong>Newsletters and marketing</strong>: recognized from their unsubscribe link and from how marketing addresses look. Small senders are gathered into one Other mailings group.</li>
+            <li><strong>Mail you never act on</strong>: people outside your organization you&rsquo;ve never written to, replied to, forwarded or flagged. It works even if you mark everything read.</li>
+            <li><strong>Co-workers</strong>: filed into Co-workers &rsaquo; Name, as the Rules Wizard files them.</li>
+            <li><strong>Each company</strong>, all of its addresses together.</li>
+            <li><strong>Large messages</strong>, and <strong>mail older than 1, 2 or 5 years</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Suggestions you can change</strong>:
+          <ul>
+            <li>Delete what nobody keeps, file co-workers, mark notifications read, and leave alone anyone you&rsquo;ve written to.</li>
+            <li>For each group, choose Move, Archive, Delete, Mark as Read or Leave Alone, with sizes shown so you can see what takes the space.</li>
+          </ul>
+        </li>
+        <li><strong>Many groups at once</strong>: show one kind (for example, Newsletters), Select All, and Set Selected To one action. Ctrl+click and Shift+click pick groups one by one.</li>
+        <li><strong>Folders where you want them</strong>: pick any folder, or right-click one to make a new folder inside it. Moves can add a rule so future mail goes there too, but not one you already have.</li>
+        <li><strong>Safe to run</strong>:
+          <ul>
+            <li>A summary before anything changes, then the work in small batches, with Stop.</li>
+            <li><strong>One Undo</strong> puts every message back where it was, and removes the rules and folders the run made.</li>
+            <li>Deleted mail goes to Deleted Items, never straight to permanent deletion.</li>
+          </ul>
+        </li>
+        <li><strong>Rules for years of mail</strong>:
+          <ul>
+            <li>The Rules Wizard and Organize Mail into Folders make a folder and rule for every co-worker and company at once, and file the mail you already have.</li>
+            <li>Run Rules Now works on any folder, with progress and Stop.</li>
+            <li>A new rule on a folder of thousands of messages asks before running, and offers Clean Up instead.</li>
+          </ul>
+        </li>
+      </ul>
+      <figure class="shot feature-shot">
+        <a class="shot-light" href="img/wizard-coworkers-light.png"><img src="img/wizard-coworkers-light.png" width="966" height="634" loading="lazy" alt="The Rules Wizard&rsquo;s Co-workers page: everyone at contoso.com who wrote at least 10 times, busiest first, each with a check box, a message count and the folder name under Co-workers."></a>
+        <a class="shot-dark" href="img/wizard-coworkers-dark.png"><img src="img/wizard-coworkers-dark.png" width="966" height="634" loading="lazy" alt="The Rules Wizard&rsquo;s Co-workers page: everyone at contoso.com who wrote at least 10 times, busiest first, each with a check box, a message count and the folder name under Co-workers. In Dark Mode."></a>
+      </figure>
+      <ul>
+        <li><strong>Your history on your PC</strong>: keep years of mail from every folder on your PC to read and search offline. File &rarr; Info shows how much is kept, beside your mailbox&rsquo;s size and limit.</li>
+      </ul>
+      <p class="lead-note feedback-note">Missing something you used in Outlook? Choose <strong>Help &rarr; Suggest a Feature</strong> in the app. Found a bug? <strong>Help &rarr; Report a Bug</strong> sends a bug report to bugs@inclosemail.com.</p>
+      <nav class="prev-next" aria-label="Previous and next feature">
+        <a class="prev" href="dark-mode.html"><span>Previous</span>Dark Mode that reads the pictures</a>
+        <a class="next" href="analytics.html"><span>Next</span>Analytics</a>
+      </nav>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="../features.html">Features</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>
