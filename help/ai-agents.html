@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI agents - InCloseMail Help</title>
-  <meta name="description" content="Connect Claude and other AI apps to InCloseMail: let them read the mailboxes you choose, draft replies, and propose folders, rules and clean-ups that change nothing until you click Apply, with Undo.">
+  <meta name="description" content="Connect Claude and other AI apps to InCloseMail: let them read the mailboxes you choose, draft replies, and propose folders, rules and cleanups that change nothing until you click Apply, with Undo.">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
@@ -52,15 +52,15 @@
     </nav>
 
     <main class="doc">
-    <p>Filing mail, writing rules and sorting folders by hand is a chore. An AI agent such as <strong>Claude</strong> can do it for you: connect it to InCloseMail and it can read and search the mailboxes you choose, draft replies, translate mail written in other languages, and <strong>propose</strong> folders, rules and clean-ups. You see every proposed change with the agent&rsquo;s reason, and nothing changes until you click <strong>Apply</strong>. <strong>Undo</strong> puts it all back.</p>
+    <p>Filing mail, writing rules and sorting folders by hand is a chore. An AI agent such as <strong>Claude</strong> can do it for you: connect it to InCloseMail and it can read and search the mailboxes you choose, draft replies, translate mail written in other languages, and <strong>propose</strong> folders, rules and cleanups. You see every proposed change with the agent&rsquo;s reason, and nothing changes until you click <strong>Apply</strong>. <strong>Undo</strong> puts it all back.</p>
     <p>It works with Claude Desktop, Claude Code and any other AI app that uses the Model Context Protocol (MCP). InCloseMail never sends mail for an agent.</p>
 
     <h2 id="turn-on">Turn it on</h2>
     <ol>
       <li>Open <strong>File &rarr; Options &rarr; Advanced</strong> and find <strong>AI agents</strong>.</li>
-      <li>Tick <strong>Let AI agents on this PC read my mail through InCloseMail</strong>.</li>
-      <li>Under <strong>Mailboxes they may use</strong>, untick any mailbox the agent should stay out of: an added account, or a shared mailbox, say.</li>
-      <li>To let the agent write drafts for you, tick <strong>Let them save drafts in Drafts for me to check and send</strong>.</li>
+      <li>Check <strong>Let AI agents on this PC read my mail through InCloseMail</strong>.</li>
+      <li>Under <strong>Mailboxes they may use</strong>, uncheck any mailbox the agent should stay out of: for example, an added account or a shared mailbox.</li>
+      <li>To let the agent write drafts for you, check <strong>Let them save drafts in Drafts for me to check and send</strong>.</li>
       <li>Click <strong>OK</strong>.</li>
     </ol>
     <p>It&rsquo;s off until you turn it on, and it works only while InCloseMail is open, only for you on this PC.</p>
@@ -125,11 +125,11 @@
     <h3 id="review">Review it</h3>
     <p>InCloseMail opens the proposal in its own window, <strong>AI Agent Proposal</strong>, with the agent&rsquo;s summary at the top and a list of changes. Each change says what it does, in plain words, with the agent&rsquo;s <strong>Why</strong>. For messages, it shows a few of their subjects.</p>
     <ul>
-      <li>Every change starts ticked. Untick any you don&rsquo;t want. <strong>Select All</strong> and <strong>Clear All</strong> do them all.</li>
-      <li><strong>Apply</strong> makes the ticked changes: folders first, then rules (in one save), then mail. If one doesn&rsquo;t work, it says why in red under that change, and the rest still go ahead.</li>
+      <li>Every change starts checked. Uncheck any you don&rsquo;t want. <strong>Select All</strong> and <strong>Clear All</strong> do them all.</li>
+      <li><strong>Apply</strong> makes the checked changes: folders first, then rules (in one save), then mail. If one doesn&rsquo;t work, it says why in red under that change, and the rest still go ahead.</li>
       <li><strong>Decline</strong> changes nothing. Closing the window without applying does the same.</li>
       <li>If the mailbox is read-only in InCloseMail, Apply asks to allow changes first, as any change does.</li>
-      <li>The agent is told what happened (applied, partly applied, declined or undone), so it can carry on.</li>
+      <li>The agent is told what happened (applied, partly applied, declined or undone), so it can continue.</li>
     </ul>
     <p>You can keep working in InCloseMail while the window is open.</p>
 
@@ -169,19 +169,19 @@
     <h3 id="clean-up-steps">How it goes</h3>
     <ol>
       <li><strong>Ask for the plan first.</strong> The agent looks through your folders, rules and mail and tells you what it found and what it would do. Talk it over and change anything you don&rsquo;t like before it proposes a thing.</li>
-      <li><strong>Go a step at a time.</strong> A big account takes a few proposals: say, folders first, then rules, then the old mail. Each proposal holds up to 100 changes; each change moves up to 500 messages, and for more the agent proposes a rule and runs it on the folder.</li>
-      <li><strong>Check each proposal</strong> in the <a href="#review">AI Agent Proposal</a> window, untick anything you don&rsquo;t want, and click Apply. The agent is told what you applied, so it can carry on with the next step.</li>
+      <li><strong>Go a step at a time.</strong> A big account takes a few proposals: for example, folders first, then rules, then the old mail. Each proposal holds up to 100 changes; each change moves up to 500 messages, and for more the agent proposes a rule and runs it on the folder.</li>
+      <li><strong>Check each proposal</strong> in the <a href="#review">AI Agent Proposal</a> window, uncheck anything you don&rsquo;t want, and click Apply. The agent is told what you applied, so it can continue with the next step.</li>
       <li><strong>Look at the result</strong> in InCloseMail. If a step went wrong, click <a href="#undo">Undo</a> in its window, or tell the agent what to change.</li>
       <li><strong>Empty Deleted Items</strong> yourself when you&rsquo;re happy. Until then nothing is gone.</li>
     </ol>
-    <p>Afterwards, your rules keep new mail where it belongs, as they always have; the agent only wrote them for you. Every month or so, ask it to look again.</p>
+    <p>Afterward, your rules keep new mail where it belongs, as they always have; the agent only wrote them for you. Every month or so, ask it to look again.</p>
 
     <h3 id="clean-up-limits">Good to know</h3>
     <ul>
-      <li><strong>What it reads goes to your AI app&rsquo;s provider.</strong> A whole-account clean-up means the agent reads a lot of your mail. If you&rsquo;d rather it didn&rsquo;t read the messages themselves, ask it to work from senders and subjects only, and untick any mailbox it shouldn&rsquo;t see. See <a href="#privacy">Your privacy</a>.</li>
+      <li><strong>What it reads goes to your AI app&rsquo;s provider.</strong> A whole-account cleanup means the agent reads a lot of your mail. If you&rsquo;d rather it didn&rsquo;t read the messages themselves, ask it to work from senders and subjects only, and uncheck any mailbox it shouldn&rsquo;t see. See <a href="#privacy">Your privacy</a>.</li>
       <li><strong>It can&rsquo;t delete folders or empty Deleted Items.</strong> It can make, rename and move folders; delete the empty ones yourself.</li>
       <li><strong>It changes a rule by replacing it:</strong> a new rule in its place, and the old one deleted. Both show in the proposal.</li>
-      <li><strong>Mail filed by a new rule run on a folder</strong> can&rsquo;t always be undone (see <a href="#undo">Undo</a>). For a large clean-up, ask the agent to say which changes those are.</li>
+      <li><strong>Mail filed by a new rule run on a folder</strong> can&rsquo;t always be undone (see <a href="#undo">Undo</a>). For a large cleanup, ask the agent to say which changes those are.</li>
     </ul>
 
     <h2 id="translate">Translate mail</h2>
@@ -195,10 +195,10 @@
 
     <h2 id="privacy">Your privacy</h2>
     <ul>
-      <li>Only the mailboxes you ticked, only while InCloseMail is open, and only AI apps running on this PC as you.</li>
+      <li>Only the mailboxes you checked, only while InCloseMail is open, and only AI apps running on this PC as you.</li>
       <li>What you let the agent read goes to that AI app, and from there to its provider (Anthropic, for Claude), under the app&rsquo;s own terms. InCloseMail sends nothing anywhere else.</li>
       <li><strong>Open Log</strong> (next to Copy Setup for Claude Desktop) shows what agents asked for and when: which tool and which mailbox, never what the mail says.</li>
-      <li>Untick the AI agents box to cut every agent off at once.</li>
+      <li>Uncheck the AI agents box to cut every agent off at once.</li>
     </ul>
 
     <h2 id="copy-for-ai">Without connecting an app</h2>
@@ -217,9 +217,9 @@
       <li><strong>The agent says InCloseMail isn&rsquo;t running, or AI agents are off:</strong> open InCloseMail, check the box in File &rarr; Options &rarr; Advanced &rarr; AI agents, and ask again.</li>
       <li><strong>InCloseMail doesn&rsquo;t show in Claude Desktop:</strong> check the config file is valid JSON (one <code>mcpServers</code> section, commas between entries), then restart Claude Desktop completely (from the tray icon too).</li>
       <li><strong>Claude Code doesn&rsquo;t see InCloseMail:</strong> start a new Claude Code session after connecting (a session that was already open doesn&rsquo;t pick it up). Running <code>claude mcp get inclosemail</code> in a terminal shows whether it&rsquo;s set up and connected; if not, click <strong>Connect Claude Code</strong> again and send the message once more.</li>
-      <li><strong>A mailbox is missing:</strong> it&rsquo;s unticked under Mailboxes they may use, or isn&rsquo;t open in InCloseMail.</li>
-      <li><strong>Drafts aren&rsquo;t saved:</strong> tick the drafts box, and check the mailbox isn&rsquo;t read-only.</li>
-      <li><strong>During an update</strong> the connection closes so the update can install; your AI app connects again afterwards.</li>
+      <li><strong>A mailbox is missing:</strong> it&rsquo;s unchecked under Mailboxes they may use, or isn&rsquo;t open in InCloseMail.</li>
+      <li><strong>Drafts aren&rsquo;t saved:</strong> select the drafts box, and check the mailbox isn&rsquo;t read-only.</li>
+      <li><strong>During an update</strong> the connection closes so the update can install; your AI app connects again afterward.</li>
     </ul>
     </main>
   </div>

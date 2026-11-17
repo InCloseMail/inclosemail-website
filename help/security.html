@@ -73,7 +73,7 @@
       <li>InCloseMail shows <strong>InCloseMail is locked</strong> before any mail. With Windows Hello, Windows asks at once; with an authenticator app, type the 6-digit code it shows.</li>
       <li>Locked means paused: InCloseMail doesn&rsquo;t sync or show new-mail alerts until it&rsquo;s unlocked. When it locks while you&rsquo;re writing, the message is saved to <strong>Drafts</strong>, and InCloseMail says so when you unlock.</li>
       <li>AI agents (Claude and others) are told &ldquo;InCloseMail is locked; unlock it to continue&rdquo;, and get nothing until you unlock it.</li>
-      <li><strong>Lost your way to unlock?</strong> Click <strong>Use your recovery words instead</strong>. Afterwards InCloseMail asks you to set up a new way to unlock and gives you new words.</li>
+      <li><strong>Lost your way to unlock?</strong> Click <strong>Use your recovery words instead</strong>. Afterward InCloseMail asks you to set up a new way to unlock and gives you new words.</li>
       <li><strong>Lost the words too?</strong> <strong>Start over on this PC</strong> deletes this PC&rsquo;s copy of your mail and your sign-in, and turns the lock off. Your mail is still on the server: sign in again and it comes back. Messages in the Outbox and changes not sent yet are lost.</li>
     </ul>
     <p>To change how it unlocks, get new recovery words, or turn it off, use <strong>Change</strong> or <strong>Turn Off</strong> in the same place. Each asks for your current way to unlock first. <strong>Lock Now</strong> locks it at once.</p>
@@ -98,11 +98,11 @@
       <li><strong>Sign out of Outlook on the web in every browser</strong> (outlook.office.com, outlook.live.com), on every PC you use. Sign out, don&rsquo;t just close the tab: a closed tab keeps you signed in.</li>
       <li><strong>Don&rsquo;t choose &ldquo;Stay signed in?&rdquo;</strong> when a browser asks after a Microsoft sign-in. It keeps the browser signed in for weeks without asking again.</li>
       <li><strong>Don&rsquo;t sign your browser&rsquo;s profile in to your work account</strong> (Edge: Settings &rsaquo; Profiles). A signed-in profile signs in to Outlook on the web by itself.</li>
-      <li><strong>End every other sign-in.</strong> Work or school account: <a href="https://mysignins.microsoft.com">My Sign-Ins</a> &rsaquo; Security info, sign out everywhere. Personal account: <a href="https://account.microsoft.com">account.microsoft.com</a> &rsaquo; Security, sign out everywhere. InCloseMail is signed out too; sign it in again afterwards.</li>
+      <li><strong>End every other sign-in.</strong> Work or school account: <a href="https://mysignins.microsoft.com">My Sign-Ins</a> &rsaquo; Security info, sign out everywhere. Personal account: <a href="https://account.microsoft.com">account.microsoft.com</a> &rsaquo; Security, sign out everywhere. InCloseMail is signed out too; sign it in again afterward.</li>
       <li><strong>Remove your mail from devices you don&rsquo;t need it on</strong>: mail apps on your phone and tablet, Outlook on other PCs, other mail programs.</li>
       <li><strong>Use strong MFA on your account</strong>: a passkey (in Microsoft Authenticator or a security key) or Windows Hello for Business. These can&rsquo;t be phished the way a texted code or an approve/deny prompt can.</li>
       <li><strong>Delete app passwords</strong> if you ever made any. They skip MFA entirely.</li>
-      <li><strong>Check where your mail goes</strong>: no forwarding to an outside address you didn&rsquo;t set up (InCloseMail&rsquo;s Rules and Alerts, or Outlook on the web&rsquo;s settings), and no apps you don&rsquo;t recognise allowed to read your mail.</li>
+      <li><strong>Check where your mail goes</strong>: no forwarding to an outside address you didn&rsquo;t set up (InCloseMail&rsquo;s Rules and Alerts, or Outlook on the web&rsquo;s settings), and no apps you don&rsquo;t recognize allowed to read your mail.</li>
     </ol>
     <p><strong>Outlook.com, Hotmail and other personal accounts</strong> have no admin switches, so it&rsquo;s this list: also consider going passwordless (account.microsoft.com &rsaquo; Security &rsaquo; Advanced security options), and turn off POP (Outlook.com &rsaquo; Settings &rsaquo; Mail &rsaquo; Forwarding and IMAP) if you don&rsquo;t use it.</p>
 
@@ -128,7 +128,7 @@ Set-CASMailbox -Identity user@contoso.com @off</code></pre>
       <li>For <strong>Office 365</strong> with client apps <strong>Browser</strong>: <strong>Sign-in frequency</strong> (for example 1 hour) and <strong>Persistent browser session &rsaquo; Never persistent</strong>. Limited to browsers, InCloseMail isn&rsquo;t asked to sign in every hour.</li>
       <li>Block the <strong>device code flow</strong>, turn off app passwords, don&rsquo;t let users consent to unknown apps reading mail, and block automatic forwarding to outside addresses.</li>
     </ul>
-    <p>Afterwards, end sessions that were already signed in: Entra admin center &rsaquo; the user &rsaquo; <strong>Revoke sessions</strong>. InCloseMail asks to sign in again once. On Entra-joined PCs, Windows itself gives browsers single sign-on, so the Windows sign-in is part of the lock too: require Windows Hello for Business and a short screen lock.</p>
+    <p>Afterward, end sessions that were already signed in: Entra admin center &rsaquo; the user &rsaquo; <strong>Revoke sessions</strong>. InCloseMail asks to sign in again once. On Entra-joined PCs, Windows itself gives browsers single sign-on, so the Windows sign-in is part of the lock too: require Windows Hello for Business and a short screen lock.</p>
 
     <h2 id="limits">What it can&rsquo;t lock</h2>
     <ul>
