@@ -75,12 +75,12 @@
       <tr><td>Ctrl+Y</td><td>Go to a folder</td></tr>
       <tr><td>F9, Shift+F9</td><td>Send/Receive all folders, the current folder</td></tr>
       <tr><td>Ctrl+P</td><td>Print (File &rarr; Print, with a preview)</td></tr>
-      <tr><td>Ctrl+Alt+V</td><td>Paste Special, in a message</td></tr>
       <tr><td>Ctrl+Shift+B</td><td>Address Book</td></tr>
       <tr><td>F11</td><td>Search People</td></tr>
       <tr><td>Ctrl+Alt+S</td><td>Send/Receive settings</td></tr>
       <tr><td>F6, Shift+F6</td><td>Move between the panes (Mail)</td></tr>
       <tr><td>Ctrl+0</td><td>Reset the window&rsquo;s zoom</td></tr>
+      <tr><td>Esc</td><td>Close the window you&rsquo;re in: a message, appointment, contact or task, or a dialog</td></tr>
     </table>
 
     <h2 id="mail">Mail</h2>
@@ -109,6 +109,29 @@
       <tr><td>Ctrl+Alt+J</td><td>Not Junk (in Junk Email)</td></tr>
       <tr><td>Ctrl+F or F4, Shift+F4</td><td>Find in the open message, find the next match</td></tr>
       <tr><td>F12, Alt+Enter</td><td>Save As, message properties</td></tr>
+      <tr><td>Enter</td><td>Open the selected message in its own window</td></tr>
+      <tr><td>Esc</td><td>In the search box: close the search and go back to the folder</td></tr>
+    </table>
+
+    <h2 id="folders">Folder pane</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>F6, Shift+F6</td><td>Move to the folder pane from the other panes, and back</td></tr>
+      <tr><td>Delete</td><td>Delete the selected folder, after asking (the Inbox and other built-in folders can&rsquo;t be deleted)</td></tr>
+      <tr><td>Ctrl+X, Ctrl+V</td><td>Move a folder: cut it, select the folder to put it in and paste. Esc changes your mind.</td></tr>
+      <tr><td>Ctrl+Shift+E</td><td>New folder inside the selected one</td></tr>
+    </table>
+
+    <h2 id="single-keys">Single keys in the message list</h2>
+    <p>Off by default. Turn them on in File &rarr; Options &rarr; <strong>Keyboard Shortcuts</strong>. They only work while the message list has the keyboard, never while you type.</p>
+    <table>
+      <tr><th>Key</th><th>What it does</th></tr>
+      <tr><td>J, K</td><td>Next message, previous message</td></tr>
+      <tr><td>R, A, F</td><td>Reply, Reply All, Forward</td></tr>
+      <tr><td>E</td><td>Archive</td></tr>
+      <tr><td>#</td><td>Delete</td></tr>
+      <tr><td>U</td><td>Mark as unread</td></tr>
+      <tr><td>/</td><td>Search</td></tr>
     </table>
 
     <h2 id="writing">Writing a message</h2>
@@ -132,6 +155,11 @@
       <tr><td>Ctrl+Q</td><td>Remove paragraph formatting (left-aligned, no indent)</td></tr>
       <tr><td>Ctrl+Shift+N</td><td>Normal style</td></tr>
       <tr><td>Ctrl+Shift+H</td><td>Delete the next word</td></tr>
+      <tr><td>Ctrl+Alt+V</td><td>Paste Special</td></tr>
+      <tr><td>Ctrl, right after pasting</td><td>Paste Options: Keep Source Formatting, Merge Formatting or Keep Text Only</td></tr>
+      <tr><td>Esc</td><td>Stop the Format Painter</td></tr>
+      <tr><td>Down, Up, then Enter or Tab</td><td>Pick a name Auto-Complete suggests in To, Cc or Bcc, or after @ in the message</td></tr>
+      <tr><td>Ctrl+Shift+B</td><td>Address Book</td></tr>
     </table>
 
     <h2 id="calendar">Calendar</h2>
@@ -148,6 +176,53 @@
       <tr><td>Ctrl+. and Ctrl+,</td><td>Next and previous appointment</td></tr>
       <tr><td>Ctrl+R, Ctrl+Shift+R</td><td>On a meeting: reply to the organizer, reply to everyone</td></tr>
       <tr><td>Alt+S, Alt+D, Alt+O, Alt+A</td><td>In Reminders: Snooze, Dismiss, Open Item, Dismiss All</td></tr>
+      <tr><td>Start typing on a time</td><td>A new appointment there with what you type as its subject; Enter saves it, Esc cancels</td></tr>
+      <tr><td>Enter</td><td>On a time with nothing there: a new appointment, in its own window</td></tr>
+      <tr><td>Delete</td><td>Delete the selected appointment or meeting</td></tr>
+      <tr><td>Esc</td><td>Close the selected item&rsquo;s preview, or cancel dragging an appointment</td></tr>
+    </table>
+
+    <h2 id="people-tasks">People and Tasks</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>Enter</td><td>Open the selected contact or task</td></tr>
+      <tr><td>Delete</td><td>Delete the selected contact or task</td></tr>
+      <tr><td>Insert</td><td>Mark the selected task complete</td></tr>
+      <tr><td>Enter, in <strong>Click here to add a new Task</strong></td><td>Add the task you typed</td></tr>
+      <tr><td>F11</td><td>Search People</td></tr>
+      <tr><td>Esc</td><td>In the People search box: clear the search</td></tr>
+    </table>
+
+    <h2 id="items">An open appointment, contact or task</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>Ctrl+S or Alt+S</td><td>Save &amp; Close (in an appointment, Alt+Enter too)</td></tr>
+      <tr><td>Ctrl+K</td><td>In a meeting: Check Names</td></tr>
+      <tr><td>Ctrl+G</td><td>In an appointment: Recurrence</td></tr>
+      <tr><td>Ctrl+D</td><td>In an appointment: Delete</td></tr>
+      <tr><td>Esc</td><td>Close</td></tr>
+    </table>
+
+    <h2 id="message-window">A message open in its own window</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>Ctrl+R, Ctrl+Shift+R</td><td>Reply, Reply All</td></tr>
+      <tr><td>Ctrl+Alt+R, Ctrl+Alt+F</td><td>Reply with Meeting, Forward as Attachment</td></tr>
+      <tr><td>Ctrl+. and Ctrl+,</td><td>Next and previous message</td></tr>
+      <tr><td>Ctrl+D, Shift+Delete</td><td>Delete, delete permanently after asking</td></tr>
+      <tr><td>Backspace</td><td>Archive, if you checked <strong>Backspace archives a message</strong></td></tr>
+      <tr><td>Ctrl+F or F4, Shift+F4</td><td>Find in the message, find the next match</td></tr>
+      <tr><td>Ctrl+S</td><td>Save your changes after Edit Message</td></tr>
+      <tr><td>Ctrl+P, F12, Alt+Enter</td><td>Print, Save As, message properties</td></tr>
+      <tr><td>Esc</td><td>Close</td></tr>
+    </table>
+
+    <h2 id="dialogs">Lists and dialogs</h2>
+    <table>
+      <tr><th>Keys</th><th>What they do</th></tr>
+      <tr><td>Ctrl+F</td><td>In Rules and Alerts: find a rule</td></tr>
+      <tr><td>Down, Up, Enter, Esc</td><td>In Tell me (Alt+Q): pick a command, run it, close the list</td></tr>
+      <tr><td>Esc</td><td>Close the dialog without saving</td></tr>
     </table>
 
     <h2 id="ribbon">Ribbon key tips</h2>
