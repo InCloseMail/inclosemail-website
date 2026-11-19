@@ -101,6 +101,7 @@
     <ul>
       <li><strong>Read:</strong> list your mailboxes and folders, list and search messages (as the search box does, with <code>from:</code>, <code>subject:</code> and so on), and read a message or a whole conversation. Messages reach the agent as clean text, without the quoted earlier replies.</li>
       <li><strong>Read your rules:</strong> each rule in the order it runs, what it looks for and what it does.</li>
+      <li><strong>See how full a mailbox is:</strong> its size, its limits, how much is used and its 10 largest folders. See <a href="#full-mailbox">When your mailbox is full</a>.</li>
       <li><strong>Translate:</strong> show its translation of a message in InCloseMail, in place of the original. See <a href="#translate">Translate mail</a>.</li>
       <li><strong>Save drafts</strong> in Drafts, if you allowed it. You check them and send them yourself. Never in a mailbox that is read-only in InCloseMail.</li>
       <li><strong>Propose changes</strong> for you to approve. See below.</li>
@@ -129,10 +130,20 @@
       <li><strong>Apply</strong> makes the checked changes: folders first, then rules (in one save), then mail, and last the folders that are deleted or merged. If one doesn&rsquo;t work, it says why in red under that change, and the rest still go ahead.</li>
       <li><strong>Decline</strong> changes nothing. Closing the window without applying does the same.</li>
       <li>If the mailbox is read-only in InCloseMail, Apply asks to allow changes first, as any change does.</li>
-      <li>The agent is told what happened (applied, partly applied, declined or undone), so it can continue.</li>
+      <li>While Apply runs, it counts as it goes (&ldquo;Reading the messages: 2,000 of 28,247&rdquo;, then &ldquo;4,200 of 28,247 messages moved&rdquo;), so you can see it&rsquo;s working. <strong>Cancel</strong> stops it after the step it&rsquo;s on; what was already changed stays, and Undo puts it back.</li>
+      <li>The agent is told what happened (applied, partly applied, failed, canceled, declined or undone), with how far a long job has got and, for each change that didn&rsquo;t work, why, so it can explain and suggest a fix.</li>
       <li>If you ask the agent for something different while a proposal is still open, it sends a revised one that takes the old one&rsquo;s place in the same window, marked <strong>Updated proposal (replaces p1)</strong>. It can also withdraw a proposal that&rsquo;s still open: the window closes, and the status bar says why. A proposal you&rsquo;ve applied or declined stays as it is.</li>
     </ul>
     <p>You can keep working in InCloseMail while the window is open.</p>
+
+    <h3 id="full-mailbox">When your mailbox is full</h3>
+    <p>A mailbox at its size limit refuses to take mail into its folders, so moves and rules that file mail fail (Exchange&rsquo;s words: &ldquo;exceeded its storage quota&rdquo;). The agent can see how full your mailbox is and which folders are largest, and puts the changes that free space first when it&rsquo;s nearly full.</p>
+    <ul>
+      <li>Apply checks the mailbox&rsquo;s size first. If it&rsquo;s full, nothing starts: the window says so, for example &ldquo;This mailbox is full (52.1 GB of 49.5 GB). Moving mail may fail. Empty Deleted Items or remove large folders first.&rdquo; Click <strong>Apply anyway</strong> to go ahead (deleting mail still works), or <strong>Cancel</strong> and free some space first.</li>
+      <li>When it&rsquo;s nearly full, the window says so and Apply goes ahead.</li>
+      <li>A change that fails says why in plain words under it, with what to do next. If Outlook showed <strong>Rules in Error</strong> at the same time, the window explains that too: it&rsquo;s the same problem.</li>
+      <li>The size limit comes from Exchange when it gives one, else from <strong>File &rarr; Options &rarr; Mail &rarr; Mailbox size</strong>, else from your Microsoft 365 plan.</li>
+    </ul>
 
     <h3 id="undo">Undo</h3>
     <p>After Apply, <strong>Undo</strong> puts things back as they were:</p>
@@ -161,6 +172,7 @@
     </blockquote>
     <p>Shorter requests work too:</p>
     <ul>
+      <li>&ldquo;I want to start cleaning up and organizing my you@example.com email account in InCloseMail.&rdquo;</li>
       <li>&ldquo;Look at my whole account and tell me what you&rsquo;d clean up. Don&rsquo;t change anything yet.&rdquo;</li>
       <li>&ldquo;I have 20 years of mail in my Inbox. Sort it into a sensible set of folders, with rules so it stays that way.&rdquo;</li>
       <li>&ldquo;My folders are a mess. Suggest a simpler structure and move things into it.&rdquo;</li>
