@@ -53,7 +53,7 @@
 
     <main class="doc">
     <p>Filing mail, writing rules and sorting folders by hand is a chore. An AI agent such as <strong>Claude</strong> can do it for you: connect it to InCloseMail and it can read and search the mailboxes you choose, draft replies, translate mail written in other languages, and <strong>propose</strong> folders, rules and cleanups. You see every proposed change with the agent&rsquo;s reason, and nothing changes until you click <strong>Apply</strong>. <strong>Undo</strong> puts it all back.</p>
-    <p>It works with Claude Desktop, Claude Code and any other AI app that uses the Model Context Protocol (MCP). InCloseMail never sends mail for an agent.</p>
+    <p>It works with Claude Desktop, Claude Code, Codex and any other AI app that uses the Model Context Protocol (MCP). InCloseMail never sends mail for an agent.</p>
 
     <h2 id="turn-on">Turn it on</h2>
     <ol>
@@ -76,6 +76,15 @@
     </ol>
     <p>If you&rsquo;d rather do it yourself, the message boils down to running this once in a terminal (your path may differ):</p>
     <pre><code>claude mcp add --scope user inclosemail -- "C:\Users\you\AppData\Local\InCloseMail\AgentBridge\InCloseMail.AgentBridge.exe" --mcp</code></pre>
+
+    <h3 id="codex">Codex: one click</h3>
+    <ol>
+      <li>Under <strong>Connect Codex</strong>, InCloseMail shows a short message, already filled in for your PC.</li>
+      <li>Click <strong>Copy Message</strong> below it, paste it into Codex (the app, the terminal or the editor extension) and send it. Codex sets up the connection and checks it. It changes Codex&rsquo;s settings, so Codex may ask you to approve the command.</li>
+      <li>Start a new session in Codex and ask it about your mail. Typing <code>/mcp</code> there lists InCloseMail&rsquo;s tools.</li>
+    </ol>
+    <p>If you&rsquo;d rather do it yourself, run this once in a terminal (your path may differ):</p>
+    <pre><code>codex mcp add inclosemail -- "C:\Users\you\AppData\Local\InCloseMail\AgentBridge\InCloseMail.AgentBridge.exe" --mcp</code></pre>
 
     <h3 id="claude-desktop">Claude Desktop</h3>
     <ol>
@@ -233,6 +242,7 @@
       <li><strong>The agent says InCloseMail isn&rsquo;t running, or AI agents are off:</strong> open InCloseMail, check the box in File &rarr; Options &rarr; Advanced &rarr; AI agents, and ask again.</li>
       <li><strong>InCloseMail doesn&rsquo;t show in Claude Desktop:</strong> check the config file is valid JSON (one <code>mcpServers</code> section, commas between entries), then restart Claude Desktop completely (from the tray icon too).</li>
       <li><strong>Claude Code doesn&rsquo;t see InCloseMail:</strong> start a new Claude Code session after connecting (a session that was already open doesn&rsquo;t pick it up). Running <code>claude mcp get inclosemail</code> in a terminal shows whether it&rsquo;s set up and connected; if not, click <strong>Connect Claude Code</strong> again and send the message once more.</li>
+      <li><strong>Codex doesn&rsquo;t see InCloseMail:</strong> start a new Codex session after connecting, then type <code>/mcp</code> to see whether InCloseMail&rsquo;s tools are there. Running <code>codex mcp get inclosemail</code> in a terminal shows whether it&rsquo;s set up; if not, copy the Codex message again and send it once more.</li>
       <li><strong>A mailbox is missing:</strong> it&rsquo;s unchecked under Mailboxes they may use, or isn&rsquo;t open in InCloseMail.</li>
       <li><strong>Drafts aren&rsquo;t saved:</strong> select the drafts box, and check the mailbox isn&rsquo;t read-only.</li>
       <li><strong>During an update</strong> your AI app stays connected, and InCloseMail answers again as soon as it&rsquo;s back. If you set up your AI app before the agent bridge came (its setup names <code>Program Files\InCloseMail\InCloseMail.exe</code>), an update ends its connection: click <strong>Connect Claude Code</strong> again (or copy the new setup) once, and it stays connected from then on.</li>
