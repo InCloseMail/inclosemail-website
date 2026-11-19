@@ -66,7 +66,7 @@
     <p>It&rsquo;s off until you turn it on, and it works only while InCloseMail is open, only for you on this PC.</p>
 
     <h2 id="connect">Connect your AI app</h2>
-    <p>In the same place, InCloseMail gives you what your AI app needs. Either way, the app starts InCloseMail with <code>--mcp</code>, which connects it to the InCloseMail you have open.</p>
+    <p>In the same place, InCloseMail gives you what your AI app needs. Either way, the app starts InCloseMail&rsquo;s small <strong>agent bridge</strong>, which connects it to the InCloseMail you have open. InCloseMail keeps the bridge in your AppData folder, where updates don&rsquo;t touch it, so your AI app stays connected while InCloseMail updates and picks up again when it starts.</p>
 
     <h3 id="claude-code">Claude Code: one click</h3>
     <ol>
@@ -75,7 +75,7 @@
       <li>Start a new session in Claude Code and ask it about your mail.</li>
     </ol>
     <p>If you&rsquo;d rather do it yourself, the message boils down to running this once in a terminal (your path may differ):</p>
-    <pre><code>claude mcp add --scope user inclosemail -- "C:\Program Files\InCloseMail\InCloseMail.exe" --mcp</code></pre>
+    <pre><code>claude mcp add --scope user inclosemail -- "C:\Users\you\AppData\Local\InCloseMail\AgentBridge\InCloseMail.AgentBridge.exe" --mcp</code></pre>
 
     <h3 id="claude-desktop">Claude Desktop</h3>
     <ol>
@@ -88,14 +88,14 @@
     <pre><code>{
   "mcpServers": {
     "inclosemail": {
-      "command": "C:\\Program Files\\InCloseMail\\InCloseMail.exe",
+      "command": "C:\\Users\\you\\AppData\\Local\\InCloseMail\\AgentBridge\\InCloseMail.AgentBridge.exe",
       "args": [ "--mcp" ]
     }
   }
 }</code></pre>
 
     <h3 id="other-apps">Other AI apps</h3>
-    <p>Any app that can start a local MCP server can use InCloseMail: give it the command <code>InCloseMail.exe</code> with the argument <code>--mcp</code>, as in the settings above.</p>
+    <p>Any app that can start a local MCP server can use InCloseMail: give it the command <code>InCloseMail.AgentBridge.exe</code> (in <code>%LOCALAPPDATA%\InCloseMail\AgentBridge</code>) with the argument <code>--mcp</code>, as in the settings above.</p>
 
     <h2 id="what-it-can-do">What an agent can do</h2>
     <ul>
@@ -124,14 +124,16 @@
     </ul>
 
     <h3 id="review">Review it</h3>
-    <p>InCloseMail opens the proposal in its own window, <strong>AI Agent Proposal</strong>, with the agent&rsquo;s summary at the top and a list of changes. Each change says what it does, in plain words, with the agent&rsquo;s <strong>Why</strong>. For messages, it shows a few of their subjects.</p>
+    <p>InCloseMail opens the proposal in its own window, with the agent&rsquo;s summary at the top and a list of changes. The window&rsquo;s title says which proposal it is, what it&rsquo;s about and when it came, for example <strong>p3 &middot; File the Linode mail &middot; 3:31 AM</strong>. Each change says what it does, in plain words, with the agent&rsquo;s <strong>Why</strong>. For messages, it shows a few of their subjects.</p>
     <ul>
       <li>Every change starts checked. Uncheck any you don&rsquo;t want. <strong>Select All</strong> and <strong>Clear All</strong> do them all.</li>
-      <li><strong>Apply</strong> makes the checked changes: folders first, then rules (in one save), then mail, and last the folders that are deleted or merged. If one doesn&rsquo;t work, it says why in red under that change, and the rest still go ahead.</li>
-      <li><strong>Decline</strong> changes nothing. Closing the window without applying does the same.</li>
+      <li><strong>Apply</strong> makes the checked changes: folders first, then rules (in one save), then mail, and last the folders that are deleted or merged. If one doesn&rsquo;t work, it says why in red under that change, and the rest still go ahead. A very large folder can take the server longer than one request allows: InCloseMail then checks whether it got to Deleted Items anyway, and tries again if it didn&rsquo;t (&ldquo;attempt 2 of 3&rdquo;).</li>
+      <li>After Apply, each change says what happened to it: <strong>Made</strong>, <strong>Partly made</strong> (with how far it got, such as how many messages a new rule moved before you canceled), <strong>Not made</strong> (and why), or, after Undo, <strong>Undone</strong>.</li>
+      <li><strong>Decline</strong> changes nothing. Before Apply, <strong>Cancel</strong> and closing the window do the same.</li>
       <li>If the mailbox is read-only in InCloseMail, Apply asks to allow changes first, as any change does.</li>
-      <li>While Apply runs, it counts as it goes (&ldquo;Reading the messages: 2,000 of 28,247&rdquo;, then &ldquo;4,200 of 28,247 messages moved&rdquo;), so you can see it&rsquo;s working. <strong>Cancel</strong> stops it after the step it&rsquo;s on; what was already changed stays, and Undo puts it back.</li>
+      <li>While Apply runs, it counts as it goes (&ldquo;Reading the messages: 2,000 of 28,247&rdquo;, then &ldquo;4,200 of 28,247 messages moved&rdquo;), so you can see it&rsquo;s working. <strong>Cancel</strong> (or closing the window) stops it after the step it&rsquo;s on. The window stays open and says what was made and what wasn&rsquo;t, and Undo puts back what was made.</li>
       <li>The agent is told what happened (applied, partly applied, failed, canceled, declined or undone), with how far a long job has got and, for each change that didn&rsquo;t work, why, so it can explain and suggest a fix.</li>
+      <li>When an agent sends several proposals, they&rsquo;re steps, applied in the order they came: each window says <strong>Step 2 of 3 from Claude Code</strong>, the oldest stays in front, and a later one&rsquo;s Apply waits until the ones before it are applied or declined. An agent can also say that a proposal needs another one applied first, or ask you to do something first that InCloseMail can&rsquo;t check (&ldquo;Before you apply, Claude Code says: after Deleted Items is emptied&rdquo;).</li>
       <li>If you ask the agent for something different while a proposal is still open, it sends a revised one that takes the old one&rsquo;s place in the same window, marked <strong>Updated proposal (replaces p1)</strong>. It can also withdraw a proposal that&rsquo;s still open: the window closes, and the status bar says why. A proposal you&rsquo;ve applied or declined stays as it is.</li>
     </ul>
     <p>You can keep working in InCloseMail while the window is open.</p>
@@ -139,7 +141,7 @@
     <h3 id="full-mailbox">When your mailbox is full</h3>
     <p>A mailbox at its size limit refuses to take mail into its folders, so moves and rules that file mail fail (Exchange&rsquo;s words: &ldquo;exceeded its storage quota&rdquo;). The agent can see how full your mailbox is and which folders are largest, and puts the changes that free space first when it&rsquo;s nearly full.</p>
     <ul>
-      <li>Apply checks the mailbox&rsquo;s size first. If it&rsquo;s full, nothing starts: the window says so, for example &ldquo;This mailbox is full (52.1 GB of 49.5 GB). Moving mail may fail. Empty Deleted Items or remove large folders first.&rdquo; Click <strong>Apply anyway</strong> to go ahead (deleting mail still works), or <strong>Cancel</strong> and free some space first.</li>
+      <li>Apply checks the mailbox&rsquo;s size first. If it&rsquo;s full, nothing starts: the window says so, for example &ldquo;This mailbox is full (52.1 GB of 49.5 GB). Moving mail may fail. Empty Deleted Items or remove large folders first.&rdquo; Click <strong>Apply anyway</strong> to go ahead (deleting mail still works), or <strong>Cancel</strong> to decline it and free some space first.</li>
       <li>When it&rsquo;s nearly full, the window says so and Apply goes ahead.</li>
       <li>A change that fails says why in plain words under it, with what to do next. If Outlook showed <strong>Rules in Error</strong> at the same time, the window explains that too: it&rsquo;s the same problem.</li>
       <li>The size limit comes from Exchange when it gives one, else from <strong>File &rarr; Options &rarr; Mail &rarr; Mailbox size</strong>, else from your Microsoft 365 plan.</li>
@@ -233,7 +235,7 @@
       <li><strong>Claude Code doesn&rsquo;t see InCloseMail:</strong> start a new Claude Code session after connecting (a session that was already open doesn&rsquo;t pick it up). Running <code>claude mcp get inclosemail</code> in a terminal shows whether it&rsquo;s set up and connected; if not, click <strong>Connect Claude Code</strong> again and send the message once more.</li>
       <li><strong>A mailbox is missing:</strong> it&rsquo;s unchecked under Mailboxes they may use, or isn&rsquo;t open in InCloseMail.</li>
       <li><strong>Drafts aren&rsquo;t saved:</strong> select the drafts box, and check the mailbox isn&rsquo;t read-only.</li>
-      <li><strong>During an update</strong> the connection closes so the update can install; your AI app connects again afterward.</li>
+      <li><strong>During an update</strong> your AI app stays connected, and InCloseMail answers again as soon as it&rsquo;s back. If you set up your AI app before the agent bridge came (its setup names <code>Program Files\InCloseMail\InCloseMail.exe</code>), an update ends its connection: click <strong>Connect Claude Code</strong> again (or copy the new setup) once, and it stays connected from then on.</li>
     </ul>
     </main>
   </div>
