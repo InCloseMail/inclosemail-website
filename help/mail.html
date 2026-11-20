@@ -82,7 +82,7 @@
 
     <h2 id="attachments">Attachments</h2>
     <ul>
-      <li>Click an attachment to preview it in place of the message (pictures, text and PDF files); other files open in their own app. <strong>Back to message</strong>, or <strong>Show Message</strong> on the ribbon, shows the message again.</li>
+      <li>Click an attachment to preview it in place of the message: pictures, text and PDF files, and with Microsoft Office installed, Excel, PowerPoint and Visio files, shown by Office&rsquo;s own previewers (other previewers installed on your PC are used too). Word files aren&rsquo;t previewed yet, as Word&rsquo;s previewer turned out unreliable. For a file with no previewer, the pane says so; double-click it, or choose <strong>Open</strong>, to open it in its own app. <strong>Back to message</strong>, or <strong>Show Message</strong> on the ribbon, shows the message again.</li>
       <li>While a file previews, the <strong>Attachments</strong> tab has <strong>Open</strong>, <strong>Quick Print</strong>, <strong>Save As</strong>, <strong>Save All Attachments</strong>, <strong>Remove Attachment</strong> and <strong>Copy</strong>, as in Outlook. <strong>Select All</strong> makes them act on every attachment of the message. The bar over the preview has the same commands, also in a message opened in its own window.</li>
       <li>The arrow on an attachment, or a right-click, has the same commands for that file.</li>
       <li><strong>Save All Attachments</strong> (also <strong>Save All</strong> beside the attachments) lists them first, all checked: uncheck any you don&rsquo;t want, then pick the folder.</li>
@@ -222,6 +222,7 @@
       <li>The script gets one argument: the path of a JSON file with the message&rsquo;s details (<code>subject</code>, <code>fromAddress</code>, <code>fromName</code>, <code>to</code>, <code>cc</code>, <code>received</code>, <code>hasAttachments</code>, <code>bodyPreview</code>, <code>internetMessageId</code>, <code>mailbox</code> and <code>emlPath</code>, where the whole message is saved as an .eml file). Both files are deleted when the script ends.</li>
       <li>Nothing from the message is put on the script&rsquo;s command line, so a crafted subject can&rsquo;t run anything.</li>
       <li>PowerShell scripts run only if they were made on this PC or are signed (the RemoteSigned policy); a downloaded unsigned script doesn&rsquo;t run.</li>
+      <li>A script still running after 5 minutes is ended, along with anything it started, and the status bar says so.</li>
       <li>Rules run while InCloseMail is open, on the new mail it finds, and are kept on this PC. <strong>Run Now</strong> tries a rule on the selected message.</li>
     </ul>
     <p>A short example, saving each matching message as an .eml file in a folder:</p>
@@ -233,7 +234,7 @@ Copy-Item -LiteralPath $m.emlPath -Destination "C:\Invoices\$($m.internetMessage
     <ul>
       <li><strong>Home &rarr; Junk</strong> has Block Sender, Never Block Sender, Never Block Sender&rsquo;s Domain, Never Block this Group or Mailing List, Not Junk and Junk Email Options.</li>
       <li>InCloseMail&rsquo;s Safe Senders list is kept on this PC and works while the app is running. For filtering that works everywhere, also add senders in Outlook on the web.</li>
-      <li><strong>Junk Email Options</strong> also has <strong>Safe Recipients</strong>, <strong>Blocked Senders</strong> and <strong>International</strong>, where you can block country domains (such as .ru) and mail in other alphabets. While InCloseMail is running, new mail they block goes to Junk Email; safe senders, safe recipients and your contacts always get through. <strong>Block Sender</strong> adds to Blocked Senders.</li>
+      <li><strong>Junk Email Options</strong> also has <strong>Safe Recipients</strong>, <strong>Blocked Senders</strong> and <strong>International</strong>, where you can block country domains (such as .ru) and mail in other alphabets. While InCloseMail is running, new mail they block goes to Junk Email; safe senders, safe recipients and your contacts get through, unless you blocked that exact address. <strong>Block Sender</strong> adds to Blocked Senders, so it can block one person at a safe domain.</li>
       <li>When a message has signs of phishing, a bar appears above it. Click <strong>Why is this suspicious?</strong> for the reasons and what to do. <strong>Block Sender</strong> and <strong>I know this sender</strong> are there too. The bar never moves or blocks anything by itself.</li>
       <li>Outside mail that claims to be internal or verified, such as &ldquo;verified as an internal communication&rdquo;, is a strong sign of phishing, since your organization doesn&rsquo;t mark mail that way.</li>
       <li>In <strong>Junk Email Options &rarr; Phishing</strong>, list <strong>People to protect</strong>, such as your CEO. Mail from outside your organization that uses one of those names in the sender&rsquo;s name or address is marked as possible phishing, even when the name is misspelled by a letter.</li>
