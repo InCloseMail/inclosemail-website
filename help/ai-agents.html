@@ -128,6 +128,7 @@
     <p>The agent looks first (your folders, rules and mail), then sends one <strong>proposal</strong>. It can propose:</p>
     <ul>
       <li><strong>Folders:</strong> make, rename or move a folder; put a folder, with its mail and subfolders, in Deleted Items; or merge two folders (all the mail of one moves to the other, however much there is, and the emptied folder goes to Deleted Items). The proposal shows how many messages and subfolders go with each one. It won&rsquo;t take away a folder a rule still files into unless that rule goes too, a folder already in Deleted Items, or folders Outlook keeps for itself, such as Sync Issues.</li>
+      <li><strong>Hidden folders:</strong> hide a folder in the folder pane (Sync Issues and RSS Feeds included), or show a hidden one again. Only InCloseMail&rsquo;s folder pane changes; the folder and its mail stay in your mailbox. See <a href="mail.html">Hide folders you never use</a>.</li>
       <li><strong>Rules:</strong> add a rule (who it&rsquo;s from, words in the subject or body, who it was sent to, with exceptions; move it, mark it as read, categorize it or put it in Deleted Items), and run a new rule on mail already in a folder. Turn rules on or off, delete them, or change their order.</li>
       <li><strong>Mail:</strong> move messages, mark them as read, or put them in Deleted Items (up to 500 messages per change; for more, it proposes a rule and runs it).</li>
     </ul>
@@ -144,8 +145,9 @@
       <li>The agent is told what happened (applied, partly applied, failed, canceled, declined or undone), with how far a long job has got and, for each change that didn&rsquo;t work, why, so it can explain and suggest a fix.</li>
       <li>When an agent sends several proposals, they&rsquo;re steps, applied in the order they came: each window says <strong>Step 2 of 3 from Claude Code</strong>, the oldest stays in front, and a later one&rsquo;s Apply waits until the ones before it are applied or declined. An agent can also say that a proposal needs another one applied first, or ask you to do something first that InCloseMail can&rsquo;t check (&ldquo;Before you apply, Claude Code says: after Deleted Items is emptied&rdquo;).</li>
       <li>If you ask the agent for something different while a proposal is still open, it sends a revised one that takes the old one&rsquo;s place in the same window, marked <strong>Updated proposal (replaces p1)</strong>. It can also withdraw a proposal that&rsquo;s still open: the window closes, and the status bar says why. A proposal you&rsquo;ve applied or declined stays as it is.</li>
+      <li>All the window&rsquo;s text can be selected and copied: <strong>Ctrl+C</strong> copies what you selected, or the whole proposal when nothing is selected. Right-click the text &rarr; <strong>Copy All</strong> copies the whole proposal, each change with its details, its Why and what happened to it.</li>
     </ul>
-    <p>You can keep working in InCloseMail while the window is open.</p>
+    <p>You can keep working in InCloseMail while the window is open. If you&rsquo;re in another app when a proposal comes (a game, a video), its window opens behind that app without taking the focus, and it&rsquo;s there when you come back to InCloseMail.</p>
 
     <h3 id="full-mailbox">When your mailbox is full</h3>
     <p>A mailbox at its size limit refuses to take mail into its folders, so moves and rules that file mail fail (Exchange&rsquo;s words: &ldquo;exceeded its storage quota&rdquo;). The agent can see how full your mailbox is and which folders are largest, and puts the changes that free space first when it&rsquo;s nearly full.</p>
