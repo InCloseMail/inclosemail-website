@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing - InCloseMail</title>
+  <meta name="description" content="InCloseMail is free for personal Microsoft accounts. For businesses: $36 per user per year after beta, with your existing Microsoft 365 plan.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261121">
+  <script>
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="./">
+          <img src="favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Keep your Microsoft 365 plan. Get the desktop email workflow your team already knows.</h1>
+      <p class="lead">Personal accounts are free. Businesses pay $36 per person per year to give everyone a Windows email client that feels like classic Outlook.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="plans" aria-label="Plans">
+      <div class="plan">
+        <h2>Personal</h2>
+        <p class="price">Free forever</p>
+        <p class="price-note">&nbsp;</p>
+        <ul>
+          <li>For Outlook.com, Hotmail, Live and other personal Microsoft accounts</li>
+          <li>All InCloseMail features</li>
+        </ul>
+        <a class="plan-button" href="download.html">Download InCloseMail</a>
+      </div>
+      <div class="plan plan-business">
+        <h2>Business</h2>
+        <p class="price">$3 <span>per user/month</span></p>
+        <p class="price-note"><strong>$36 per user, billed annually</strong>, after beta</p>
+        <ul>
+          <li>All InCloseMail features with Microsoft 365 work accounts</li>
+          <li>Free during the beta: work accounts included</li>
+        </ul>
+        <a class="plan-button" href="download.html">Download the free beta</a>
+        <p class="plan-total">10 users = $360/year</p>
+      </div>
+    </section>
+
+    <h2 class="section-title">What your business gets</h2>
+    <ul class="features">
+      <li><strong>Familiar from day one</strong><span>Keep the ribbon, keyboard shortcuts and right-click menus your team knows from classic Outlook.</span></li>
+      <li><strong>Built for work email</strong><span>Use shared mailboxes and calendars, including Send As and Send on Behalf.</span></li>
+      <li><strong>Bring years of email with you</strong><span>Open PST archives, search cached mail offline and clean up large folders with Undo.</span></li>
+    </ul>
+
+    <figure class="shot">
+      <img class="shot-light" src="screenshot.png" alt="InCloseMail's main window: the ribbon, folder pane, message list and reading pane">
+      <img class="shot-dark" src="screenshot-dark.png" alt="InCloseMail's main window in Dark Mode">
+      <figcaption>The classic Outlook layout, on your Microsoft 365 mailboxes.</figcaption>
+    </figure>
+
+    <section class="doc">
+      <h2>If you're on Microsoft 365 E1</h2>
+      <p>A U.S. example for 10 users, based on E1 at $10/user/month and Business Standard with Teams at $14/user/month (<a href="https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products">Microsoft's pricing</a>, as of November 2026).</p>
+      <div class="table-scroll">
+      <table class="compare">
+        <thead><tr><th>Option</th><th>What your team gets</th><th>Example extra cost for 10 users</th></tr></thead>
+        <tbody>
+          <tr><td>Keep E1 and use Outlook on the web</td><td>Browser-based email</td><td><strong>$0/year</strong></td></tr>
+          <tr class="ours"><td>Keep E1 and add InCloseMail</td><td>A Windows email client with a classic Outlook workflow</td><td><strong>$360/year</strong></td></tr>
+          <tr><td>Switch to Microsoft 365 Business Standard with Teams</td><td>Microsoft Outlook plus desktop Word, Excel and PowerPoint</td><td><strong>$480/year</strong> above E1</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2>Questions before you roll it out</h2>
+      <h3>Do we have to switch Microsoft 365 plans or migrate our email?</h3>
+      <p>No. InCloseMail signs in to your existing Microsoft 365 work accounts. Your mail, calendars and contacts stay where they are.</p>
+      <h3>How many licenses do we need if several people use the same shared mailbox?</h3>
+      <p>One for each person who uses InCloseMail. The shared mailboxes they already have access to are included.</p>
+      <h3>Can I use one license on my desktop and laptop?</h3>
+      <p>Yes. A license covers one person on up to three Windows PCs.</p>
+      <h3>When does the trial start, and what happens when it ends?</h3>
+      <p>During the beta, work accounts are free and there's no trial to start. After beta, the 30-day trial starts when you connect your first work account. Personal accounts stay free either way.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="help/">Help</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>

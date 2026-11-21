@@ -519,3 +519,23 @@ a.brand { color: inherit; text-decoration: none; }
   .prev-next { grid-template-columns: minmax(0, 1fr); }
   .prev-next .next { grid-column: 1; }
 }
+
+/* Pricing page */
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 8px 0 32px; }
+.plan { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 22px; display: flex; flex-direction: column; }
+.plan-business { border: 2px solid var(--accent); }
+.plan h2 { margin: 0 0 8px; font-size: 1.2rem; }
+.plan .price { margin: 0; font-size: 2rem; font-weight: 700; }
+.plan .price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
+.plan .price-note { margin: 4px 0 12px; color: var(--muted); }
+.plan ul { padding-left: 20px; margin: 0 0 18px; flex: 1; }
+.plan li { margin-bottom: 6px; }
+.plan-button { display: block; text-align: center; padding: 10px 16px; border-radius: 6px; background: var(--accent); color: #ffffff; font-weight: 600; text-decoration: none; }
+:root[data-theme="dark"] .plan-button { color: #0b1f1e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .plan-button { color: #0b1f1e; } }
+.plan-button:hover { filter: brightness(1.1); }
+.plan-total { margin: 12px 0 0; text-align: center; font-weight: 600; }
+.section-title { margin: 0 0 12px; }
+.table-scroll { overflow-x: auto; }
+.compare td:last-child, .compare th:last-child { text-align: right; }
+.compare tr.ours td { background: var(--surface); font-weight: 600; }
