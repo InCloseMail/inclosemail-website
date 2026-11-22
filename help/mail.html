@@ -178,8 +178,21 @@
       <li><strong>Blacklist Email Address</strong> sends the sender&rsquo;s mail to Junk Email from now on (<a href="#blacklist">Blacklist</a>).</li>
       <li><strong>Ignore</strong> moves a conversation, and any new messages in it, to Deleted Items. On an ignored conversation, <strong>Stop Ignoring</strong> ends it.</li>
       <li><strong>Always Move to Other</strong> and <strong>Always Move to Focused</strong> put a sender&rsquo;s new mail on that tab of the <a href="#focused-inbox">Focused Inbox</a>.</li>
-      <li><strong>Script Rules</strong> run a script of yours when matching mail arrives (<a href="#script-rules">Script rules</a>).</li>
+      <li><strong>Rules on This Computer</strong> play a sound, show an alert, print or run a script of yours when matching mail arrives (<a href="#script-rules">Rules on this computer</a>).</li>
     </ul>
+
+    <h2 id="rss">RSS Feeds</h2>
+    <p>As in classic Outlook, you can follow news sites and blogs in InCloseMail. <strong>File &rarr; Open &amp; Export &rarr; Add RSS Feed</strong> asks for the feed&rsquo;s address; a site&rsquo;s own address works too, as most sites name their feed. Each feed is a folder under <strong>RSS Feeds</strong> at the bottom of the folder pane, and its articles read like mail: read and unread, flags, categories, search and Delete all work (a deleted article goes for good, as there&rsquo;s no Deleted Items for feeds). <strong>View article</strong> at the bottom of an article opens it on the site.</p>
+    <ul>
+      <li>Feeds are read when you add them, when you press F9, and every hour, but never more often than a feed asks. A feed that can&rsquo;t be read keeps its articles; <strong>Feed Properties</strong> says why.</li>
+      <li>Right-click a feed (or <strong>RSS Feeds</strong>) for <strong>Add a New RSS Feed</strong>, <strong>Update All Feeds</strong>, <strong>Rename Feed</strong>, <strong>Delete Feed</strong> (which unsubscribes), <strong>Feed Properties</strong>, and to import or export your feeds as an OPML file.</li>
+      <li><strong>File &rarr; Open &amp; Export &rarr; Import RSS Feeds</strong> adds the feeds from an OPML file, such as one exported from classic Outlook (<strong>File &rarr; Open &amp; Export &rarr; Import/Export &rarr; Export RSS Feeds to an OPML file</strong>) or from another feed reader.</li>
+      <li>Feeds and their articles are kept on this PC, not in your mailbox, so they work with a read-only account and offline. Articles can&rsquo;t be moved to mail folders; <strong>Forward</strong> sends one from your mailbox.</li>
+    </ul>
+
+    <h2 id="outlook-today">Outlook Today</h2>
+    <p>Click your mailbox&rsquo;s name at the top of the folder pane for <strong>Outlook Today</strong>, as in classic Outlook: today&rsquo;s date, the next days of your calendar, your open tasks (overdue ones in red), and how many unread messages are in your Inbox and items in Drafts and Outbox. Click an appointment to open it, or a heading or folder to go there.</p>
+    <p><strong>Customize Outlook Today</strong> sets how many days of calendar to show (1 to 7), whether to show only today&rsquo;s tasks, and <strong>When starting, go directly to Outlook Today</strong>.</p>
 
     <h2 id="smime">Signed and encrypted mail (S/MIME)</h2>
     <ul>
@@ -222,14 +235,21 @@
     <h3 id="start-over">Start over with your rules</h3>
     <p>When years of rules have piled up, <strong>Start Over</strong> in Rules and Alerts clears the way. It saves every rule to a backup file in <strong>Documents\InCloseMail\Rules backups</strong>, deletes them, and then offers the Rules Wizard to build a new set. Your folders and mail stay as they are. If the backup can&rsquo;t be saved, nothing is deleted. To bring an old rule back, use <strong>Import Rules</strong> with the backup file.</p>
 
-    <h3 id="script-rules">Script rules</h3>
-    <p><strong>Home &rarr; Rules &rarr; Script Rules</strong> runs a script of yours when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did, with a script file instead of VBA. A rule can watch your Inbox, an added account&rsquo;s or a shared mailbox&rsquo;s, and match on the sender, the subject and whether there are attachments. The script can be a PowerShell script (.ps1), a batch file (.cmd or .bat) or a program (.exe).</p>
+    <h3 id="script-rules">Rules on this computer</h3>
+    <p><strong>Home &rarr; Rules &rarr; Rules on This Computer</strong> does what classic Outlook&rsquo;s client-only rules did when matching mail arrives, which Exchange&rsquo;s own rules can&rsquo;t. A rule can watch your Inbox, an added account&rsquo;s or a shared mailbox&rsquo;s, and match on the sender, the subject and whether there are attachments. Then it does any of these:</p>
+    <ul>
+      <li><strong>Play a sound</strong>: a .wav file you choose, or Windows&rsquo; new mail sound. <strong>Play</strong> lets you hear it.</li>
+      <li><strong>Display a Desktop Alert</strong>, even when the alerts in <strong>File &rarr; Options &rarr; Mail</strong> are turned off.</li>
+      <li><strong>Display this message in the New Item Alert window</strong>: the <strong>New Item Alerts</strong> window lists your text with the sender, subject and time of each match, newest first. <strong>Open Item</strong> (or a double-click) opens the message.</li>
+      <li><strong>Print it</strong> on your default printer.</li>
+      <li><strong>Run this script</strong>: a script of yours, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did, with a script file instead of VBA (below).</li>
+    </ul>
+    <p>Rules run while InCloseMail is open, on the new mail it finds, and are kept on this PC. <strong>Run Now</strong> tries a rule on the selected message. The script can be a PowerShell script (.ps1), a batch file (.cmd or .bat) or a program (.exe):</p>
     <ul>
       <li>The script gets one argument: the path of a JSON file with the message&rsquo;s details (<code>subject</code>, <code>fromAddress</code>, <code>fromName</code>, <code>to</code>, <code>cc</code>, <code>received</code>, <code>hasAttachments</code>, <code>bodyPreview</code>, <code>internetMessageId</code>, <code>mailbox</code> and <code>emlPath</code>, where the whole message is saved as an .eml file). Both files are deleted when the script ends.</li>
       <li>Nothing from the message is put on the script&rsquo;s command line, so a crafted subject can&rsquo;t run anything.</li>
       <li>PowerShell scripts run only if they were made on this PC or are signed (the RemoteSigned policy); a downloaded unsigned script doesn&rsquo;t run.</li>
       <li>A script still running after 5 minutes is ended, along with anything it started, and the status bar says so.</li>
-      <li>Rules run while InCloseMail is open, on the new mail it finds, and are kept on this PC. <strong>Run Now</strong> tries a rule on the selected message.</li>
     </ul>
     <p>A short example, saving each matching message as an .eml file in a folder:</p>
     <pre><code>param($Path)
