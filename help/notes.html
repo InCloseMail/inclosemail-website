@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes - InCloseMail Help</title>
+  <meta name="description" content="Writing sticky notes in InCloseMail, kept in your mailbox so every PC has them.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css?v=20261122c">
+  <script>
+    // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
+    // Applied before the page draws, so it doesn't flash the other theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="hero hero-small">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="../">
+          <img src="../favicon.svg" alt="" width="40" height="40">
+          <span>InCloseMail</span>
+        </a>
+        <button type="button" class="theme-toggle" id="theme-toggle">
+          <span class="icon" aria-hidden="true"></span><span class="label">Dark mode</span>
+        </button>
+      </div>
+      <h1>Notes</h1>
+    </div>
+  </header>
+
+  <div class="wrap help-layout">
+    <nav class="help-nav" aria-label="Help topics">
+      <a href="./">Get started</a>
+      <a href="mail.html">Mail</a>
+      <a href="cleanup.html">Cleaning up mail</a>
+      <a href="ai-agents.html">AI agents</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="people.html">People</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="notes.html" aria-current="page">Notes</a>
+      <a href="accounts.html">Accounts and offline</a>
+      <a href="security.html">Lock InCloseMail</a>
+      <a href="keyboard.html">Keyboard shortcuts</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="admin-consent.html">For administrators</a>
+      <a href="what-it-uses.html">What InCloseMail uses</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+    </nav>
+
+    <main class="doc">
+    <p>Notes are InCloseMail&rsquo;s sticky notes, as in classic Outlook: short notes for things you&rsquo;d jot on a slip of paper. Press Ctrl+5 or click Notes at the bottom of the folder pane.</p>
+
+    <h2 id="writing">Writing a note</h2>
+    <ul>
+      <li><strong>New Note</strong> (Ctrl+N in Notes, or Ctrl+Shift+N from anywhere, or <strong>New Items &rarr; Note</strong>) opens a small note window. Just type: the first line is the note&rsquo;s title.</li>
+      <li>A note saves itself a moment after you stop typing, and again when you close it (Esc or &times;). An empty new note isn&rsquo;t kept.</li>
+      <li>Drag a note by its top strip and size it from its corner. Notes stay open beside InCloseMail while you work.</li>
+      <li>The menu at the top left of a note has <strong>Forward</strong>, <strong>Color</strong> (blue, green, pink, yellow or white), <strong>Categorize</strong>, <strong>Delete</strong> and <strong>Close</strong>.</li>
+    </ul>
+
+    <h2 id="views">Finding notes</h2>
+    <ul>
+      <li><strong>Icon</strong> shows each note as a little note of its color. <strong>Notes List</strong> shows a row for each with its text and when it was last changed. <strong>Last 7 Days</strong> shows only the notes changed this past week.</li>
+      <li>The box over the notes searches their text and categories.</li>
+      <li>Double-click a note (or select it and press Enter) to open it. Right-click it for <strong>Forward</strong>, <strong>Color</strong>, <strong>Categorize</strong> and <strong>Delete</strong>. Delete also works on its own key.</li>
+      <li><strong>Forward</strong> opens a new message with the note&rsquo;s text, its first line as the subject.</li>
+    </ul>
+
+    <h2 id="where">Where notes are kept</h2>
+    <p>Your notes are kept in your own mailbox, in a hidden folder named InCloseMail Notes, so InCloseMail shows the same notes on every PC you use it on. Nothing goes to a server of ours. <strong>Refresh</strong> loads them again if you changed them on another PC.</p>
+    <p>Outlook, Outlook on the web and Windows Sticky Notes don&rsquo;t show these notes, and InCloseMail can&rsquo;t show theirs: Microsoft&rsquo;s connection for apps (Microsoft Graph) doesn&rsquo;t reach Outlook&rsquo;s own Notes folder. A deleted note can be brought back for a while with <strong>Recover Deleted Items</strong>. In demo mode, the sample notes are kept on your PC.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 <a href="https://emukey.com">EmuKey LLC</a></span>
+      <nav aria-label="Legal">
+        <a href="./">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../license.html">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <!-- Cloudflare Web Analytics: page views only, no cookies (see privacy.html, "This website"). -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d56dfa70abff4da1890ede9aaacb350c"}'></script>
+</body>
+</html>
