@@ -4,11 +4,73 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pricing - InCloseMail</title>
-  <meta name="description" content="InCloseMail is free for personal Microsoft accounts. For businesses: $36 per user per year after beta, with your existing Microsoft 365 plan.">
+  <meta name="description" content="InCloseMail is free for personal Microsoft accounts. Businesses pay $36 per user per year after the beta and keep the Microsoft 365 plan they already have.">
+  <link rel="canonical" href="https://inclosemail.com/pricing.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="InCloseMail">
+  <meta property="og:title" content="Pricing - InCloseMail">
+  <meta property="og:description" content="InCloseMail is free for personal Microsoft accounts. Businesses pay $36 per user per year after the beta and keep the Microsoft 365 plan they already have.">
+  <meta property="og:url" content="https://inclosemail.com/pricing.html">
+  <meta property="og:image" content="https://inclosemail.com/screenshot.png">
+  <meta property="og:image:width" content="1786">
+  <meta property="og:image:height" content="994">
+  <meta property="og:image:alt" content="InCloseMail's main window: the ribbon, folder pane, message list and reading pane">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://inclosemail.com/#app",
+        "name": "InCloseMail",
+        "description": "A Windows email client for Microsoft 365 and Outlook.com that works like classic Outlook: the same ribbon, menus and shortcuts. Free for personal use.",
+        "applicationCategory": "CommunicationApplication",
+        "operatingSystem": "Windows 10 (version 1809 or later), Windows 11; 64-bit",
+        "url": "https://inclosemail.com/",
+        "downloadUrl": "https://inclosemail.com/download.html",
+        "license": "https://inclosemail.com/license.html",
+        "screenshot": [
+          "https://inclosemail.com/screenshot.png",
+          "https://inclosemail.com/screenshot-dark.png"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free for personal Microsoft accounts"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://inclosemail.com/#publisher",
+          "name": "EmuKey LLC",
+          "url": "https://emukey.com"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "InCloseMail",
+            "item": "https://inclosemail.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": "https://inclosemail.com/pricing.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="favicon.ico?v=2" sizes="any">
   <link rel="apple-touch-icon" href="logo.png?v=2">
-  <link rel="stylesheet" href="style.css?v=20261122c">
+  <link rel="stylesheet" href="style.css?v=20261123">
   <script>
     try {
       var saved = localStorage.getItem('theme');
@@ -21,7 +83,7 @@
     <div class="wrap">
       <div class="topbar">
         <a class="brand" href="./">
-          <img src="logo.png?v=2" alt="" width="40" height="40">
+          <img src="logo-96.webp" alt="" width="40" height="40">
           <span>InCloseMail</span>
         </a>
         <button type="button" class="theme-toggle" id="theme-toggle">
@@ -66,8 +128,8 @@
     </ul>
 
     <figure class="shot">
-      <img class="shot-light" src="screenshot.png" alt="InCloseMail's main window: the ribbon, folder pane, message list and reading pane">
-      <img class="shot-dark" src="screenshot-dark.png" alt="InCloseMail's main window in Dark Mode">
+      <a class="shot-light" href="screenshot.png"><img src="screenshot.webp" width="1786" height="994" alt="InCloseMail's main window: the ribbon, folder pane, message list and reading pane" loading="lazy"></a>
+      <a class="shot-dark" href="screenshot-dark.png"><img src="screenshot-dark.webp" width="1786" height="994" alt="InCloseMail's main window in Dark Mode" loading="lazy"></a>
       <figcaption>The classic Outlook layout, on your Microsoft 365 mailboxes.</figcaption>
     </figure>
 

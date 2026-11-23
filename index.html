@@ -3,12 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InCloseMail</title>
-  <meta name="description" content="Email, calendar, contacts and tasks for Microsoft 365 and Outlook.com on Windows, working the way classic Outlook does. Free for personal use.">
+  <title>InCloseMail: email that works like classic Outlook</title>
+  <meta name="description" content="A Windows email client for Microsoft 365 and Outlook.com that works like classic Outlook: the same ribbon, menus and shortcuts. Free for personal use.">
+  <link rel="canonical" href="https://inclosemail.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="InCloseMail">
+  <meta property="og:title" content="InCloseMail: email that works like classic Outlook">
+  <meta property="og:description" content="A Windows email client for Microsoft 365 and Outlook.com that works like classic Outlook: the same ribbon, menus and shortcuts. Free for personal use.">
+  <meta property="og:url" content="https://inclosemail.com/">
+  <meta property="og:image" content="https://inclosemail.com/screenshot.png">
+  <meta property="og:image:width" content="1786">
+  <meta property="og:image:height" content="994">
+  <meta property="og:image:alt" content="InCloseMail showing an Inbox: the ribbon across the top; the folder list on the left with the main account, its shared mailboxes and a second account with its own shared mailboxes; the message list in the middle and the open message on the right.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://inclosemail.com/#website",
+        "name": "InCloseMail",
+        "url": "https://inclosemail.com/",
+        "publisher": {
+          "@id": "https://inclosemail.com/#publisher"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://inclosemail.com/#app",
+        "name": "InCloseMail",
+        "description": "A Windows email client for Microsoft 365 and Outlook.com that works like classic Outlook: the same ribbon, menus and shortcuts. Free for personal use.",
+        "applicationCategory": "CommunicationApplication",
+        "operatingSystem": "Windows 10 (version 1809 or later), Windows 11; 64-bit",
+        "url": "https://inclosemail.com/",
+        "downloadUrl": "https://inclosemail.com/download.html",
+        "license": "https://inclosemail.com/license.html",
+        "screenshot": [
+          "https://inclosemail.com/screenshot.png",
+          "https://inclosemail.com/screenshot-dark.png"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free for personal Microsoft accounts"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://inclosemail.com/#publisher",
+          "name": "EmuKey LLC",
+          "url": "https://emukey.com"
+        }
+      }
+    ]
+  }
+  </script>
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="favicon.ico?v=2" sizes="any">
   <link rel="apple-touch-icon" href="logo.png?v=2">
-  <link rel="stylesheet" href="style.css?v=20261122c">
+  <link rel="stylesheet" href="style.css?v=20261123">
   <script>
     // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
     // Applied before the page draws, so it doesn't flash the other theme.
@@ -23,7 +77,7 @@
     <div class="wrap">
       <div class="topbar">
         <div class="brand">
-          <img src="logo.png?v=2" alt="" width="40" height="40">
+          <img src="logo-96.webp" alt="" width="40" height="40">
           <span>InCloseMail</span>
         </div>
         <button type="button" class="theme-toggle" id="theme-toggle">
@@ -47,10 +101,10 @@
   <main class="wrap">
     <figure class="shot">
       <!-- The app in the page's mode: light normally, Dark Mode when the page is dark. -->
-      <img class="shot-light" src="screenshot.png" width="1800" height="1000"
-           alt="InCloseMail showing an Inbox: the ribbon across the top; the folder list on the left with the main account, its shared mailboxes and a second account with its own shared mailboxes; the message list in the middle and the open message on the right.">
-      <img class="shot-dark" src="screenshot-dark.png" width="1800" height="1000"
-           alt="InCloseMail in Dark Mode showing an Inbox: the ribbon across the top; the folder list on the left with the main account, its shared mailboxes and a second account with its own shared mailboxes; the message list in the middle and the open message on the right.">
+      <a class="shot-light" href="screenshot.png"><img src="screenshot.webp" width="1786" height="994"
+           alt="InCloseMail showing an Inbox: the ribbon across the top; the folder list on the left with the main account, its shared mailboxes and a second account with its own shared mailboxes; the message list in the middle and the open message on the right."></a>
+      <a class="shot-dark" href="screenshot-dark.png"><img src="screenshot-dark.webp" width="1786" height="994"
+           alt="InCloseMail in Dark Mode showing an Inbox: the ribbon across the top; the folder list on the left with the main account, its shared mailboxes and a second account with its own shared mailboxes; the message list in the middle and the open message on the right."></a>
       <figcaption>InCloseMail with its sample mailbox.</figcaption>
     </figure>
 

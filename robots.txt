@@ -1,0 +1,7 @@
+# inclosemail.com
+User-agent: *
+# Internal folders: EmuKey's private stats page and the editor's settings.
+Disallow: /dash/
+Disallow: /.claude/
+
+Sitemap: https://inclosemail.com/sitemap.xml

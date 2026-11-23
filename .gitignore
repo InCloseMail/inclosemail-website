@@ -4,15 +4,21 @@
 *.jpg
 *.jpeg
 *.gif
+*.webp
 !screenshot.png
 !screenshot-dark.png
-!screenshot-analytics.png
-!screenshot-analytics-dark.png
+!screenshot.webp
+!screenshot-dark.webp
 # The logo (the app's assets/icon/icon-source.png, scaled down).
 !logo.png
+!logo-96.webp
 # The feature pages' pictures, also taken in demo mode (features/*.html).
 !features/img/*.png
+# Their lighter WebP copies, which the pages show (the PNG opens on click).
+!features/img/*.webp
 *.log
 *.txt
+# ...but not the file that tells search engines where the sitemap is.
+!robots.txt
 *.eml
 *.msg

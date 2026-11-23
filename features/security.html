@@ -4,11 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Security and privacy - InCloseMail features</title>
-  <meta name="description" content="Plain-language phishing warnings, a second look before sending, read-only mode and S/MIME.">
+  <meta name="description" content="Phishing warnings that say why in plain language, a second look before sending, read-only mode, S/MIME, blocked web pictures and Continuous Access Evaluation.">
+  <link rel="canonical" href="https://inclosemail.com/features/security.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="InCloseMail">
+  <meta property="og:title" content="Security and privacy - InCloseMail features">
+  <meta property="og:description" content="Phishing warnings that say why in plain language, a second look before sending, read-only mode, S/MIME, blocked web pictures and Continuous Access Evaluation.">
+  <meta property="og:url" content="https://inclosemail.com/features/security.html">
+  <meta property="og:image" content="https://inclosemail.com/features/img/phish-light.png">
+  <meta property="og:image:width" content="968">
+  <meta property="og:image:height" content="610">
+  <meta property="og:image:alt" content="A message from a co-worker&rsquo;s name at a Gmail address, with the phishing warning open: someone you know, from a new address; it asks for money (gift cards); the sender checks; and what to do, with Block Sender and I know this sender.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "InCloseMail",
+            "item": "https://inclosemail.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Features",
+            "item": "https://inclosemail.com/features.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Security and privacy",
+            "item": "https://inclosemail.com/features/security.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="../favicon.ico?v=2" sizes="any">
   <link rel="apple-touch-icon" href="../logo.png?v=2">
-  <link rel="stylesheet" href="../style.css?v=20261122c">
+  <link rel="stylesheet" href="../style.css?v=20261123">
   <script>
     // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
     // Applied before the page draws, so it doesn't flash the other theme.
@@ -23,7 +64,7 @@
     <div class="wrap">
       <div class="topbar">
         <a class="brand" href=".././">
-          <img src="../logo.png?v=2" alt="" width="40" height="40">
+          <img src="../logo-96.webp" alt="" width="40" height="40">
           <span>InCloseMail</span>
         </a>
         <button type="button" class="theme-toggle" id="theme-toggle">
@@ -69,8 +110,8 @@
         <li><strong>People to protect</strong>: outside mail that uses your CEO&rsquo;s name, or another you list, is flagged, even when the name is misspelled by a letter. Outside mail that claims to be internal or &ldquo;verified&rdquo; is flagged too.</li>
       </ul>
       <figure class="shot feature-shot">
-        <a class="shot-light" href="img/phish-light.png"><img src="img/phish-light.png" width="968" height="610" loading="lazy" alt="A message from a co-worker&rsquo;s name at a Gmail address, with the phishing warning open: someone you know, from a new address; it asks for money (gift cards); the sender checks; and what to do, with Block Sender and I know this sender."></a>
-        <a class="shot-dark" href="img/phish-dark.png"><img src="img/phish-dark.png" width="968" height="610" loading="lazy" alt="A message from a co-worker&rsquo;s name at a Gmail address, with the phishing warning open: someone you know, from a new address; it asks for money (gift cards); the sender checks; and what to do, with Block Sender and I know this sender. In Dark Mode."></a>
+        <a class="shot-light" href="img/phish-light.png"><img src="img/phish-light.webp" width="968" height="610" loading="lazy" alt="A message from a co-worker&rsquo;s name at a Gmail address, with the phishing warning open: someone you know, from a new address; it asks for money (gift cards); the sender checks; and what to do, with Block Sender and I know this sender."></a>
+        <a class="shot-dark" href="img/phish-dark.png"><img src="img/phish-dark.webp" width="968" height="610" loading="lazy" alt="A message from a co-worker&rsquo;s name at a Gmail address, with the phishing warning open: someone you know, from a new address; it asks for money (gift cards); the sender checks; and what to do, with Block Sender and I know this sender. In Dark Mode."></a>
       </figure>
       <ul>
         <li><strong>A second look before sending</strong>: forgotten attachments, outside recipients and replies to many people.</li>
@@ -79,8 +120,8 @@
         <li><strong>Pictures from the web blocked</strong> until you download them (or always download from a sender or their domain, who join your Safe Senders), scripts off, and attachments that can run code blocked, as in Outlook.</li>
       </ul>
       <figure class="shot feature-shot">
-        <a class="shot-light" href="img/opt-trust-light.png"><img src="img/opt-trust-light.png" width="986" height="480" loading="lazy" alt="File &rarr; Options &rarr; Trust Center: Lock InCloseMail, Email Security (encrypt and sign outgoing mail, your email certificates) and Automatic Download of pictures."></a>
-        <a class="shot-dark" href="img/opt-trust-dark.png"><img src="img/opt-trust-dark.png" width="986" height="480" loading="lazy" alt="File &rarr; Options &rarr; Trust Center: Lock InCloseMail, Email Security (encrypt and sign outgoing mail, your email certificates) and Automatic Download of pictures. In Dark Mode."></a>
+        <a class="shot-light" href="img/opt-trust-light.png"><img src="img/opt-trust-light.webp" width="986" height="480" loading="lazy" alt="File &rarr; Options &rarr; Trust Center: Lock InCloseMail, Email Security (encrypt and sign outgoing mail, your email certificates) and Automatic Download of pictures."></a>
+        <a class="shot-dark" href="img/opt-trust-dark.png"><img src="img/opt-trust-dark.webp" width="986" height="480" loading="lazy" alt="File &rarr; Options &rarr; Trust Center: Lock InCloseMail, Email Security (encrypt and sign outgoing mail, your email certificates) and Automatic Download of pictures. In Dark Mode."></a>
       </figure>
       <ul>
         <li><strong>Continuous Access Evaluation</strong>: when an administrator ends your sessions, InCloseMail notices within minutes.</li>

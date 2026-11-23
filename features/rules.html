@@ -4,11 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rules and Quick Steps - InCloseMail features</title>
-  <meta name="description" content="Rules and Alerts that run on the server, the Rules Wizard, Quick Steps, Junk Email and Automatic Replies.">
+  <meta name="description" content="Rules and Alerts that run on the server, a Rules Wizard that makes folders and rules for you, script rules, Quick Steps, Junk Email and Automatic Replies.">
+  <link rel="canonical" href="https://inclosemail.com/features/rules.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="InCloseMail">
+  <meta property="og:title" content="Rules and Quick Steps - InCloseMail features">
+  <meta property="og:description" content="Rules and Alerts that run on the server, a Rules Wizard that makes folders and rules for you, script rules, Quick Steps, Junk Email and Automatic Replies.">
+  <meta property="og:url" content="https://inclosemail.com/features/rules.html">
+  <meta property="og:image" content="https://inclosemail.com/features/img/wizard-review-light.png">
+  <meta property="og:image:width" content="966">
+  <meta property="og:image:height" content="634">
+  <meta property="og:image:alt" content="The Rules Wizard&rsquo;s last page, Ready to create: 4 rules and 6 new folders, Co-workers › Joni, Co-workers › Patti, Companies › Fabrikam and Companies › Northwind Traders, with how many messages each one files, and a box to file the mail already in the Inbox.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "InCloseMail",
+            "item": "https://inclosemail.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Features",
+            "item": "https://inclosemail.com/features.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Rules and Quick Steps",
+            "item": "https://inclosemail.com/features/rules.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="../favicon.ico?v=2" sizes="any">
   <link rel="apple-touch-icon" href="../logo.png?v=2">
-  <link rel="stylesheet" href="../style.css?v=20261122c">
+  <link rel="stylesheet" href="../style.css?v=20261123">
   <script>
     // The visitor's own choice of light or dark, if they made one; otherwise the page follows their system setting.
     // Applied before the page draws, so it doesn't flash the other theme.
@@ -23,7 +64,7 @@
     <div class="wrap">
       <div class="topbar">
         <a class="brand" href=".././">
-          <img src="../logo.png?v=2" alt="" width="40" height="40">
+          <img src="../logo-96.webp" alt="" width="40" height="40">
           <span>InCloseMail</span>
         </a>
         <button type="button" class="theme-toggle" id="theme-toggle">
@@ -71,8 +112,8 @@
         <li><strong>Organize Mail into Folders</strong>: a step-by-step wizard that makes a folder for each co-worker inside Co-workers and for each company you hear from inside Companies (all of a company&rsquo;s addresses together), with a rule for each, and files the mail already in your Inbox. Status page mail that many companies send through one service (Statuspage) goes to each company&rsquo;s own folder, by the name in its subject.</li>
       </ul>
       <figure class="shot feature-shot">
-        <a class="shot-light" href="img/wizard-review-light.png"><img src="img/wizard-review-light.png" width="966" height="634" loading="lazy" alt="The Rules Wizard&rsquo;s last page, Ready to create: 4 rules and 6 new folders, Co-workers &rsaquo; Joni, Co-workers &rsaquo; Patti, Companies &rsaquo; Fabrikam and Companies &rsaquo; Northwind Traders, with how many messages each one files, and a box to file the mail already in the Inbox."></a>
-        <a class="shot-dark" href="img/wizard-review-dark.png"><img src="img/wizard-review-dark.png" width="966" height="634" loading="lazy" alt="The Rules Wizard&rsquo;s last page, Ready to create: 4 rules and 6 new folders, Co-workers &rsaquo; Joni, Co-workers &rsaquo; Patti, Companies &rsaquo; Fabrikam and Companies &rsaquo; Northwind Traders, with how many messages each one files, and a box to file the mail already in the Inbox. In Dark Mode."></a>
+        <a class="shot-light" href="img/wizard-review-light.png"><img src="img/wizard-review-light.webp" width="966" height="634" loading="lazy" alt="The Rules Wizard&rsquo;s last page, Ready to create: 4 rules and 6 new folders, Co-workers &rsaquo; Joni, Co-workers &rsaquo; Patti, Companies &rsaquo; Fabrikam and Companies &rsaquo; Northwind Traders, with how many messages each one files, and a box to file the mail already in the Inbox."></a>
+        <a class="shot-dark" href="img/wizard-review-dark.png"><img src="img/wizard-review-dark.webp" width="966" height="634" loading="lazy" alt="The Rules Wizard&rsquo;s last page, Ready to create: 4 rules and 6 new folders, Co-workers &rsaquo; Joni, Co-workers &rsaquo; Patti, Companies &rsaquo; Fabrikam and Companies &rsaquo; Northwind Traders, with how many messages each one files, and a box to file the mail already in the Inbox. In Dark Mode."></a>
       </figure>
       <ul>
         <li><strong>Start Over</strong>: save every rule to a backup file, delete them all and build new ones with Organize Mail into Folders. Import Rules brings any old rule back, creating any folder it needs, with progress shown as it goes.</li>
@@ -80,8 +121,8 @@
         <li><strong>Rules that copy mail spotted</strong>: when two rules would both move the same message, Exchange keeps a copy in each folder. Rules and Alerts marks them, and Fix Rules That Copy Mail stops the first one there and offers to remove the copies already made.</li>
       </ul>
       <figure class="shot feature-shot">
-        <a class="shot-light" href="img/rules-light.png"><img src="img/rules-light.png" width="666" height="634" loading="lazy" alt="Rules and Alerts after the Rules Wizard: New Rule, Rules Wizard, Change Rule, Run Rules Now, Export Rules, Import Rules and Start Over above the list of rules, each with its check box, and the selected rule&rsquo;s description below."></a>
-        <a class="shot-dark" href="img/rules-dark.png"><img src="img/rules-dark.png" width="666" height="634" loading="lazy" alt="Rules and Alerts after the Rules Wizard: New Rule, Rules Wizard, Change Rule, Run Rules Now, Export Rules, Import Rules and Start Over above the list of rules, each with its check box, and the selected rule&rsquo;s description below. In Dark Mode."></a>
+        <a class="shot-light" href="img/rules-light.png"><img src="img/rules-light.webp" width="666" height="634" loading="lazy" alt="Rules and Alerts after the Rules Wizard: New Rule, Rules Wizard, Change Rule, Run Rules Now, Export Rules, Import Rules and Start Over above the list of rules, each with its check box, and the selected rule&rsquo;s description below."></a>
+        <a class="shot-dark" href="img/rules-dark.png"><img src="img/rules-dark.webp" width="666" height="634" loading="lazy" alt="Rules and Alerts after the Rules Wizard: New Rule, Rules Wizard, Change Rule, Run Rules Now, Export Rules, Import Rules and Start Over above the list of rules, each with its check box, and the selected rule&rsquo;s description below. In Dark Mode."></a>
       </figure>
       <ul>
         <li><strong>Script rules</strong>: run a PowerShell script, batch file or program when matching mail arrives, as classic Outlook&rsquo;s &ldquo;run a script&rdquo; rule did.</li>

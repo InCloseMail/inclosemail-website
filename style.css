@@ -556,3 +556,6 @@ a.brand { color: inherit; text-decoration: none; }
 
 /* A 4K monitor at 100% scaling: everything grows by half, so text isn't tiny and the layout matches 150%. */
 @media (min-width: 3200px) { body { zoom: 1.5; } }
+
+/* Home and pricing screenshots link to the full-size picture, like the feature pages' do. */
+.shot > a { display: block; }
