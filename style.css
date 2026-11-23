@@ -4,8 +4,9 @@
   --text: #242424;
   --muted: #616161;
   --border: #e0e0e0;
-  --accent: #0f6b66;
-  --hero-bg: #0f6b66;
+  --accent: #024948;
+  --on-accent: #ffffff;
+  --hero-bg: #024948;
   --hero-text: #ffffff;
   --page-end: #ffffff;
 }
@@ -18,8 +19,9 @@
     --text: #f0f0f0;
     --muted: #adadad;
     --border: #3d3d3d;
-    --accent: #4fbfb6;
-    --hero-bg: #0a403d;
+    --accent: #acece0;
+    --on-accent: #024948;
+    --hero-bg: #024948;
     --hero-text: #ffffff;
     --page-end: #000000;
     color-scheme: dark;
@@ -32,8 +34,9 @@
   --text: #f0f0f0;
   --muted: #adadad;
   --border: #3d3d3d;
-  --accent: #4fbfb6;
-  --hero-bg: #0a403d;
+  --accent: #acece0;
+  --on-accent: #024948;
+  --hero-bg: #024948;
   --hero-text: #ffffff;
   --page-end: #000000;
   color-scheme: dark;
@@ -144,13 +147,13 @@ a { color: var(--accent); }
   padding: 11px 22px;
   border-radius: 6px;
   background: #ffffff;
-  color: #0f6b66;
+  color: #024948;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
-.button:hover { background: #e8f4f3; }
+.button:hover { background: #e3f7f2; }
 
 .button:focus-visible,
 .cta-link:focus-visible {
@@ -396,7 +399,7 @@ a.brand { color: inherit; text-decoration: none; }
 }
 
 /* For administrators: the approve button on a light page, and the result Microsoft sends back. */
-.doc .consent-button { background: var(--accent); color: #ffffff; margin: 6px 0; }
+.doc .consent-button { background: var(--accent); color: var(--on-accent); margin: 6px 0; }
 .doc .consent-button:hover { background: var(--accent); filter: brightness(1.1); }
 .doc .consent-result { border-left: 4px solid var(--accent); background: var(--surface); padding: 12px 16px; margin: 8px 0 4px; }
 .doc .consent-result.error { border-left-color: #c42b1c; }
@@ -530,7 +533,7 @@ a.brand { color: inherit; text-decoration: none; }
 .plan .price-note { margin: 4px 0 12px; color: var(--muted); }
 .plan ul { padding-left: 20px; margin: 0 0 18px; flex: 1; }
 .plan li { margin-bottom: 6px; }
-.plan-button { display: block; text-align: center; padding: 10px 16px; border-radius: 6px; background: var(--accent); color: #ffffff; font-weight: 600; text-decoration: none; }
+.plan-button { display: block; text-align: center; padding: 10px 16px; border-radius: 6px; background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none; }
 :root[data-theme="dark"] .plan-button { color: #0b1f1e; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .plan-button { color: #0b1f1e; } }
 .plan-button:hover { filter: brightness(1.1); }
