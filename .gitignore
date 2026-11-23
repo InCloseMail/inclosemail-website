@@ -8,6 +8,8 @@
 !screenshot-dark.png
 !screenshot-analytics.png
 !screenshot-analytics-dark.png
+# The logo (the app's assets/icon/icon-source.png, scaled down).
+!logo.png
 # The feature pages' pictures, also taken in demo mode (features/*.html).
 !features/img/*.png
 *.log
